@@ -40,7 +40,7 @@ class ActionOpenBoard(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         query = tracker.get_slot("board_name")
-        open_board()
+        open_board(board_name=query)
         dispatcher.utter_message(text=f"Opened board, please check your browser.") 
 
         return [SlotSet("board_name", query)]

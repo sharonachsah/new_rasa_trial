@@ -18,18 +18,17 @@ def add_board():
     board_name = board_name.replace(".", "")
     client.add_board(board_name)
 
-def open_board():
-    board_name = ""
-    board_name = re.sub(r"[^\w\s]", "", board_name)
+def open_board(boardname: str):
+    board_name = re.sub(r"[^\w\s]", "", boardname)
     board_name = board_name.strip().replace(" ", "-")
     boards = client.list_boards()
+    print(boards)
     board_names = {board.name.lower() for board in boards}
     if board_name in board_names:
+        print("board_name: ", board_name)
         matching_board = next(
             board for board in boards if board.name.lower() == board_name
         )
         webbrowser.open(matching_board.url)
     else:
         print(f"Sorry, I couldn't find a board named {board_name}.")
-
-# open_board()

@@ -28,7 +28,7 @@ nlu:
     - see you around
     - bye bye
     - see you later
-    
+
 - intent: affirm
   examples: |
     - yes
@@ -151,14 +151,14 @@ nlu:
 
 - intent: open_board
   examples: |
-    - open trello board (paradox)[board_name]
-    - open board (achsah)[board_name]
-    - open a board (speech recognition)[board_name]
-    - open a trello board (paradox)[board_name]
-    - open a trello board page (paradox)[board_name]
-    - open a board in trello (paradox)[board_name]
-    - open a board in trello page (esakki)[board_name]
-    - open a board in trello site (speech recognition)[board_name]
-    - open a board in trello webpage (paradox)[board_name]
-    - open a board in trello website (ILM timesheet)[board_name]
-    - open a board in trello in browser (paradox)[board_name]
+    - open trello board [board_name]
+    - open board [board_name]
+    - open a board [board_name]
+    - open a trello board [board_name]
+    - open a trello board page [board_name]
+    - open a board in trello [board_name]
+    - open a board in trello page [board_name]
+    - open a board in trello site [board_name]
+    - open a board in trello webpage [board_name]
+    - open a board in trello website [board_name]
+    - open a board in trello in browser [board_name]

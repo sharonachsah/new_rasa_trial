@@ -65,6 +65,7 @@ slots:
     influence_conversation: true
     mappings:
     - type: from_entity
+      intent: open_trello
       entity: query
   
   board_name:
@@ -95,8 +96,8 @@ responses:
   
 actions:
 - utter_iamabot
+- utter_greet
+- utter_goodbye
 - action_open_board
 - action_open_trello
 - action_hello_world
-- utter_greet
-- utter_goodbye
