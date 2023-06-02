@@ -24,7 +24,7 @@ def get_all_boards():
         print(board.id)
 
 
-def add_board(boardname: str):
+def add_board(boardnametoadd: str):
     """
     This function adds a board to a client with a given name after removing any periods in the name.
 
@@ -33,29 +33,20 @@ def add_board(boardname: str):
     board using the modified name
     :type boardname: str
     """
-    # boardname = boardname.replace(".", "")
-    client.add_board(boardname)
+    boardnametoadd = re.sub(r"[^\w\s]", "", boardnametoadd)
+    client.add_board(boardnametoadd)
 
 
 # add_board("new board")
 
-
-def open_board(boardname: str):
-    """
-    This function opens a Trello board in the web browser if it exists, otherwise it prints an error
-    message.
-
-    :param boardname: a string representing the name of a Trello board to be opened
-    :type boardname: str
-    """
-    board_name = re.sub(r"[^\w\s]", "", boardname)
+def open_board(boardnametoopen: str):
+    board_name = re.sub(r"[^\w\s]", "", boardnametoopen)
     # board_name = board_name.strip().replace(" ", "-")
     boards = client.list_boards()
-    print(boards)
-    board_names = {board.name for board in boards}
-    if board_name in board_names:
+    board_names = {board.name.lower() for board in boards}  # convert board names to lowercase
+    if board_name.lower() in board_names:  # compare lowercase board name with lowercase board names in the set
         print("board_name: ", board_name)
-        matching_board = next(board for board in boards if board.name == board_name)
+        matching_board = next(board for board in boards if board.name.lower() == board_name.lower())  # compare lowercase board name with lowercase board names in the list
         print(board for board in boards if board.name == board_name)
         print("matching_board: ", matching_board)
         webbrowser.open(matching_board.url)
@@ -63,10 +54,7 @@ def open_board(boardname: str):
         print(f"Sorry, I couldn't find a board named {board_name}.")
 
 
-# open_board("speech recognition")
-
-
-def update_board_name(board_name: str, new_board_name: str):
+def update_board_name(prev_board_name: str, new_board_name: str):
     """
     This function will update a board
 
@@ -74,7 +62,7 @@ def update_board_name(board_name: str, new_board_name: str):
     """
     boards = client.list_boards()
     for board in boards:
-        if board_name in board.name.lower():
+        if prev_board_name in board.name.lower():
             board.set_name(new_board_name)
 
 

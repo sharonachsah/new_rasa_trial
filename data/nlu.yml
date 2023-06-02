@@ -153,15 +153,105 @@ nlu:
 
   - intent: open_board
     examples: |
-      - open board (achsah) [board_name]
-      - open board (speech recogintion) [board_name]
-      - open board (speech recognition) [board_name]
-      - open board (books) [board_name]
-      - open board (videos) [board_name]
-      - open board (movies) [board_name]
-      - open board (movies to watch) [board_name]
-      - open board (movies to watch) [board_name]
-      - open board (features) [board_name]
-      - open board (bugs) [board_name]
-      - open board (bugs to fix) [board_name]
-      - open board (roadmap) [board_name]
+      - open board [achsah]{"entity": "board_name_to_open", "value": "achsah"}
+      - open board [speech recogntion]{"entity": "board_name_to_open", "value": "speech recogntion"}
+      - open board [speech recognition]{"entity": "board_name_to_open", "value": "speech recognition"}
+      - open board [books]{"entity": "board_name_to_open", "value": "books"}
+      - open board [videos]{"entity": "board_name_to_open", "value": "videos"}
+      - open board [movies]{"entity": "board_name_to_open", "value": "movies"}
+      - open board [movies to watch]{"entity": "board_name_to_open", "value": "movies to watch"}
+      - open board [features]{"entity": "board_name_to_open", "value": "features"}
+      - open board [songs]{"entity": "board_name_to_open", "value": "songs"}
+      - open board [bugs to fix]{"entity": "board_name_to_open", "value": "bugs to fix"}
+      - open board [exploratory testing]{"entity": "board_name_to_open", "value": "exploratory testing"}
+      - open board [roadmap]{"entity": "board_name_to_open", "value": "roadmap"}
+      - open board [goals]{"entity": "board_name_to_open", "value": "goals"}
+      - open board [goals for 2023]{"entity": "board_name_to_open", "value": "goals for 2023"}
+      - open board [UX issues]{"entity": "board_name_to_open", "value": "UX issues"}
+      - open board [backlogs]{"entity": "board_name_to_open", "value": "backlogs"}
+      - open board [analysis]{"entity": "board_name_to_open", "value": "analysis"}
+      - open board [Employee status]{"entity": "board_name_to_open", "value": "Employee status"}
+
+  - intent: create_board
+    examples: |
+      - create board [achsah]{"entity": "board_name_to_create", "value": "achsah"}
+      - create board [speech recogntion]{"entity": "board_name_to_create", "value": "speech recogntion"}
+      - create board [speech recognition]{"entity": "board_name_to_create", "value": "speech recognition"}
+      - create board [books]{"entity": "board_name_to_create", "value": "books"}
+      - create board [videos]{"entity": "board_name_to_create", "value": "videos"}
+      - create board [movies]{"entity": "board_name_to_create", "value": "movies"}
+      - create board [movies to watch]{"entity": "board_name_to_create", "value": "movies to watch"}
+      - create board [features]{"entity": "board_name_to_create", "value": "features"}
+      - create board [songs]{"entity": "board_name_to_create", "value": "songs"}
+      - create board [bugs to fix]{"entity": "board_name_to_create", "value": "bugs to fix"}
+      - create board [exploratory testing]{"entity": "board_name_to_create", "value": "exploratory testing"}
+      - create board [roadmap]{"entity": "board_name_to_create", "value": "roadmap"}
+      - create board [goals]{"entity": "board_name_to_create", "value": "goals"}
+      - create board [goals for 2023]{"entity": "board_name_to_create", "value": "goals for 2023"}
+      - create board [UX issues]{"entity": "board_name_to_create", "value": "UX issues"}
+      - create board [backlogs]{"entity": "board_name_to_create", "value": "backlogs"}
+      - create board [analysis]{"entity": "board_name_to_create", "value": "analysis"}
+      - create board [Employee status]{"entity": "board_name_to_create", "value": "Employee status"}
+      - add board [achsah]{"entity": "board_name_to_create", "value": "achsah"}
+      - add board [speech recogntion]{"entity": "board_name_to_create", "value": "speech recogntion"}
+      - add board [speech recognition]{"entity": "board_name_to_create", "value": "speech recognition"}
+      - add board [books]{"entity": "board_name_to_create", "value": "books"}
+      - add board [videos]{"entity": "board_name_to_create", "value": "videos"}
+      - add board [movies]{"entity": "board_name_to_create", "value": "movies"}
+      - add board [movies to watch]{"entity": "board_name_to_create", "value": "movies to watch"}
+      - add board [features]{"entity": "board_name_to_create", "value": "features"}
+      - add board [songs]{"entity": "board_name_to_create", "value": "songs"}
+      - add board [bugs to fix]{"entity": "board_name_to_create", "value": "bugs to fix"}
+      - add board [exploratory testing]{"entity": "board_name_to_create", "value": "exploratory testing"}
+      - add board [roadmap]{"entity": "board_name_to_create", "value": "roadmap"}
+      - add board [goals]{"entity": "board_name_to_create", "value": "goals"}
+      - add board [goals for 2023]{"entity": "board_name_to_create", "value": "goals for 2023"}
+      - add board [UX issues]{"entity": "board_name_to_create", "value": "UX issues"}
+      - add board [backlogs]{"entity": "board_name_to_create", "value": "backlogs"}
+      - add board [analysis]{"entity": "board_name_to_create", "value": "analysis"}
+      - add board [Employee status]{"entity": "board_name_to_create", "value": "Employee status"}
+      - create a new board [achsah]{"entity": "board_name_to_create", "value": "achsah"}
+      - create a new board [speech recogntion]{"entity": "board_name_to_create", "value": "speech recogntion"}
+      - create a new board [speech recognition]{"entity": "board_name_to_create", "value": "speech recognition"}
+      - create a new board [books]{"entity": "board_name_to_create", "value": "books"}
+      - create a new board [videos]{"entity": "board_name_to_create", "value": "videos"}
+      - create a new board [movies]{"entity": "board_name_to_create", "value": "movies"}
+      - create a new board [movies to watch]{"entity": "board_name_to_create", "value": "movies to watch"}
+      - create a new board [features]{"entity": "board_name_to_create", "value": "features"}
+      - create a new board [songs]{"entity": "board_name_to_create", "value": "songs"}
+      - create a new board [bugs to fix]{"entity": "board_name_to_create", "value": "bugs to fix"}
+      - create a new board [exploratory testing]{"entity": "board_name_to_create", "value": "exploratory testing"}
+      - create a new board [roadmap]{"entity": "board_name_to_create", "value": "roadmap"}
+      - create a new board [goals]{"entity": "board_name_to_create", "value": "goals"}
+      - create a new board [goals for 2023]{"entity": "board_name_to_create", "value": "goals for 2023"}
+      - create a new board [UX issues]{"entity": "board_name_to_create", "value": "UX issues"}
+      - create a new board [backlogs]{"entity": "board_name_to_create", "value": "backlogs"}
+      - create a new board [analysis]{"entity": "board_name_to_create", "value": "analysis"}
+      - create a new board [Employee status]{"entity": "board_name_to_create", "value": "Employee status"}
+      - add a board named [achsah]{"entity": "board_name_to_create", "value": "achsah"}
+      - add a board named [speech recogntion]{"entity": "board_name_to_create", "value": "speech recogntion"}
+      - add a board named [speech recognition]{"entity": "board_name_to_create", "value": "speech recognition"}
+      - add a board named [books]{"entity": "board_name_to_create", "value": "books"}
+      - add a board named [videos]{"entity": "board_name_to_create", "value": "videos"}
+      - add a board named [movies]{"entity": "board_name_to_create", "value": "movies"}
+      - add a board named [movies to watch]{"entity": "board_name_to_create", "value": "movies to watch"}
+      - add a board named [features]{"entity": "board_name_to_create", "value": "features"}
+      - add a board named [songs]{"entity": "board_name_to_create", "value": "songs"}
+      - add a board named [bugs to fix]{"entity": "board_name_to_create", "value": "bugs to fix"}
+      - add a board named [exploratory testing]{"entity": "board_name_to_create", "value": "exploratory testing"}
+      - add a board named [roadmap]{"entity": "board_name_to_create", "value": "roadmap"}
+      - add a board named [goals]{"entity": "board_name_to_create", "value": "goals"}
+      - add a board named [goals for 2023]{"entity": "board_name_to_create", "value": "goals for 2023"}
+      - add a board named [UX issues]{"entity": "board_name_to_create", "value": "UX issues"}
+      - add a board named [backlogs]{"entity": "board_name_to_create", "value": "backlogs"}
+      - add a board named [analysis]{"entity": "board_name_to_create", "value": "analysis"}
+      - add a board named [Employee status]{"entity": "board_name_to_create", "value": "Employee status"}
+      - create a board named [achsah]{"entity": "board_name_to_create", "value": "achsah"}
+      - create a board named [speech recogntion]{"entity": "board_name_to_create", "value": "speech recogntion"}
+      - create a board named [speech recognition]{"entity": "board_name_to_create", "value": "speech recognition"}
+      - create a board named [books]{"entity": "board_name_to_create", "value": "books"}
+      - create a board named [videos]{"entity": "board_name_to_create", "value": "videos"}
+      - create a board named [movies]{"entity": "board_name_to_create", "value": "movies"}
+      - create a board named [movies to watch]{"entity": "board_name_to_create", "value": "movies to watch"}
+      - create a board named [features]{"entity": "board_name_to_create", "value": "features"}
+

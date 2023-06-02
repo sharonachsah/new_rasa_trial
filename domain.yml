@@ -12,12 +12,78 @@ intents:
   - hello_world
   - mood_great
   - mood_unhappy
-  - open_board
   - open_trello
+  - open_board:
+      use_entities:
+        - board_name_to_open
+  - create_board:
+      use_entities:
+        - board_name_to_create
 
 entities:
   - query
-  - board_name
+  - board_name_to_open
+  - board_name_to_create
+
+slots:
+  query:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        intent: open_trello
+        entity: query
+
+  board_name_to_open:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: board_name_to_open
+
+  board_name_to_create:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: board_name_to_create
+
+responses:
+  utter_greet:
+    - text: Hey! How are you?
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+    - text: Did that help you?
+  utter_happy:
+    - text: Great, carry on!
+  utter_goodbye:
+    - text: Bye
+  utter_iamabot:
+    - text: I am a bot, powered by Rasa.
+  utter_open_trello:
+    - text: I have opened the trello website in your browser
+  utter_open_board:
+    - text: I have opened the board you asked for in your browser
+  utter_create_board:
+    - text: I have created the board you asked for in your browser
+
+actions:
+  - utter_iamabot
+  - utter_greet
+  - utter_goodbye
+  - action_hello_world
+  - action_open_trello
+  - utter_open_trello
+  - action_open_board
+  - utter_open_board
+  - action_create_board
+  - utter_create_board
+
+
+
+
 # - board_memberships
 # - board_labels
 # - board_lists
@@ -58,46 +124,3 @@ entities:
 # - checklist_item_list
 # - checklist_item_due_date
 # - checklist_item_description
-
-slots:
-  query:
-    type: text
-    influence_conversation: true
-    mappings:
-      - type: from_entity
-        intent: open_trello
-        entity: query
-
-  board_name:
-    type: text
-    influence_conversation: true
-    mappings:
-      - type: from_entity
-        entity: board_name
-
-responses:
-  utter_greet:
-    - text: Hey! How are you?
-  utter_cheer_up:
-    - text: "Here is something to cheer you up:"
-      image: https://i.imgur.com/nGF1K8f.jpg
-  utter_did_that_help:
-    - text: Did that help you?
-  utter_happy:
-    - text: Great, carry on!
-  utter_goodbye:
-    - text: Bye
-  utter_iamabot:
-    - text: I am a bot, powered by Rasa.
-  utter_open_trello:
-    - text: I have opened the trello page in your browser
-  utter_open_board:
-    - text: I have opened the trello board in your browser
-
-actions:
-  - utter_iamabot
-  - utter_greet
-  - utter_goodbye
-  - action_open_board
-  - action_open_trello
-  - action_hello_world

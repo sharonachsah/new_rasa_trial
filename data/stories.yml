@@ -38,15 +38,27 @@ stories:
       - intent: open_trello
         entities:
           - query: trello
-      # - action: utter_open_trello
       - action: action_open_trello
-      - slot_was_set:
-          - query: trello
+      # - action: utter_open_trello
+      # - slot_was_set:
+      #     - query: trello
 
   - story: open board
     steps:
       - intent: open_board
+        entities:
+          - board_name_to_open: "Achsah"
       - action: action_open_board
-      # - action: utter_open_board
-      - slot_was_set:
-          - board_name: board_name
+      - action: utter_open_board
+      # - slot_was_set:
+      #     - board_name_to_open: board_name_to_open
+
+  - story: create board
+    steps:
+      - intent: create_board
+        entities:
+          - board_name_to_create: "Achsah"
+      - action: action_create_board
+      - action: utter_create_board
+      # - slot_was_set:
+      #     - board_name_to_create: board_name_to_create

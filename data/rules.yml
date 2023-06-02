@@ -16,17 +16,9 @@ rules:
       - intent: greet
       - action: action_hello_world
 
-  - rule: Say 'I have opened the trello site in your browser'
+  - rule: Say 'I have opened the trello website in your browser'
     steps:
       - intent: open_trello
       - action: action_open_trello
 
-  # - rule: Say 'I have opened the trello board in your browser'
-  #   steps:
-  #   - intent: open_board
-  #   - action: action_open_board
 
-  - rule: Say 'I have opened the trello page in your browser'
-    steps:
-      - intent: open_board
-      - action: action_open_board
