@@ -1,23 +1,23 @@
-version: '3.1'
+version: "3.1"
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 
 intents:
-- affirm
-- bot_challenge
-- deny
-- goodbye
-- greet
-- hello_world
-- mood_great
-- mood_unhappy
-- open_board
-- open_trello
+  - affirm
+  - bot_challenge
+  - deny
+  - goodbye
+  - greet
+  - hello_world
+  - mood_great
+  - mood_unhappy
+  - open_board
+  - open_trello
 
 entities:
-- query
-- board_name
+  - query
+  - board_name
 # - board_memberships
 # - board_labels
 # - board_lists
@@ -64,40 +64,40 @@ slots:
     type: text
     influence_conversation: true
     mappings:
-    - type: from_entity
-      intent: open_trello
-      entity: query
-  
+      - type: from_entity
+        intent: open_trello
+        entity: query
+
   board_name:
-    type: any
-    influence_conversation: false
+    type: text
+    influence_conversation: true
     mappings:
-    - type: from_entity
-      entity: board_name
+      - type: from_entity
+        entity: board_name
 
 responses:
   utter_greet:
-  - text: Hey! How are you?
+    - text: Hey! How are you?
   utter_cheer_up:
-  - text: 'Here is something to cheer you up:'
-    image: https://i.imgur.com/nGF1K8f.jpg
+    - text: "Here is something to cheer you up:"
+      image: https://i.imgur.com/nGF1K8f.jpg
   utter_did_that_help:
-  - text: Did that help you?
+    - text: Did that help you?
   utter_happy:
-  - text: Great, carry on!
+    - text: Great, carry on!
   utter_goodbye:
-  - text: Bye
+    - text: Bye
   utter_iamabot:
-  - text: I am a bot, powered by Rasa.
+    - text: I am a bot, powered by Rasa.
   utter_open_trello:
-  - text: I have opened the trello in your browser
+    - text: I have opened the trello page in your browser
   utter_open_board:
-  - text: I have opened the trello board in your browser
-  
+    - text: I have opened the trello board in your browser
+
 actions:
-- utter_iamabot
-- utter_greet
-- utter_goodbye
-- action_open_board
-- action_open_trello
-- action_hello_world
+  - utter_iamabot
+  - utter_greet
+  - utter_goodbye
+  - action_open_board
+  - action_open_trello
+  - action_hello_world
