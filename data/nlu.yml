@@ -1,0 +1,164 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - how are you
+- intent: hello_world
+  examples: |
+    - hello world!
+    - hello world
+- intent: open_trello
+  examples: |
+    - open trello
+    - open trello board
+    - open trello app
+    - open trello website
+    - open trello web
+    - open trello page
+    - open trello site
+    - open trello board page
+    - open trello board site
+    - open trello board web
+    - open trello board website
+    - open trello app page
+    - open trello app site
+    - open trello app web
+    - open trello app website
+    - open trello web page
+    - open trello web site
+    - open trello web app
+    - open trello web website
+    - open trello website page
+    - open trello website site
+    - open trello website app
+    - open trello website web
+    - open trello site page
+    - open trello site site
+    - open trello site app
+    - open trello site web
+    - open trello in browser
+    - open trello board in browser
+    - open trello app in browser
+    - open trello website in browser
+    - open trello web in browser
+    - open trello page in browser
+    - open trello site in browser
+    - open trello board page in browser
+    - open trello board site in browser
+    - open trello board web in browser
+    - open trello board website in browser
+    - open trello app page in browser
+    - open trello app site in browser
+    - open trello app web in browser
+    - open trello app website in browser
+    - open trello web page in browser
+    - open trello web site in browser
+    - open trello web app in browser
+    - open trello web website in browser
+    - launch trello
+    - launch trello board
+    - launch trello app
+    - launch trello website
+    - launch trello web
+    - launch trello page
+    - launch trello site
+    - launch trello board page
+    - launch trello board site
+    - launch trello board web
+    - launch trello board website
+
+- intent: open_board
+  examples: |
+    - open trello board (paradox)[board_name]
+    - open board (achsah)[board_name]
+    - open a board (speech recognition)[board_name]
+    - open a trello board (paradox)[board_name]
+    - open a trello board page (paradox)[board_name]
+    - open a board in trello (paradox)[board_name]
+    - open a board in trello page (esakki)[board_name]
+    - open a board in trello site (speech recognition)[board_name]
+    - open a board in trello webpage (paradox)[board_name]
+    - open a board in trello website (ILM timesheet)[board_name]
+    - open a board in trello in browser (paradox)[board_name]

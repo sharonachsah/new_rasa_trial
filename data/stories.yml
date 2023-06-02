@@ -1,0 +1,65 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: hello
+  steps:
+  - intent: hello_world
+  - action: action_hello_world
+
+- story: goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: open trello
+  steps:
+  - intent: open_trello
+    entities: 
+    - query: trello
+  - action: action_open_trello
+  - slot_was_set:
+    - query: trello
+
+- story: open board
+  steps:
+  - intent: open_board
+    entities: 
+    - query: board
+  - action: action_open_board
+  - slot_was_set:
+    - query: board
+    
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: action_hello_world
+  - intent: open_board
+  - action: action_open_board
+  - intent: open_trello
+  - action: action_open_trello
+  - slot_was_set:
+    - query: null
+  - intent: bot_challenge
+  - action: utter_iamabot
