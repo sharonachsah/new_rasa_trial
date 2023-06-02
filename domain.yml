@@ -20,10 +20,17 @@ intents:
       use_entities:
         - board_name_to_create
 
+  - update_board_name:
+      use_entities:
+        - previous_board_name
+        - new_board_name
+
 entities:
   - query
   - board_name_to_open
   - board_name_to_create
+  - previous_board_name
+  - new_board_name
 
 slots:
   query:
@@ -48,6 +55,20 @@ slots:
       - type: from_entity
         entity: board_name_to_create
 
+  previous_board_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: previous_board_name
+
+  new_board_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: new_board_name
+
 responses:
   utter_greet:
     - text: Hey! How are you?
@@ -68,6 +89,8 @@ responses:
     - text: I have opened the board you asked for in your browser
   utter_create_board:
     - text: I have created the board you asked for in your browser
+  utter_update_board_name:
+    - text: I have updated the board name you asked for in your browser
 
 actions:
   - utter_iamabot
@@ -80,10 +103,7 @@ actions:
   - utter_open_board
   - action_create_board
   - utter_create_board
-
-
-
-
+  - action_update_board_name
 # - board_memberships
 # - board_labels
 # - board_lists

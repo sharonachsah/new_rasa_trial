@@ -20,5 +20,3 @@ rules:
     steps:
       - intent: open_trello
       - action: action_open_trello
-
-

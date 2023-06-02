@@ -62,3 +62,15 @@ stories:
       - action: utter_create_board
       # - slot_was_set:
       #     - board_name_to_create: board_name_to_create
+
+  - story: update board name
+    steps:
+      - intent: update_board_name
+        entities:
+          - previous_board_name: "Achsah"
+          - new_board_name: "Mayur"
+      - action: action_update_board_name
+      - action: utter_update_board_name
+      # - slot_was_set:
+      #     - previous_board_name: previous_board_name
+      #     - new_board_name: new_board_name

@@ -171,6 +171,24 @@ nlu:
       - open board [backlogs]{"entity": "board_name_to_open", "value": "backlogs"}
       - open board [analysis]{"entity": "board_name_to_open", "value": "analysis"}
       - open board [Employee status]{"entity": "board_name_to_open", "value": "Employee status"}
+      - open board named [achsah]{"entity": "board_name_to_open", "value": "achsah"}
+      - open board named [speech recogntion]{"entity": "board_name_to_open", "value": "speech recogntion"}
+      - open board named [speech recognition]{"entity": "board_name_to_open", "value": "speech recognition"}
+      - open board named [books]{"entity": "board_name_to_open", "value": "books"}
+      - open board named [videos]{"entity": "board_name_to_open", "value": "videos"}
+      - open board named [movies]{"entity": "board_name_to_open", "value": "movies"}
+      - open board named [movies to watch]{"entity": "board_name_to_open", "value": "movies to watch"}
+      - open board named [features]{"entity": "board_name_to_open", "value": "features"}
+      - open board named [songs]{"entity": "board_name_to_open", "value": "songs"}
+      - open board named [bugs to fix]{"entity": "board_name_to_open", "value": "bugs to fix"}
+      - open board named [exploratory testing]{"entity": "board_name_to_open", "value": "exploratory testing"}
+      - open board named [roadmap]{"entity": "board_name_to_open", "value": "roadmap"}
+      - open board named [goals]{"entity": "board_name_to_open", "value": "goals"}
+      - open board named [goals for 2023]{"entity": "board_name_to_open", "value": "goals for 2023"}
+      - open board named [UX issues]{"entity": "board_name_to_open", "value": "UX issues"}
+      - open board named [backlogs]{"entity": "board_name_to_open", "value": "backlogs"}
+      - open board named [analysis]{"entity": "board_name_to_open", "value": "analysis"}
+      - open board named [Employee status]{"entity": "board_name_to_open", "value": "Employee status"}
 
   - intent: create_board
     examples: |
@@ -255,3 +273,124 @@ nlu:
       - create a board named [movies to watch]{"entity": "board_name_to_create", "value": "movies to watch"}
       - create a board named [features]{"entity": "board_name_to_create", "value": "features"}
 
+  - intent: update_board_name
+    examples: |
+      - update board name [achsah]{"entity": "previous_board_name", "value": "achsah"} to [speech recogntion]{"entity": "new_board_name", "value": "speech recogntion"}
+      - update board name [achsah]{"entity": "previous_board_name", "value": "achsah"} to [speech recognition]{"entity": "new_board_name", "value": "speech recognition"}
+      - update board name [achsah]{"entity": "previous_board_name", "value": "achsah"} to [books]{"entity": "new_board_name", "value": "books"}
+      - update board name [achsah]{"entity": "previous_board_name", "value": "achsah"} to [videos]{"entity": "new_board_name", "value": "videos"}
+      - update board name [achsah]{"entity": "previous_board_name", "value": "achsah"} to [movies]{"entity": "new_board_name", "value": "movies"}
+      - update board name [achsah]{"entity": "previous_board_name", "value": "achsah"} to [movies to watch]{"entity": "new_board_name", "value": "movies to watch"}
+      - update board name [achsah]{"entity": "previous_board_name", "value": "achsah"} to [features]{"entity": "new_board_name", "value": "features"}
+      - update board name [achsah]{"entity": "previous_board_name", "value": "achsah"} to [songs]{"entity": "new_board_name", "value": "songs"}
+      - update board name [achsah]{"entity": "previous_board_name", "value": "achsah"} to [bugs to fix]{"entity": "new_board_name", "value": "bugs to fix"}
+      - update board name [achsah]{"entity": "previous_board_name", "value": "achsah"} to [exploratory testing]{"entity": "new_board_name", "value": "exploratory testing"}
+      - update board name [books]{"entity": "previous_board_name", "value": "books"} to [speech recogntion]{"entity": "new_board_name", "value": "speech recogntion"}
+      - update board name [books]{"entity": "previous_board_name", "value": "books"} to [speech recognition]{"entity": "new_board_name", "value": "speech recognition"}
+      - update board name [books]{"entity": "previous_board_name", "value": "books"} to [books]{"entity": "new_board_name", "value": "books"}
+      - update board name [books]{"entity": "previous_board_name", "value": "books"} to [videos]{"entity": "new_board_name", "value": "videos"}
+      - update board name [books]{"entity": "previous_board_name", "value": "books"} to [movies]{"entity": "new_board_name", "value": "movies"}
+      - update board name [books]{"entity": "previous_board_name", "value": "videos"} to [movies to watch]{"entity": "new_board_name", "value": "movies to watch"}
+      - update board name [books]{"entity": "previous_board_name", "value": "books"} to [features]{"entity": "new_board_name", "value": "features"}
+      - update board name [books]{"entity": "previous_board_name", "value": "books"} to [songs]{"entity": "new_board_name", "value": "songs"}
+      - update board name [books]{"entity": "previous_board_name", "value": "books"} to [bugs to fix]{"entity": "new_board_name", "value": "bugs to fix"}
+      - update board name [books]{"entity": "previous_board_name", "value": "books"} to [exploratory testing]{"entity": "new_board_name", "value": "exploratory testing"}
+      - update board name [videos]{"entity": "previous_board_name", "value": "videos"} to [speech recogntion]{"entity": "new_board_name", "value": "speech recogntion"}
+      - update board name [videos]{"entity": "previous_board_name", "value": "videos"} to [speech recognition]{"entity": "new_board_name", "value": "speech recognition"}
+      - update board name [videos]{"entity": "previous_board_name", "value": "videos"} to [books]{"entity": "new_board_name", "value": "books"}
+      - update board name [videos]{"entity": "previous_board_name", "value": "videos"} to [videos]{"entity": "new_board_name", "value": "videos"}
+      - update board name [videos]{"entity": "previous_board_name", "value": "videos"} to [movies]{"entity": "new_board_name", "value": "movies"}
+      - update board name [videos]{"entity": "previous_board_name", "value": "videos"} to [movies to watch]{"entity": "new_board_name", "value": "movies to watch"}
+      - update board name [videos]{"entity": "previous_board_name", "value": "videos"} to [features]{"entity": "new_board_name", "value": "features"}
+      - update board name [videos]{"entity": "previous_board_name", "value": "videos"} to [songs]{"entity": "new_board_name", "value": "songs"}
+      - update board name [videos]{"entity": "previous_board_name", "value": "videos"} to [bugs to fix]{"entity": "new_board_name", "value": "bugs to fix"}
+      - update board name [videos]{"entity": "previous_board_name", "value": "videos"} to [exploratory testing]{"entity": "new_board_name", "value": "exploratory testing"}
+      - update board name [movies]{"entity": "previous_board_name", "value": "movies"} to [speech recogntion]{"entity": "new_board_name", "value": "speech recogntion"}
+      - update board name [movies]{"entity": "previous_board_name", "value": "movies"} to [speech recognition]{"entity": "new_board_name", "value": "speech recognition"}
+      - update board name [movies]{"entity": "previous_board_name", "value": "movies"} to [books]{"entity": "new_board_name", "value": "books"}
+      - update board name [movies]{"entity": "previous_board_name", "value": "movies"} to [videos]{"entity": "new_board_name", "value": "videos"}
+      - update board name [movies]{"entity": "previous_board_name", "value": "movies"} to [movies]{"entity": "new_board_name", "value": "movies"}
+      - update board name [movies]{"entity": "previous_board_name", "value": "movies"} to [movies to watch]{"entity": "new_board_name", "value": "movies to watch"}
+      - update board name [movies]{"entity": "previous_board_name", "value": "movies"} to [features]{"entity": "new_board_name", "value": "features"}
+      - update board name [movies]{"entity": "previous_board_name", "value": "movies"} to [songs]{"entity": "new_board_name", "value": "songs"}
+      - update board name [movies]{"entity": "previous_board_name", "value": "movies"} to [bugs to fix]{"entity": "new_board_name", "value": "bugs to fix"}
+      - update board name [movies]{"entity": "previous_board_name", "value": "movies"} to [exploratory testing]{"entity": "new_board_name", "value": "exploratory testing"}
+      - update board name [movies to watch]{"entity": "previous_board_name", "value": "movies to watch"} to [speech recogntion]{"entity": "new_board_name", "value": "speech recogntion"}
+      - update board name [movies to watch]{"entity": "previous_board_name", "value": "movies to watch"} to [speech recognition]{"entity": "new_board_name", "value": "speech recognition"}
+      - update board name [movies to watch]{"entity": "previous_board_name", "value": "movies to watch"} to [books]{"entity": "new_board_name", "value": "books"}
+      - update board name [movies to watch]{"entity": "previous_board_name", "value": "movies to watch"} to [videos]{"entity": "new_board_name", "value": "videos"}
+      - update board name [movies to watch]{"entity": "previous_board_name", "value": "movies to watch"} to [movies]{"entity": "new_board_name", "value": "movies"}
+      - update board name [movies to watch]{"entity": "previous_board_name", "value": "movies to watch"} to [movies to watch]{"entity": "new_board_name", "value": "movies to watch"}
+      - update board name [movies to watch]{"entity": "previous_board_name", "value": "movies to watch"} to [features]{"entity": "new_board_name", "value": "features"}
+      - update board name [movies to watch]{"entity": "previous_board_name", "value": "movies to watch"} to [songs]{"entity": "new_board_name", "value": "songs"}
+      - update board name [movies to watch]{"entity": "previous_board_name", "value": "movies to watch"} to [bugs to fix]{"entity": "new_board_name", "value": "bugs to fix"}
+      - update board name [movies to watch]{"entity": "previous_board_name", "value": "movies to watch"} to [exploratory testing]{"entity": "new_board_name", "value": "exploratory testing"}
+      - update board name [features]{"entity": "previous_board_name", "value": "features"} to [speech recogntion]{"entity": "new_board_name", "value": "speech recogntion"}
+      - update board name [features]{"entity": "previous_board_name", "value": "features"} to [speech recognition]{"entity": "new_board_name", "value": "speech recognition"}
+      - update board name [features]{"entity": "previous_board_name", "value": "features"} to [books]{"entity": "new_board_name", "value": "books"}
+      - update board name [features]{"entity": "previous_board_name", "value": "features"} to [videos]{"entity": "new_board_name", "value": "videos"}
+      - update board name [features]{"entity": "previous_board_name", "value": "features"} to [movies]{"entity": "new_board_name", "value": "movies"}
+      - change board name [achsah]{"entity": "previous_board_name", "value": "achsah"} to [speech recogntion]{"entity": "new_board_name", "value": "speech recogntion"}
+      - change board name [achsah]{"entity": "previous_board_name", "value": "achsah"} to [speech recognition]{"entity": "new_board_name", "value": "speech recognition"}
+      - change board name [achsah]{"entity": "previous_board_name", "value": "achsah"} to [books]{"entity": "new_board_name", "value": "books"}
+      - change board name [achsah]{"entity": "previous_board_name", "value": "achsah"} to [videos]{"entity": "new_board_name", "value": "videos"}
+      - change board name [achsah]{"entity": "previous_board_name", "value": "achsah"} to [movies]{"entity": "new_board_name", "value": "movies"}
+      - change board name [achsah]{"entity": "previous_board_name", "value": "achsah"} to [movies to watch]{"entity": "new_board_name", "value": "movies to watch"}
+      - change board name [achsah]{"entity": "previous_board_name", "value": "achsah"} to [features]{"entity": "new_board_name", "value": "features"}
+      - change board name [achsah]{"entity": "previous_board_name", "value": "achsah"} to [songs]{"entity": "new_board_name", "value": "songs"}
+      - change board name [achsah]{"entity": "previous_board_name", "value": "achsah"} to [bugs to fix]{"entity": "new_board_name", "value": "bugs to fix"}
+      - change board name [achsah]{"entity": "previous_board_name", "value": "achsah"} to [exploratory testing]{"entity": "new_board_name", "value": "exploratory testing"}
+      - change board name [books]{"entity": "previous_board_name", "value": "books"} to [speech recogntion]{"entity": "new_board_name", "value": "speech recogntion"}
+      - change board name [books]{"entity": "previous_board_name", "value": "books"} to [speech recognition]{"entity": "new_board_name", "value": "speech recognition"}
+      - change board name [books]{"entity": "previous_board_name", "value": "books"} to [books]{"entity": "new_board_name", "value": "books"}
+      - change board name [books]{"entity": "previous_board_name", "value": "books"} to [videos]{"entity": "new_board_name", "value": "videos"}
+      - change board name [books]{"entity": "previous_board_name", "value": "books"} to [movies]{"entity": "new_board_name", "value": "movies"}
+      - change board name [books]{"entity": "previous_board_name", "value": "videos"} to [movies to watch]{"entity": "new_board_name", "value": "movies to watch"}
+      - change board name [books]{"entity": "previous_board_name", "value": "books"} to [features]{"entity": "new_board_name", "value": "features"}
+      - change board name [books]{"entity": "previous_board_name", "value": "books"} to [songs]{"entity": "new_board_name", "value": "songs"}
+      - change board name [books]{"entity": "previous_board_name", "value": "books"} to [bugs to fix]{"entity": "new_board_name", "value": "bugs to fix"}
+      - change board name [books]{"entity": "previous_board_name", "value": "books"} to [exploratory testing]{"entity": "new_board_name", "value": "exploratory testing"}
+      - change board name [videos]{"entity": "previous_board_name", "value": "videos"} to [speech recogntion]{"entity": "new_board_name", "value": "speech recogntion"}
+      - change board name [videos]{"entity": "previous_board_name", "value": "videos"} to [speech recognition]{"entity": "new_board_name", "value": "speech recognition"}
+      - change board name [videos]{"entity": "previous_board_name", "value": "videos"} to [books]{"entity": "new_board_name", "value": "books"}
+      - change board name [videos]{"entity": "previous_board_name", "value": "videos"} to [videos]{"entity": "new_board_name", "value": "videos"}
+      - change board name [videos]{"entity": "previous_board_name", "value": "videos"} to [movies]{"entity": "new_board_name", "value": "movies"}
+      - change board name [videos]{"entity": "previous_board_name", "value": "videos"} to [movies to watch]{"entity": "new_board_name", "value": "movies to watch"}
+      - change board name [videos]{"entity": "previous_board_name", "value": "videos"} to [features]{"entity": "new_board_name", "value": "features"}
+      - change board name [videos]{"entity": "previous_board_name", "value": "videos"} to [songs]{"entity": "new_board_name", "value": "songs"}
+      - change board name [videos]{"entity": "previous_board_name", "value": "videos"} to [bugs to fix]{"entity": "new_board_name", "value": "bugs to fix"}
+      - change board name [videos]{"entity": "previous_board_name", "value": "videos"} to [exploratory testing]{"entity": "new_board_name", "value": "exploratory testing"}
+      - change board name [movies]{"entity": "previous_board_name", "value": "movies"} to [speech recogntion]{"entity": "new_board_name", "value": "speech recogntion"}
+      - change board name [movies]{"entity": "previous_board_name", "value": "movies"} to [speech recognition]{"entity": "new_board_name", "value": "speech recognition"}
+      - change board name [movies]{"entity": "previous_board_name", "value": "movies"} to [books]{"entity": "new_board_name", "value": "books"}
+      - change board name [movies]{"entity": "previous_board_name", "value": "movies"} to [videos]{"entity": "new_board_name", "value": "videos"}
+      - change board name [movies]{"entity": "previous_board_name", "value": "movies"} to [movies]{"entity": "new_board_name", "value": "movies"}
+      - change board name [movies]{"entity": "previous_board_name", "value": "movies"} to [movies to watch]{"entity": "new_board_name", "value": "movies to watch"}
+      - change board name [movies]{"entity": "previous_board_name", "value": "movies"} to [features]{"entity": "new_board_name", "value": "features"}
+      - change board name [movies]{"entity": "previous_board_name", "value": "movies"} to [songs]{"entity": "new_board_name", "value": "songs"}
+      - change board name [movies]{"entity": "previous_board_name", "value": "movies"} to [bugs to fix]{"entity": "new_board_name", "value": "bugs to fix"}
+      - change board name [movies]{"entity": "previous_board_name", "value": "movies"} to [exploratory testing]{"entity": "new_board_name", "value": "exploratory testing"}
+      - change board name [movies to watch]{"entity": "previous_board_name", "value": "movies to watch"} to [speech recogntion]{"entity": "new_board_name", "value": "speech recogntion"}
+      - change board name [movies to watch]{"entity": "previous_board_name", "value": "movies to watch"} to [speech recognition]{"entity": "new_board_name", "value": "speech recognition"}
+      - change board name [movies to watch]{"entity": "previous_board_name", "value": "movies to watch"} to [books]{"entity": "new_board_name", "value": "books"}
+      - change board name [movies to watch]{"entity": "previous_board_name", "value": "movies to watch"} to [videos]{"entity": "new_board_name", "value": "videos"}
+      - change board name [movies to watch]{"entity": "previous_board_name", "value": "movies to watch"} to [movies]{"entity": "new_board_name", "value": "movies"}
+      - change board name [movies to watch]{"entity": "previous_board_name", "value": "movies to watch"} to [movies to watch]{"entity": "new_board_name", "value": "movies to watch"}
+      - change board name [movies to watch]{"entity": "previous_board_name", "value": "movies to watch"} to [features]{"entity": "new_board_name", "value": "features"}
+      - change board name [movies to watch]{"entity": "previous_board_name", "value": "movies to watch"} to [songs]{"entity": "new_board_name", "value": "songs"}
+      - change board name [movies to watch]{"entity": "previous_board_name", "value": "movies to watch"} to [bugs to fix]{"entity": "new_board_name", "value": "bugs to fix"}
+      - change board name [movies to watch]{"entity": "previous_board_name", "value": "movies to watch"} to [exploratory testing]{"entity": "new_board_name", "value": "exploratory testing"}
+      - change board name [features]{"entity": "previous_board_name", "value": "features"} to [speech recogntion]{"entity": "new_board_name", "value": "speech recogntion"}
+      - change board name [features]{"entity": "previous_board_name", "value": "features"} to [speech recognition]{"entity": "new_board_name", "value": "speech recognition"}
+      - change board name [features]{"entity": "previous_board_name", "value": "features"} to [books]{"entity": "new_board_name", "value": "books"}
+      - change board name [features]{"entity": "previous_board_name", "value": "features"} to [videos]{"entity": "new_board_name", "value": "videos"}
+      - change board name [features]{"entity": "previous_board_name", "value": "features"} to [movies]{"entity": "new_board_name", "value": "movies"}
+      - change board name [features]{"entity": "previous_board_name", "value": "features"} to [movies to watch]{"entity": "new_board_name", "value": "movies to watch"}
+      - change board name [features]{"entity": "previous_board_name", "value": "features"} to [features]{"entity": "new_board_name", "value": "features"}
+      - change board name [features]{"entity": "previous_board_name", "value": "features"} to [songs]{"entity": "new_board_name", "value": "songs"}
+      - change board name [features]{"entity": "previous_board_name", "value": "features"} to [bugs to fix]{"entity": "new_board_name", "value": "bugs to fix"}
+      - change board name [features]{"entity": "previous_board_name", "value": "features"} to [exploratory testing]{"entity": "new_board_name", "value": "exploratory testing"}
+      - change board name [songs]{"entity": "previous_board_name", "value": "songs"} to [speech recogntion]{"entity": "new_board_name", "value": "speech recogntion"}
+      - change board name [songs]{"entity": "previous_board_name", "value": "songs"} to [speech recognition]{"entity": "new_board_name", "value": "speech recognition"}
+      - change board name [songs]{"entity": "previous_board_name", "value": "songs"} to [books]{"entity": "new_board_name", "value": "books"}
+      - change board name [songs]{"entity": "previous_board_name", "value": "songs"} to [videos]{"entity": "new_board_name", "value": "videos"}

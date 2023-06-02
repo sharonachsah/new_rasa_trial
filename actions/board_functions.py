@@ -39,14 +39,21 @@ def add_board(boardnametoadd: str):
 
 # add_board("new board")
 
+
 def open_board(boardnametoopen: str):
     board_name = re.sub(r"[^\w\s]", "", boardnametoopen)
     # board_name = board_name.strip().replace(" ", "-")
     boards = client.list_boards()
-    board_names = {board.name.lower() for board in boards}  # convert board names to lowercase
-    if board_name.lower() in board_names:  # compare lowercase board name with lowercase board names in the set
+    board_names = {
+        board.name.lower() for board in boards
+    }  # convert board names to lowercase
+    if (
+        board_name.lower() in board_names
+    ):  # compare lowercase board name with lowercase board names in the set
         print("board_name: ", board_name)
-        matching_board = next(board for board in boards if board.name.lower() == board_name.lower())  # compare lowercase board name with lowercase board names in the list
+        matching_board = next(
+            board for board in boards if board.name.lower() == board_name.lower()
+        )  # compare lowercase board name with lowercase board names in the list
         print(board for board in boards if board.name == board_name)
         print("matching_board: ", matching_board)
         webbrowser.open(matching_board.url)
