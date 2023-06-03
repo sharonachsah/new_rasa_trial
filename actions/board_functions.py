@@ -33,7 +33,7 @@ def add_board(boardnametoadd: str):
     board using the modified name
     :type boardname: str
     """
-    boardnametoadd = re.sub(r"[^\w\s]", "", boardnametoadd)
+    # boardnametoadd = re.sub(r"[^\w\s]", "", boardnametoadd)
     client.add_board(boardnametoadd)
 
 
@@ -69,11 +69,8 @@ def update_board_name(prev_board_name: str, new_board_name: str):
     """
     boards = client.list_boards()
     for board in boards:
-        if prev_board_name in board.name.lower():
+        if prev_board_name in board.name:
             board.set_name(new_board_name)
-
-
-update_board_name("speech recognition", "voice recognition")
 
 
 def delete_board(board_name: str):
@@ -84,5 +81,5 @@ def delete_board(board_name: str):
     """
     boards = client.list_boards()
     for board in boards:
-        if board_name in board.name.lower():
+        if board_name in board.name:
             board.close()

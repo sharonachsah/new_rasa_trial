@@ -195,6 +195,46 @@ nlu:
       - create board [achsah]{"entity": "board_name_to_create", "value": "achsah"}
       - create board [speech recogntion]{"entity": "board_name_to_create", "value": "speech recogntion"}
       - create board [speech recognition]{"entity": "board_name_to_create", "value": "speech recognition"}
+      - create board [image classification] {"entity": "board_name_to_create", "value": "image classification"}
+      - create board [data visualization] {"entity": "board_name_to_create", "value": "data visualization"}
+      - create board [sentiment analysis] {"entity": "board_name_to_create", "value": "sentiment analysis"}
+      - create board [machine translation] {"entity": "board_name_to_create", "value": "machine translation"}
+      - create board [natural language processing] {"entity": "board_name_to_create", "value": "natural language processing"}
+      - create board [fraud detection] {"entity": "board_name_to_create", "value": "fraud detection"}
+      - create board [recommendation system] {"entity": "board_name_to_create", "value": "recommendation system"}
+      - create board [customer segmentation] {"entity": "board_name_to_create", "value": "customer segmentation"}
+      - create board [time series forecasting] {"entity": "board_name_to_create", "value": "time series forecasting"}
+      - create board [object detection] {"entity": "board_name_to_create", "value": "object detection"}
+      - create board [speech synthesis] {"entity": "board_name_to_create", "value": "speech synthesis"}
+      - create board [emotion recognition] {"entity": "board_name_to_create", "value": "emotion recognition"}
+      - create board [text summarization] {"entity": "board_name_to_create", "value": "text summarization"}
+      - create board [anomaly detection] {"entity": "board_name_to_create", "value": "anomaly detection"}
+      - create board [chatbot development] {"entity": "board_name_to_create", "value": "chatbot development"}
+      - create board [face recognition] {"entity": "board_name_to_create", "value": "face recognition"}
+      - create board [speech enhancement] {"entity": "board_name_to_create", "value": "speech enhancement"}
+      - create board [customer churn prediction] {"entity": "board_name_to_create", "value": "customer churn prediction"}
+      - create board [named entity recognition] {"entity": "board_name_to_create", "value": "named entity recognition"}
+      - create board [Artificial Intelligence | Research] {"entity": "board_name_to_create", "value": "Artificial Intelligence Research"}
+      - create board [Machine Learning | Projects] {"entity": "board_name_to_create", "value": "Machine Learning Projects"}
+      - create board [Data Analysis | Visualization] {"entity": "board_name_to_create", "value": "Data Analysis Visualization"}
+      - create board [Programming | Code] {"entity": "board_name_to_create", "value": "Programming Code"}
+      - create board [Web Development | Frontend] {"entity": "board_name_to_create", "value": "Web Development Frontend"}
+      - create board [Backend Development | APIs] {"entity": "board_name_to_create", "value": "Backend Development APIs"}
+      - create board [Mobile App Development | UI/UX] {"entity": "board_name_to_create", "value": "Mobile App Development UI/UX"}
+      - create board [Data Science | Algorithms] {"entity": "board_name_to_create", "value": "Data Science Algorithms"}
+      - create board [Cybersecurity | Threats] {"entity": "board_name_to_create", "value": "Cybersecurity Threats"}
+      - create board [Cloud Computing | Infrastructure] {"entity": "board_name_to_create", "value": "Cloud Computing Infrastructure"}
+      - create board [Big Data | Analytics] {"entity": "board_name_to_create", "value": "Big Data Analytics"}
+      - create board [Blockchain | Smart Contracts] {"entity": "board_name_to_create", "value": "Blockchain Smart Contracts"}
+      - create board [Internet of Things | Sensors] {"entity": "board_name_to_create", "value": "Internet of Things Sensors"}
+      - create board [Virtual Reality | Gaming] {"entity": "board_name_to_create", "value": "Virtual Reality Gaming"}
+      - create board [Augmented Reality | Applications] {"entity": "board_name_to_create", "value": "Augmented Reality Applications"}
+      - create board [Computer Vision | Image Processing] {"entity": "board_name_to_create", "value": "Computer Vision Image Processing"}
+      - create board [Natural Language Processing | Chatbots] {"entity": "board_name_to_create", "value": "Natural Language Processing Chatbots"}
+      - create board [Data Engineering | ETL] {"entity": "board_name_to_create", "value": "Data Engineering ETL"}
+      - create board [Art | Design] {"entity": "board_name_to_create", "value": "Art Design"}
+      - create board [Software Engineering | Agile Development] {"entity": "board_name_to_create", "value": "Software Engineering Agile Development"}
+      - create board [speech-to-text conversion] {"entity": "board_name_to_create", "value": "speech-to-text conversion"}
       - create board [books]{"entity": "board_name_to_create", "value": "books"}
       - create board [videos]{"entity": "board_name_to_create", "value": "videos"}
       - create board [movies]{"entity": "board_name_to_create", "value": "movies"}
@@ -210,6 +250,36 @@ nlu:
       - create board [backlogs]{"entity": "board_name_to_create", "value": "backlogs"}
       - create board [analysis]{"entity": "board_name_to_create", "value": "analysis"}
       - create board [Employee status]{"entity": "board_name_to_create", "value": "Employee status"}
+      - create board [Customer feedback] {"entity": "board_name_to_create", "value": "customer feedback"}
+      - create board [Bug tracking] {"entity": "board_name_to_create", "value": "bug tracking"}
+      - create board [Project management] {"entity": "board_name_to_create", "value": "project management"}
+      - create board [Task organization] {"entity": "board_name_to_create", "value": "task organization"}
+      - create board [Budget tracking] {"entity": "board_name_to_create", "value": "budget tracking"}
+      - create board [Meeting scheduling] {"entity": "board_name_to_create", "value": "meeting scheduling"}
+      - create board [Content planning] {"entity": "board_name_to_create", "value": "content planning"}
+      - create board [Event coordination] {"entity": "board_name_to_create", "value": "event coordination"}
+      - create board [Team collaboration] {"entity": "board_name_to_create", "value": "team collaboration"}
+      - create board [Product roadmap] {"entity": "board_name_to_create", "value": "product roadmap"}
+      - create board [Resource allocation] {"entity": "board_name_to_create", "value": "resource allocation"}
+      - create board [Issue tracking] {"entity": "board_name_to_create", "value": "issue tracking"}
+      - create board [Sales pipeline] {"entity": "board_name_to_create", "value": "sales pipeline"}
+      - create board [Feature planning] {"entity": "board_name_to_create", "value": "feature planning"}
+      - create board [Inventory management] {"entity": "board_name_to_create", "value": "inventory management"}
+      - create board [Project collaboration] {"entity": "board_name_to_create", "value": "project collaboration"}
+      - create board [User research] {"entity": "board_name_to_create", "value": "user research"}
+      - create board [Content creation] {"entity": "board_name_to_create", "value": "content creation"}
+      - create board [Workflow automation] {"entity": "board_name_to_create", "value": "workflow automation"}
+      - create board [Marketing campaign] {"entity": "board_name_to_create", "value": "marketing campaign"}
+      - create board [Quality assurance] {"entity": "board_name_to_create", "value": "quality assurance"}
+      - create board [Data analysis] {"entity": "board_name_to_create", "value": "data analysis"}
+      - create board [Customer support] {"entity": "board_name_to_create", "value": "customer support"}
+      - create board [Task tracking] {"entity": "board_name_to_create", "value": "task tracking"}
+      - create board [Feedback collection] {"entity": "board_name_to_create", "value": "feedback collection"}
+      - create board [Project planning] {"entity": "board_name_to_create", "value": "project planning"}
+      - create board [Knowledge base] {"entity": "board_name_to_create", "value": "knowledge base"}
+      - create board [Time tracking] {"entity": "board_name_to_create", "value": "time tracking"}
+      - create board [Content management] {"entity": "board_name_to_create", "value": "content management"}
+      - create board [Issue management] {"entity": "board_name_to_create", "value": "issue management"}
       - add board [achsah]{"entity": "board_name_to_create", "value": "achsah"}
       - add board [speech recogntion]{"entity": "board_name_to_create", "value": "speech recogntion"}
       - add board [speech recognition]{"entity": "board_name_to_create", "value": "speech recognition"}
@@ -246,6 +316,35 @@ nlu:
       - create a new board [backlogs]{"entity": "board_name_to_create", "value": "backlogs"}
       - create a new board [analysis]{"entity": "board_name_to_create", "value": "analysis"}
       - create a new board [Employee status]{"entity": "board_name_to_create", "value": "Employee status"}
+      - create a new board [work]{"entity": "board_name_to_create", "value": "work"}
+      - create a new board [projects]{"entity": "board_name_to_create", "value": "projects"}
+      - create a new board [ideas]{"entity": "board_name_to_create", "value": "ideas"}
+      - create a new board [recipes]{"entity": "board_name_to_create", "value": "recipes"}
+      - create a new board [shopping]{"entity": "board_name_to_create", "value": "shopping"}
+      - create a new board [inspiration]{"entity": "board_name_to_create", "value": "inspiration"}
+      - create a new board [travel]{"entity": "board_name_to_create", "value": "travel"}
+      - create a new board [fitness]{"entity": "board_name_to_create", "value": "fitness"}
+      - create a new board [music]{"entity": "board_name_to_create", "value": "music"}
+      - create a new board [quotes]{"entity": "board_name_to_create", "value": "quotes"}
+      - create a new board [photography]{"entity": "board_name_to_create", "value": "photography"}
+      - create a new board [art]{"entity": "board_name_to_create", "value": "art"}
+      - create a new board [goals]{"entity": "board_name_to_create", "value": "goals"}
+      - create a new board [coding]{"entity": "board_name_to_create", "value": "coding"}
+      - create a new board [design]{"entity": "board_name_to_create", "value": "design"}
+      - create a new board [memes]{"entity": "board_name_to_create", "value": "memes"}
+      - create a new board [quotes to remember]{"entity": "board_name_to_create", "value": "quotes to remember"}
+      - create a new board [crafts]{"entity": "board_name_to_create", "value": "crafts"}
+      - create a new board [wishlist]{"entity": "board_name_to_create", "value": "wishlist"}
+      - create a new board [technology]{"entity": "board_name_to_create", "value": "technology"}
+      - create a new board [architecture]{"entity": "board_name_to_create", "value": "architecture"}
+      - create a new board [fashion]{"entity": "board_name_to_create", "value": "fashion"}
+      - create a new board [food]{"entity": "board_name_to_create", "value": "food"}
+      - create a new board [pets]{"entity": "board_name_to_create", "value": "pets"}
+      - create a new board [celebrities]{"entity": "board_name_to_create", "value": "celebrities"}
+      - create a new board [quotes for motivation]{"entity": "board_name_to_create", "value": "quotes for motivation"}
+      - create a new board [gardening]{"entity": "board_name_to_create", "value": "gardening"}
+      - create a new board [movies to watch later]{"entity": "board_name_to_create", "value": "movies to watch later"}
+      - create a new board [recipes to try]{"entity": "board_name_to_create", "value": "recipes to try"}
       - add a board named [achsah]{"entity": "board_name_to_create", "value": "achsah"}
       - add a board named [speech recogntion]{"entity": "board_name_to_create", "value": "speech recogntion"}
       - add a board named [speech recognition]{"entity": "board_name_to_create", "value": "speech recognition"}
@@ -264,6 +363,65 @@ nlu:
       - add a board named [backlogs]{"entity": "board_name_to_create", "value": "backlogs"}
       - add a board named [analysis]{"entity": "board_name_to_create", "value": "analysis"}
       - add a board named [Employee status]{"entity": "board_name_to_create", "value": "Employee status"}
+      - add a board named [travel destinations]{"entity": "board_name_to_create", "value": "travel destinations"}
+      - add a board named [recipes]{"entity": "board_name_to_create", "value": "recipes"}
+      - add a board named [coding projects]{"entity": "board_name_to_create", "value": "coding projects"}
+      - add a board named [workout routines]{"entity": "board_name_to_create", "value": "workout routines"}
+      - add a board named [vacation ideas]{"entity": "board_name_to_create", "value": "vacation ideas"}
+      - add a board named [favorite books]{"entity": "board_name_to_create", "value": "favorite books"}
+      - add a board named [art inspiration]{"entity": "board_name_to_create", "value": "art inspiration"}
+      - add a board named [customer feedback]{"entity": "board_name_to_create", "value": "customer feedback"}
+      - add a board named [budget planning]{"entity": "board_name_to_create", "value": "budget planning"}
+      - add a board named [meeting minutes]{"entity": "board_name_to_create", "value": "meeting minutes"}
+      - add a board named [project ideas]{"entity": "board_name_to_create", "value": "project ideas"}
+      - add a board named [product roadmap]{"entity": "board_name_to_create", "value": "product roadmap"}
+      - add a board named [design concepts]{"entity": "board_name_to_create", "value": "design concepts"}
+      - add a board named [bug reports]{"entity": "board_name_to_create", "value": "bug reports"}
+      - add a board named [team collaboration]{"entity": "board_name_to_create", "value": "team collaboration"}
+      - add a board named [marketing strategies]{"entity": "board_name_to_create", "value": "marketing strategies"}
+      - add a board named [customer testimonials]{"entity": "board_name_to_create", "value": "customer testimonials"}
+      - add a board named [new features]{"entity": "board_name_to_create", "value": "new features"}
+      - add a board named [project management]{"entity": "board_name_to_create", "value": "project management"}
+      - add a board named [task tracking]{"entity": "board_name_to_create", "value": "task tracking"}
+      - add a board named [client proposals]{"entity": "board_name_to_create", "value": "client proposals"}
+      - add a board named [data analysis]{"entity": "board_name_to_create", "value": "data analysis"}
+      - add a board named [user experience]{"entity": "board_name_to_create", "value": "user experience"}
+      - add a board named [bug fixes]{"entity": "board_name_to_create", "value": "bug fixes"}
+      - add a board named [content ideas]{"entity": "board_name_to_create", "value": "content ideas"}
+      - add a board named [social media]{"entity": "board_name_to_create", "value": "social media"}
+      - add a board named [customer support]{"entity": "board_name_to_create", "value": "customer support"}
+      - add a board named [team goals]{"entity": "board_name_to_create", "value": "team goals"}
+      - add a board named [productivity tips]{"entity": "board_name_to_create", "value": "productivity tips"}
+      - add board [football match]{"entity": "board_name_to_create", "value": "football match"}
+      - add board [project management]{"entity": "board_name_to_create", "value": "project management"}
+      - add board [meeting agenda]{"entity": "board_name_to_create", "value": "meeting agenda"}
+      - add board [team collaboration]{"entity": "board_name_to_create", "value": "team collaboration"}
+      - add board [task tracking]{"entity": "board_name_to_create", "value": "task tracking"}
+      - add board [bug tracking]{"entity": "board_name_to_create", "value": "bug tracking"}
+      - add board [design inspiration]{"entity": "board_name_to_create", "value": "design inspiration"}
+      - add board [recipe ideas]{"entity": "board_name_to_create", "value": "recipe ideas"}
+      - add board [marketing strategies]{"entity": "board_name_to_create", "value": "marketing strategies"}
+      - add board [customer feedback]{"entity": "board_name_to_create", "value": "customer feedback"}
+      - add board [financial analysis]{"entity": "board_name_to_create", "value": "financial analysis"}
+      - add board [workout routines]{"entity": "board_name_to_create", "value": "workout routines"}
+      - add board [travel plans]{"entity": "board_name_to_create", "value": "travel plans"}
+      - add board [job applications]{"entity": "board_name_to_create", "value": "job applications"}
+      - add board [book recommendations]{"entity": "board_name_to_create", "value": "book recommendations"}
+      - add board [project ideas]{"entity": "board_name_to_create", "value": "project ideas"}
+      - add board [customer support]{"entity": "board_name_to_create", "value": "customer support"}
+      - add board [bug fixes]{"entity": "board_name_to_create", "value": "bug fixes"}
+      - add board [user interface]{"entity": "board_name_to_create", "value": "user interface"}
+      - add board [data analysis]{"entity": "board_name_to_create", "value": "data analysis"}
+      - add board [vacation plans]{"entity": "board_name_to_create", "value": "vacation plans"}
+      - add board [coding challenges]{"entity": "board_name_to_create", "value": "coding challenges"}
+      - add board [budgeting]{"entity": "board_name_to_create", "value": "budgeting"}
+      - add board [project milestones]{"entity": "board_name_to_create", "value": "project milestones"}
+      - add board [team goals]{"entity": "board_name_to_create", "value": "team goals"}
+      - add board [client meetings]{"entity": "board_name_to_create", "value": "client meetings"}
+      - add board [content ideas]{"entity": "board_name_to_create", "value": "content ideas"}
+      - add board [bug reports]{"entity": "board_name_to_create", "value": "bug reports"}
+      - add board [social media]{"entity": "board_name_to_create", "value": "social media"}
+      - add board [sales leads]{"entity": "board_name_to_create", "value": "sales leads"}
       - create a board named [achsah]{"entity": "board_name_to_create", "value": "achsah"}
       - create a board named [speech recogntion]{"entity": "board_name_to_create", "value": "speech recogntion"}
       - create a board named [speech recognition]{"entity": "board_name_to_create", "value": "speech recognition"}
@@ -272,6 +430,36 @@ nlu:
       - create a board named [movies]{"entity": "board_name_to_create", "value": "movies"}
       - create a board named [movies to watch]{"entity": "board_name_to_create", "value": "movies to watch"}
       - create a board named [features]{"entity": "board_name_to_create", "value": "features"}
+      - create a new board [Finance]{"entity": "board_name_to_create", "value": "Finance"}
+      - create board [Recipes]{"entity": "board_name_to_create", "value": "Recipes"}
+      - create board [Travel Plans]{"entity": "board_name_to_create", "value": "Travel Plans"}
+      - add a board named [Marketing]{"entity": "board_name_to_create", "value": "Marketing"}
+      - create a board named [Project Management]{"entity": "board_name_to_create", "value": "Project Management"}
+      - add board [Tasks]{"entity": "board_name_to_create", "value": "Tasks"}
+      - create board [Design Ideas]{"entity": "board_name_to_create", "value": "Design Ideas"}
+      - create a new board [Customer Feedback]{"entity": "board_name_to_create", "value": "Customer Feedback"}
+      - create board [Workouts]{"entity": "board_name_to_create", "value": "Workouts"}
+      - create a new board [Product Launch]{"entity": "board_name_to_create", "value": "Product Launch"}
+      - add board [Shopping List]{"entity": "board_name_to_create", "value": "Shopping List"}
+      - create a board named [Event Planning]{"entity": "board_name_to_create", "value": "Event Planning"}
+      - create board [Inspiration]{"entity": "board_name_to_create", "value": "Inspiration"}
+      - add a board named [Bug Tracking]{"entity": "board_name_to_create", "value": "Bug Tracking"}
+      - create a board named [Meeting Agenda]{"entity": "board_name_to_create", "value": "Meeting Agenda"}
+      - create board [Home Renovation]{"entity": "board_name_to_create", "value": "Home Renovation"}
+      - add board [Fitness Goals]{"entity": "board_name_to_create", "value": "Fitness Goals"}
+      - create board [Job Applications]{"entity": "board_name_to_create", "value": "Job Applications"}
+      - create a new board [Social Media]{"entity": "board_name_to_create", "value": "Social Media"}
+      - add a board named [Research]{"entity": "board_name_to_create", "value": "Research"}
+      - create a board named [Budget Planning]{"entity": "board_name_to_create", "value": "Budget Planning"}
+      - create board [Recipe Ideas]{"entity": "board_name_to_create", "value": "Recipe Ideas"}
+      - add board [Project Tasks]{"entity": "board_name_to_create", "value": "Project Tasks"}
+      - create board [Travel Bucket List]{"entity": "board_name_to_create", "value": "Travel Bucket List"}
+      - create a new board [Team Collaboration]{"entity": "board_name_to_create", "value": "Team Collaboration"}
+      - create board [Art Inspiration]{"entity": "board_name_to_create", "value": "Art Inspiration"}
+      - add a board named [Sales Leads]{"entity": "board_name_to_create", "value": "Sales Leads"}
+      - create a board named [Content Strategy]{"entity": "board_name_to_create", "value": "Content Strategy"}
+      - create board [Project Milestones]{"entity": "board_name_to_create", "value": "Project Milestones"}
+      - add board [Recipe Collection]{"entity": "board_name_to_create", "value": "Recipe Collection"}
 
   - intent: update_board_name
     examples: |
