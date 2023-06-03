@@ -39,6 +39,7 @@ nlu:
       - of course
       - that sounds good
       - correct
+
   - intent: deny
     examples: |
       - no
@@ -48,6 +49,7 @@ nlu:
       - don't like that
       - no way
       - not really
+
   - intent: mood_great
     examples: |
       - perfect
@@ -64,6 +66,7 @@ nlu:
       - so so perfect
       - so good
       - so perfect
+
   - intent: mood_unhappy
     examples: |
       - my day was horrible
@@ -80,6 +83,7 @@ nlu:
       - extremly sad
       - so saad
       - so sad
+
   - intent: bot_challenge
     examples: |
       - are you a bot?
@@ -87,10 +91,23 @@ nlu:
       - am I talking to a bot?
       - am I talking to a human?
       - how are you
+
   - intent: hello_world
     examples: |
       - hello world!
       - hello world
+
+  - intent: voice_input
+    examples: |
+      - [hello guys]{"entity": "user_voice_input", "value": "hello guys"}
+      - [hello my world]{"entity": "user_voice_input", "value": "hello my world"}
+      - [hello world how are you]{"entity": "user_voice_input", "value": "hello world how are you"}
+      - [hello world how are you doing]{"entity": "user_voice_input", "value": "hello world how are you doing"}
+      - [hello world how are you doing today]{"entity": "user_voice_input", "value": "hello world how are you doing today"}
+      - [Hey bud]{"entity": "user_voice_input", "value": "Hey bud"}
+      - [cool, good day]{"entity": "user_voice_input", "value": "cool, good day"}
+      - [How you doing]{"entity": "user_voice_input", "value": "How you doing"}
+
   - intent: open_trello
     examples: |
       - open trello

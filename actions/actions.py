@@ -11,6 +11,7 @@ from actions.board_functions import (
     add_board,
     update_board_name,
 )
+from actions.speechtotext import recognize_speech
 
 
 class ActionHelloWorld(Action):
@@ -112,3 +113,27 @@ class ActionUpdateBoardName(Action):
             SlotSet("previous_board_name", tracker.get_slot("previous_board_name")),
             SlotSet("new_board_name", tracker.get_slot("new_board_name")),
         ]
+
+
+class ActionTakeVoiceInput(Action):
+    def name(self) -> Text:
+        return "action_take_voice_input"
+    
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict]:
+        dispatcher.utter_message(text="Please speak now...")
+        recognize_speech(audio_model="C:/new_rasa_trial/whisper_models/base.en.pt")
+        speech = recognize_speech.transcription = []
+        print(speech)
+        dispatcher.utter_message(
+            text=f'You said: {tracker.get_slot("user_voice_input")}'
+        )
+        return [
+            SlotSet("user_voice_input", tracker.get_slot("user_voice_input")),
+        ]
+    
+# recognize_speech(audio_model="C:/new_rasa_trial/whisper_models/base.en.pt")

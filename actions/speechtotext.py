@@ -1,3 +1,5 @@
+""" This script demonstrates how to use whisper to transcribe audio from a microphone in real time."""
+
 import argparse
 import io
 import os
@@ -8,14 +10,15 @@ from tempfile import NamedTemporaryFile
 from time import sleep
 
 import speech_recognition as sr
-import torch
 import whisper
 
-def main():
+
+def recognize_speech(audio_model):
+    """Transcribe audio from microphone in real time using whisper."""
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--model",
-        default="base",
+        default="tiny",
         help="Model to use",
         choices=["tiny", "base", "small", "medium", "large"],
     )
@@ -30,13 +33,13 @@ def main():
     )
     parser.add_argument(
         "--record_timeout",
-        default=2,
+        default=4,
         help="How real time the recording is in seconds.",
         type=float,
     )
     parser.add_argument(
         "--phrase_timeout",
-        default=3,
+        default=2,
         help="How much empty space between recordings before we "
         "consider it a new line in the transcription.",
         type=float,
@@ -65,30 +68,15 @@ def main():
 
     # Important for linux users.
     # Prevents permanent application hang and crash by using the wrong Microphone
-    if "linux" in platform:
-        mic_name = args.default_microphone
-        if not mic_name or mic_name == "list":
-            print("Available microphone devices are: ")
-            for index, name in enumerate(sr.Microphone.list_microphone_names()):
-                print(f'Microphone with name "{name}" found')
-            return
-        else:
-            for index, name in enumerate(sr.Microphone.list_microphone_names()):
-                if mic_name in name:
-                    source = sr.Microphone(sample_rate=16000, device_index=index)
-                    break
-    else:
-        source = sr.Microphone(sample_rate=16000)
-    # Load / Download model
-    # model_path = "C:\\Users\\Achsah\\Downloads\\new rasa trial\\base.en.pt"
-    # audio_model = whisper.load_model(name=model_path, in_memory=True)
-    model = args.model
-    if args.model != "large" and not args.non_english:
-        model = f"{model}.en"
-    audio_model = whisper.load_model(model)
+    source = sr.Microphone(sample_rate=16000, device_index=0)
 
-    # # jit-compile the transcribe function
-    # audio_model.transcribe = torch.jit.script(audio_model.transcribe)
+    # Load / Download model
+    # model = args.model
+    # model = "X:\\virtual-voice-assistant\\models\\small.en.pt"
+    # if args.model != "large" and not args.non_english:
+    #     model = f"{model}.en"
+    # audio_model = audio_model
+    audio_model = whisper.load_model(audio_model)
 
     record_timeout = args.record_timeout
     phrase_timeout = args.phrase_timeout
@@ -149,9 +137,7 @@ def main():
                     f.write(wav_data.read())
 
                 # Read the transcription.
-                result = audio_model.transcribe(
-                    temp_file, fp16=torch.cuda.is_available()
-                )
+                result = audio_model.transcribe(temp_file, fp16=False)
                 text = result["text"].strip()
 
                 # If we detected a pause between recordings, add a new item to our transcripion.
@@ -162,15 +148,14 @@ def main():
                     transcription[-1] = text
 
                 # Clear the console to reprint the updated transcription.
-                os.system("cls" if os.name == "nt" else "clear")
-                # for line in transcription:
-                #     print(line)
-                print("\n".join(transcription))
+                # os.system("cls")
+                for line in transcription:
+                    print(line)
                 # Flush stdout.
                 print("", end="", flush=True)
 
                 # Infinite loops are bad for processors, must sleep.
-                sleep(0.10)
+                sleep(0.1)
         except KeyboardInterrupt:
             break
 
@@ -179,5 +164,5 @@ def main():
         print(line)
 
 
-if __name__ == "_main_":
-    main()
+if __name__ == "__main__":
+    recognize_speech(audio_model="C:/new_rasa_trial/whisper_models/base.en.pt")

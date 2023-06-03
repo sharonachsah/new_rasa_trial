@@ -33,6 +33,11 @@ stories:
       - intent: goodbye
       - action: utter_goodbye
 
+  - story: user speech
+    steps:
+      - intent: voice_input
+      - action: action_take_voice_input
+      
   - story: open trello
     steps:
       - intent: open_trello

@@ -12,6 +12,9 @@ intents:
   - hello_world
   - mood_great
   - mood_unhappy
+  - voice_input:
+      use_entities:
+        - user_voice_input
   - open_trello
   - open_board:
       use_entities:
@@ -26,6 +29,7 @@ intents:
         - new_board_name
 
 entities:
+  - user_voice_input
   - query
   - board_name_to_open
   - board_name_to_create
@@ -33,6 +37,13 @@ entities:
   - new_board_name
 
 slots:
+  user_voice_input:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: user_voice_input
+
   query:
     type: text
     influence_conversation: true
@@ -69,6 +80,8 @@ slots:
       - type: from_entity
         entity: new_board_name
 
+  
+
 responses:
   utter_greet:
     - text: Hey! How are you?
@@ -83,8 +96,6 @@ responses:
     - text: Bye
   utter_iamabot:
     - text: I am a bot, powered by Rasa.
-  utter_open_trello:
-    - text: I have opened the trello website in your browser
   utter_open_board:
     - text: I have opened the board you asked for in your browser
   utter_create_board:
@@ -97,8 +108,8 @@ actions:
   - utter_greet
   - utter_goodbye
   - action_hello_world
+  - action_take_voice_input
   - action_open_trello
-  - utter_open_trello
   - action_open_board
   - utter_open_board
   - action_create_board

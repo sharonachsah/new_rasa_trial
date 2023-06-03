@@ -16,6 +16,11 @@ rules:
       - intent: greet
       - action: action_hello_world
 
+  # - rule: hear
+  #   steps:
+  #     - intent: hear
+  #     - action: action_take_voice_input
+
   - rule: Say 'I have opened the trello website in your browser'
     steps:
       - intent: open_trello
