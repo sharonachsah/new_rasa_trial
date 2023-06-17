@@ -599,3 +599,790 @@ nlu:
       - change board name [songs]{"entity": "previous_board_name", "value": "songs"} to [speech recognition]{"entity": "new_board_name", "value": "speech recognition"}
       - change board name [songs]{"entity": "previous_board_name", "value": "songs"} to [books]{"entity": "new_board_name", "value": "books"}
       - change board name [songs]{"entity": "previous_board_name", "value": "songs"} to [videos]{"entity": "new_board_name", "value": "videos"}
+
+- intent: create_list
+    examples: |
+      - create list [achsah]{"entity": "list_name_to_create", "value": "achsah"}
+      - create list [speech recogntion]{"entity": "list_name_to_create", "value": "speech recogntion"}
+      - create list [speech recognition]{"entity": "list_name_to_create", "value": "speech recognition"}
+      - create list [image classification] {"entity": "list_name_to_create", "value": "image classification"}
+      - create list [data visualization] {"entity": "list_name_to_create", "value": "data visualization"}
+      - create list [sentiment analysis] {"entity": "list_name_to_create", "value": "sentiment analysis"}
+      - create list [machine translation] {"entity": "list_name_to_create", "value": "machine translation"}
+      - create list [natural language processing] {"entity": "list_name_to_create", "value": "natural language processing"}
+      - create list [fraud detection] {"entity": "list_name_to_create", "value": "fraud detection"}
+      - create list [recommendation system] {"entity": "list_name_to_create", "value": "recommendation system"}
+      - create list [customer segmentation] {"entity": "list_name_to_create", "value": "customer segmentation"}
+      - create list [time series forecasting] {"entity": "list_name_to_create", "value": "time series forecasting"}
+      - create list [object detection] {"entity": "list_name_to_create", "value": "object detection"}
+      - create list [speech synthesis] {"entity": "list_name_to_create", "value": "speech synthesis"}
+      - create list [emotion recognition] {"entity": "list_name_to_create", "value": "emotion recognition"}
+      - create list [text summarization] {"entity": "list_name_to_create", "value": "text summarization"}
+      - create list [anomaly detection] {"entity": "list_name_to_create", "value": "anomaly detection"}
+      - create list [chatbot development] {"entity": "list_name_to_create", "value": "chatbot development"}
+      - create list [face recognition] {"entity": "list_name_to_create", "value": "face recognition"}
+      - create list [speech enhancement] {"entity": "list_name_to_create", "value": "speech enhancement"}
+      - create list [customer churn prediction] {"entity": "list_name_to_create", "value": "customer churn prediction"}
+      - create list [named entity recognition] {"entity": "list_name_to_create", "value": "named entity recognition"}
+      - create list [Artificial Intelligence | Research] {"entity": "list_name_to_create", "value": "Artificial Intelligence Research"}
+      - create list [Machine Learning | Projects] {"entity": "list_name_to_create", "value": "Machine Learning Projects"}
+      - create list [Data Analysis | Visualization] {"entity": "list_name_to_create", "value": "Data Analysis Visualization"}
+      - create list [Programming | Code] {"entity": "list_name_to_create", "value": "Programming Code"}
+      - create list [Web Development | Frontend] {"entity": "list_name_to_create", "value": "Web Development Frontend"}
+      - create list [Backend Development | APIs] {"entity": "list_name_to_create", "value": "Backend Development APIs"}
+      - create list [Mobile App Development | UI/UX] {"entity": "list_name_to_create", "value": "Mobile App Development UI/UX"}
+      - create list [Data Science | Algorithms] {"entity": "list_name_to_create", "value": "Data Science Algorithms"}
+      - create list [Cybersecurity | Threats] {"entity": "list_name_to_create", "value": "Cybersecurity Threats"}
+      - create list [Cloud Computing | Infrastructure] {"entity": "list_name_to_create", "value": "Cloud Computing Infrastructure"}
+      - create list [Big Data | Analytics] {"entity": "list_name_to_create", "value": "Big Data Analytics"}
+      - create list [Blockchain | Smart Contracts] {"entity": "list_name_to_create", "value": "Blockchain Smart Contracts"}
+      - create list [Internet of Things | Sensors] {"entity": "list_name_to_create", "value": "Internet of Things Sensors"}
+      - create list [Virtual Reality | Gaming] {"entity": "list_name_to_create", "value": "Virtual Reality Gaming"}
+      - create list [Augmented Reality | Applications] {"entity": "list_name_to_create", "value": "Augmented Reality Applications"}
+      - create list [Computer Vision | Image Processing] {"entity": "list_name_to_create", "value": "Computer Vision Image Processing"}
+      - create list [Natural Language Processing | Chatbots] {"entity": "list_name_to_create", "value": "Natural Language Processing Chatbots"}
+      - create list [Data Engineering | ETL] {"entity": "list_name_to_create", "value": "Data Engineering ETL"}
+      - create list [Art | Design] {"entity": "list_name_to_create", "value": "Art Design"}
+      - create list [Software Engineering | Agile Development] {"entity": "list_name_to_create", "value": "Software Engineering Agile Development"}
+      - create list [speech-to-text conversion] {"entity": "list_name_to_create", "value": "speech-to-text conversion"}
+      - create list [books]{"entity": "list_name_to_create", "value": "books"}
+      - create list [videos]{"entity": "list_name_to_create", "value": "videos"}
+      - create list [movies]{"entity": "list_name_to_create", "value": "movies"}
+      - create list [movies to watch]{"entity": "list_name_to_create", "value": "movies to watch"}
+      - create list [features]{"entity": "list_name_to_create", "value": "features"}
+      - create list [songs]{"entity": "list_name_to_create", "value": "songs"}
+      - create list [bugs to fix]{"entity": "list_name_to_create", "value": "bugs to fix"}
+      - create list [exploratory testing]{"entity": "list_name_to_create", "value": "exploratory testing"}
+      - create list [roadmap]{"entity": "list_name_to_create", "value": "roadmap"}
+      - create list [goals]{"entity": "list_name_to_create", "value": "goals"}
+      - create list [goals for 2023]{"entity": "list_name_to_create", "value": "goals for 2023"}
+      - create list [UX issues]{"entity": "list_name_to_create", "value": "UX issues"}
+      - create list [backlogs]{"entity": "list_name_to_create", "value": "backlogs"}
+      - create list [analysis]{"entity": "list_name_to_create", "value": "analysis"}
+      - create list [Employee status]{"entity": "list_name_to_create", "value": "Employee status"}
+      - create list [Customer feedback] {"entity": "list_name_to_create", "value": "customer feedback"}
+      - create list [Bug tracking] {"entity": "list_name_to_create", "value": "bug tracking"}
+      - create list [Project management] {"entity": "list_name_to_create", "value": "project management"}
+      - create list [Task organization] {"entity": "list_name_to_create", "value": "task organization"}
+      - create list [Budget tracking] {"entity": "list_name_to_create", "value": "budget tracking"}
+      - create list [Meeting scheduling] {"entity": "list_name_to_create", "value": "meeting scheduling"}
+      - create list [Content planning] {"entity": "list_name_to_create", "value": "content planning"}
+      - create list [Event coordination] {"entity": "list_name_to_create", "value": "event coordination"}
+      - create list [Team collaboration] {"entity": "list_name_to_create", "value": "team collaboration"}
+      - create list [Product roadmap] {"entity": "list_name_to_create", "value": "product roadmap"}
+      - create list [Resource allocation] {"entity": "list_name_to_create", "value": "resource allocation"}
+      - create list [Issue tracking] {"entity": "list_name_to_create", "value": "issue tracking"}
+      - create list [Sales pipeline] {"entity": "list_name_to_create", "value": "sales pipeline"}
+      - create list [Feature planning] {"entity": "list_name_to_create", "value": "feature planning"}
+      - create list [Inventory management] {"entity": "list_name_to_create", "value": "inventory management"}
+      - create list [Project collaboration] {"entity": "list_name_to_create", "value": "project collaboration"}
+      - create list [User research] {"entity": "list_name_to_create", "value": "user research"}
+      - create list [Content creation] {"entity": "list_name_to_create", "value": "content creation"}
+      - create list [Workflow automation] {"entity": "list_name_to_create", "value": "workflow automation"}
+      - create list [Marketing campaign] {"entity": "list_name_to_create", "value": "marketing campaign"}
+      - create list [Quality assurance] {"entity": "list_name_to_create", "value": "quality assurance"}
+      - create list [Data analysis] {"entity": "list_name_to_create", "value": "data analysis"}
+      - create list [Customer support] {"entity": "list_name_to_create", "value": "customer support"}
+      - create list [Task tracking] {"entity": "list_name_to_create", "value": "task tracking"}
+      - create list [Feedback collection] {"entity": "list_name_to_create", "value": "feedback collection"}
+      - create list [Project planning] {"entity": "list_name_to_create", "value": "project planning"}
+      - create list [Knowledge base] {"entity": "list_name_to_create", "value": "knowledge base"}
+      - create list [Time tracking] {"entity": "list_name_to_create", "value": "time tracking"}
+      - create list [Content management] {"entity": "list_name_to_create", "value": "content management"}
+      - create list [Issue management] {"entity": "list_name_to_create", "value": "issue management"}
+      - add list [achsah]{"entity": "list_name_to_create", "value": "achsah"}
+      - add list [speech recogntion]{"entity": "list_name_to_create", "value": "speech recogntion"}
+      - add list [speech recognition]{"entity": "list_name_to_create", "value": "speech recognition"}
+      - add list [books]{"entity": "list_name_to_create", "value": "books"}
+      - add list [videos]{"entity": "list_name_to_create", "value": "videos"}
+      - add list [movies]{"entity": "list_name_to_create", "value": "movies"}
+      - add list [movies to watch]{"entity": "list_name_to_create", "value": "movies to watch"}
+      - add list [features]{"entity": "list_name_to_create", "value": "features"}
+      - add list [songs]{"entity": "list_name_to_create", "value": "songs"}
+      - add list [bugs to fix]{"entity": "list_name_to_create", "value": "bugs to fix"}
+      - add list [exploratory testing]{"entity": "list_name_to_create", "value": "exploratory testing"}
+      - add list [roadmap]{"entity": "list_name_to_create", "value": "roadmap"}
+      - add list [goals]{"entity": "list_name_to_create", "value": "goals"}
+      - add list [goals for 2023]{"entity": "list_name_to_create", "value": "goals for 2023"}
+      - add list [UX issues]{"entity": "list_name_to_create", "value": "UX issues"}
+      - add list [backlogs]{"entity": "list_name_to_create", "value": "backlogs"}
+      - add list [analysis]{"entity": "list_name_to_create", "value": "analysis"}
+      - add list [Employee status]{"entity": "list_name_to_create", "value": "Employee status"}
+      - create a new list [achsah]{"entity": "list_name_to_create", "value": "achsah"}
+      - create a new list [speech recogntion]{"entity": "list_name_to_create", "value": "speech recogntion"}
+      - create a new list [speech recognition]{"entity": "list_name_to_create", "value": "speech recognition"}
+      - create a new list [books]{"entity": "list_name_to_create", "value": "books"}
+      - create a new list [videos]{"entity": "list_name_to_create", "value": "videos"}
+      - create a new list [movies]{"entity": "list_name_to_create", "value": "movies"}
+      - create a new list [movies to watch]{"entity": "list_name_to_create", "value": "movies to watch"}
+      - create a new list [features]{"entity": "list_name_to_create", "value": "features"}
+      - create a new list [songs]{"entity": "list_name_to_create", "value": "songs"}
+      - create a new list [bugs to fix]{"entity": "list_name_to_create", "value": "bugs to fix"}
+      - create a new list [exploratory testing]{"entity": "list_name_to_create", "value": "exploratory testing"}
+      - create a new list [roadmap]{"entity": "list_name_to_create", "value": "roadmap"}
+      - create a new list [goals]{"entity": "list_name_to_create", "value": "goals"}
+      - create a new list [goals for 2023]{"entity": "list_name_to_create", "value": "goals for 2023"}
+      - create a new list [UX issues]{"entity": "list_name_to_create", "value": "UX issues"}
+      - create a new list [backlogs]{"entity": "list_name_to_create", "value": "backlogs"}
+      - create a new list [analysis]{"entity": "list_name_to_create", "value": "analysis"}
+      - create a new list [Employee status]{"entity": "list_name_to_create", "value": "Employee status"}
+      - create a new list [work]{"entity": "list_name_to_create", "value": "work"}
+      - create a new list [projects]{"entity": "list_name_to_create", "value": "projects"}
+      - create a new list [ideas]{"entity": "list_name_to_create", "value": "ideas"}
+      - create a new list [recipes]{"entity": "list_name_to_create", "value": "recipes"}
+      - create a new list [shopping]{"entity": "list_name_to_create", "value": "shopping"}
+      - create a new list [inspiration]{"entity": "list_name_to_create", "value": "inspiration"}
+      - create a new list [travel]{"entity": "list_name_to_create", "value": "travel"}
+      - create a new list [fitness]{"entity": "list_name_to_create", "value": "fitness"}
+      - create a new list [music]{"entity": "list_name_to_create", "value": "music"}
+      - create a new list [quotes]{"entity": "list_name_to_create", "value": "quotes"}
+      - create a new list [photography]{"entity": "list_name_to_create", "value": "photography"}
+      - create a new list [art]{"entity": "list_name_to_create", "value": "art"}
+      - create a new list [goals]{"entity": "list_name_to_create", "value": "goals"}
+      - create a new list [coding]{"entity": "list_name_to_create", "value": "coding"}
+      - create a new list [design]{"entity": "list_name_to_create", "value": "design"}
+      - create a new list [memes]{"entity": "list_name_to_create", "value": "memes"}
+      - create a new list [quotes to remember]{"entity": "list_name_to_create", "value": "quotes to remember"}
+      - create a new list [crafts]{"entity": "list_name_to_create", "value": "crafts"}
+      - create a new list [wishlist]{"entity": "list_name_to_create", "value": "wishlist"}
+      - create a new list [technology]{"entity": "list_name_to_create", "value": "technology"}
+      - create a new list [architecture]{"entity": "list_name_to_create", "value": "architecture"}
+      - create a new list [fashion]{"entity": "list_name_to_create", "value": "fashion"}
+      - create a new list [food]{"entity": "list_name_to_create", "value": "food"}
+      - create a new list [pets]{"entity": "list_name_to_create", "value": "pets"}
+      - create a new list [celebrities]{"entity": "list_name_to_create", "value": "celebrities"}
+      - create a new list [quotes for motivation]{"entity": "list_name_to_create", "value": "quotes for motivation"}
+      - create a new list [gardening]{"entity": "list_name_to_create", "value": "gardening"}
+      - create a new list [movies to watch later]{"entity": "list_name_to_create", "value": "movies to watch later"}
+      - create a new list [recipes to try]{"entity": "list_name_to_create", "value": "recipes to try"}
+      - add a list named [achsah]{"entity": "list_name_to_create", "value": "achsah"}
+      - add a list named [speech recogntion]{"entity": "list_name_to_create", "value": "speech recogntion"}
+      - add a list named [speech recognition]{"entity": "list_name_to_create", "value": "speech recognition"}
+      - add a list named [books]{"entity": "list_name_to_create", "value": "books"}
+      - add a list named [videos]{"entity": "list_name_to_create", "value": "videos"}
+      - add a list named [movies]{"entity": "list_name_to_create", "value": "movies"}
+      - add a list named [movies to watch]{"entity": "list_name_to_create", "value": "movies to watch"}
+      - add a list named [features]{"entity": "list_name_to_create", "value": "features"}
+      - add a list named [songs]{"entity": "list_name_to_create", "value": "songs"}
+      - add a list named [bugs to fix]{"entity": "list_name_to_create", "value": "bugs to fix"}
+      - add a list named [exploratory testing]{"entity": "list_name_to_create", "value": "exploratory testing"}
+      - add a list named [roadmap]{"entity": "list_name_to_create", "value": "roadmap"}
+      - add a list named [goals]{"entity": "list_name_to_create", "value": "goals"}
+      - add a list named [goals for 2023]{"entity": "list_name_to_create", "value": "goals for 2023"}
+      - add a list named [UX issues]{"entity": "list_name_to_create", "value": "UX issues"}
+      - add a list named [backlogs]{"entity": "list_name_to_create", "value": "backlogs"}
+      - add a list named [analysis]{"entity": "list_name_to_create", "value": "analysis"}
+      - add a list named [Employee status]{"entity": "list_name_to_create", "value": "Employee status"}
+      - add a list named [travel destinations]{"entity": "list_name_to_create", "value": "travel destinations"}
+      - add a list named [recipes]{"entity": "list_name_to_create", "value": "recipes"}
+      - add a list named [coding projects]{"entity": "list_name_to_create", "value": "coding projects"}
+      - add a list named [workout routines]{"entity": "list_name_to_create", "value": "workout routines"}
+      - add a list named [vacation ideas]{"entity": "list_name_to_create", "value": "vacation ideas"}
+      - add a list named [favorite books]{"entity": "list_name_to_create", "value": "favorite books"}
+      - add a list named [art inspiration]{"entity": "list_name_to_create", "value": "art inspiration"}
+      - add a list named [customer feedback]{"entity": "list_name_to_create", "value": "customer feedback"}
+      - add a list named [budget planning]{"entity": "list_name_to_create", "value": "budget planning"}
+      - add a list named [meeting minutes]{"entity": "list_name_to_create", "value": "meeting minutes"}
+      - add a list named [project ideas]{"entity": "list_name_to_create", "value": "project ideas"}
+      - add a list named [product roadmap]{"entity": "list_name_to_create", "value": "product roadmap"}
+      - add a list named [design concepts]{"entity": "list_name_to_create", "value": "design concepts"}
+      - add a list named [bug reports]{"entity": "list_name_to_create", "value": "bug reports"}
+      - add a list named [team collaboration]{"entity": "list_name_to_create", "value": "team collaboration"}
+      - add a list named [marketing strategies]{"entity": "list_name_to_create", "value": "marketing strategies"}
+      - add a list named [customer testimonials]{"entity": "list_name_to_create", "value": "customer testimonials"}
+      - add a list named [new features]{"entity": "list_name_to_create", "value": "new features"}
+      - add a list named [project management]{"entity": "list_name_to_create", "value": "project management"}
+      - add a list named [task tracking]{"entity": "list_name_to_create", "value": "task tracking"}
+      - add a list named [client proposals]{"entity": "list_name_to_create", "value": "client proposals"}
+      - add a list named [data analysis]{"entity": "list_name_to_create", "value": "data analysis"}
+      - add a list named [user experience]{"entity": "list_name_to_create", "value": "user experience"}
+      - add a list named [bug fixes]{"entity": "list_name_to_create", "value": "bug fixes"}
+      - add a list named [content ideas]{"entity": "list_name_to_create", "value": "content ideas"}
+      - add a list named [social media]{"entity": "list_name_to_create", "value": "social media"}
+      - add a list named [customer support]{"entity": "list_name_to_create", "value": "customer support"}
+      - add a list named [team goals]{"entity": "list_name_to_create", "value": "team goals"}
+      - add a list named [productivity tips]{"entity": "list_name_to_create", "value": "productivity tips"}
+      - add list [football match]{"entity": "list_name_to_create", "value": "football match"}
+      - add list [project management]{"entity": "list_name_to_create", "value": "project management"}
+      - add list [meeting agenda]{"entity": "list_name_to_create", "value": "meeting agenda"}
+      - add list [team collaboration]{"entity": "list_name_to_create", "value": "team collaboration"}
+      - add list [task tracking]{"entity": "list_name_to_create", "value": "task tracking"}
+      - add list [bug tracking]{"entity": "list_name_to_create", "value": "bug tracking"}
+      - add list [design inspiration]{"entity": "list_name_to_create", "value": "design inspiration"}
+      - add list [recipe ideas]{"entity": "list_name_to_create", "value": "recipe ideas"}
+      - add list [marketing strategies]{"entity": "list_name_to_create", "value": "marketing strategies"}
+      - add list [customer feedback]{"entity": "list_name_to_create", "value": "customer feedback"}
+      - add list [financial analysis]{"entity": "list_name_to_create", "value": "financial analysis"}
+      - add list [workout routines]{"entity": "list_name_to_create", "value": "workout routines"}
+      - add list [travel plans]{"entity": "list_name_to_create", "value": "travel plans"}
+      - add list [job applications]{"entity": "list_name_to_create", "value": "job applications"}
+      - add list [book recommendations]{"entity": "list_name_to_create", "value": "book recommendations"}
+      - add list [project ideas]{"entity": "list_name_to_create", "value": "project ideas"}
+      - add list [customer support]{"entity": "list_name_to_create", "value": "customer support"}
+      - add list [bug fixes]{"entity": "list_name_to_create", "value": "bug fixes"}
+      - add list [user interface]{"entity": "list_name_to_create", "value": "user interface"}
+      - add list [data analysis]{"entity": "list_name_to_create", "value": "data analysis"}
+      - add list [vacation plans]{"entity": "list_name_to_create", "value": "vacation plans"}
+      - add list [coding challenges]{"entity": "list_name_to_create", "value": "coding challenges"}
+      - add list [budgeting]{"entity": "list_name_to_create", "value": "budgeting"}
+      - add list [project milestones]{"entity": "list_name_to_create", "value": "project milestones"}
+      - add list [team goals]{"entity": "list_name_to_create", "value": "team goals"}
+      - add list [client meetings]{"entity": "list_name_to_create", "value": "client meetings"}
+      - add list [content ideas]{"entity": "list_name_to_create", "value": "content ideas"}
+      - add list [bug reports]{"entity": "list_name_to_create", "value": "bug reports"}
+      - add list [social media]{"entity": "list_name_to_create", "value": "social media"}
+      - add list [sales leads]{"entity": "list_name_to_create", "value": "sales leads"}
+      - create a list named [achsah]{"entity": "list_name_to_create", "value": "achsah"}
+      - create a list named [speech recogntion]{"entity": "list_name_to_create", "value": "speech recogntion"}
+      - create a list named [speech recognition]{"entity": "list_name_to_create", "value": "speech recognition"}
+      - create a list named [books]{"entity": "list_name_to_create", "value": "books"}
+      - create a list named [videos]{"entity": "list_name_to_create", "value": "videos"}
+      - create a list named [movies]{"entity": "list_name_to_create", "value": "movies"}
+      - create a list named [movies to watch]{"entity": "list_name_to_create", "value": "movies to watch"}
+      - create a list named [features]{"entity": "list_name_to_create", "value": "features"}
+      - create a new list [Finance]{"entity": "list_name_to_create", "value": "Finance"}
+      - create list [Recipes]{"entity": "list_name_to_create", "value": "Recipes"}
+      - create list [Travel Plans]{"entity": "list_name_to_create", "value": "Travel Plans"}
+      - add a list named [Marketing]{"entity": "list_name_to_create", "value": "Marketing"}
+      - create a list named [Project Management]{"entity": "list_name_to_create", "value": "Project Management"}
+      - add list [Tasks]{"entity": "list_name_to_create", "value": "Tasks"}
+      - create list [Design Ideas]{"entity": "list_name_to_create", "value": "Design Ideas"}
+      - create a new list [Customer Feedback]{"entity": "list_name_to_create", "value": "Customer Feedback"}
+      - create list [Workouts]{"entity": "list_name_to_create", "value": "Workouts"}
+      - create a new list [Product Launch]{"entity": "list_name_to_create", "value": "Product Launch"}
+      - add list [Shopping List]{"entity": "list_name_to_create", "value": "Shopping List"}
+      - create a list named [Event Planning]{"entity": "list_name_to_create", "value": "Event Planning"}
+      - create list [Inspiration]{"entity": "list_name_to_create", "value": "Inspiration"}
+      - add a list named [Bug Tracking]{"entity": "list_name_to_create", "value": "Bug Tracking"}
+      - create a list named [Meeting Agenda]{"entity": "list_name_to_create", "value": "Meeting Agenda"}
+      - create list [Home Renovation]{"entity": "list_name_to_create", "value": "Home Renovation"}
+      - add list [Fitness Goals]{"entity": "list_name_to_create", "value": "Fitness Goals"}
+      - create list [Job Applications]{"entity": "list_name_to_create", "value": "Job Applications"}
+      - create a new list [Social Media]{"entity": "list_name_to_create", "value": "Social Media"}
+      - add a list named [Research]{"entity": "list_name_to_create", "value": "Research"}
+      - create a list named [Budget Planning]{"entity": "list_name_to_create", "value": "Budget Planning"}
+      - create list [Recipe Ideas]{"entity": "list_name_to_create", "value": "Recipe Ideas"}
+      - add list [Project Tasks]{"entity": "list_name_to_create", "value": "Project Tasks"}
+      - create list [Travel Bucket List]{"entity": "list_name_to_create", "value": "Travel Bucket List"}
+      - create a new list [Team Collaboration]{"entity": "list_name_to_create", "value": "Team Collaboration"}
+      - create list [Art Inspiration]{"entity": "list_name_to_create", "value": "Art Inspiration"}
+      - add a list named [Sales Leads]{"entity": "list_name_to_create", "value": "Sales Leads"}
+      - create a list named [Content Strategy]{"entity": "list_name_to_create", "value": "Content Strategy"}
+      - create list [Project Milestones]{"entity": "list_name_to_create", "value": "Project Milestones"}
+      - add list [Recipe Collection]{"entity": "list_name_to_create", "value": "Recipe Collection"}
+
+  - intent: update_list_name
+    examples: |
+      - update list name [achsah]{"entity": "previous_list_name", "value": "achsah"} to [speech recogntion]{"entity": "new_list_name", "value": "speech recogntion"}
+      - update list name [achsah]{"entity": "previous_list_name", "value": "achsah"} to [speech recognition]{"entity": "new_list_name", "value": "speech recognition"}
+      - update list name [achsah]{"entity": "previous_list_name", "value": "achsah"} to [books]{"entity": "new_list_name", "value": "books"}
+      - update list name [achsah]{"entity": "previous_list_name", "value": "achsah"} to [videos]{"entity": "new_list_name", "value": "videos"}
+      - update list name [achsah]{"entity": "previous_list_name", "value": "achsah"} to [movies]{"entity": "new_list_name", "value": "movies"}
+      - update list name [achsah]{"entity": "previous_list_name", "value": "achsah"} to [movies to watch]{"entity": "new_list_name", "value": "movies to watch"}
+      - update list name [achsah]{"entity": "previous_list_name", "value": "achsah"} to [features]{"entity": "new_list_name", "value": "features"}
+      - update list name [achsah]{"entity": "previous_list_name", "value": "achsah"} to [songs]{"entity": "new_list_name", "value": "songs"}
+      - update list name [achsah]{"entity": "previous_list_name", "value": "achsah"} to [bugs to fix]{"entity": "new_list_name", "value": "bugs to fix"}
+      - update list name [achsah]{"entity": "previous_list_name", "value": "achsah"} to [exploratory testing]{"entity": "new_list_name", "value": "exploratory testing"}
+      - update list name [books]{"entity": "previous_list_name", "value": "books"} to [speech recogntion]{"entity": "new_list_name", "value": "speech recogntion"}
+      - update list name [books]{"entity": "previous_list_name", "value": "books"} to [speech recognition]{"entity": "new_list_name", "value": "speech recognition"}
+      - update list name [books]{"entity": "previous_list_name", "value": "books"} to [books]{"entity": "new_list_name", "value": "books"}
+      - update list name [books]{"entity": "previous_list_name", "value": "books"} to [videos]{"entity": "new_list_name", "value": "videos"}
+      - update list name [books]{"entity": "previous_list_name", "value": "books"} to [movies]{"entity": "new_list_name", "value": "movies"}
+      - update list name [books]{"entity": "previous_list_name", "value": "videos"} to [movies to watch]{"entity": "new_list_name", "value": "movies to watch"}
+      - update list name [books]{"entity": "previous_list_name", "value": "books"} to [features]{"entity": "new_list_name", "value": "features"}
+      - update list name [books]{"entity": "previous_list_name", "value": "books"} to [songs]{"entity": "new_list_name", "value": "songs"}
+      - update list name [books]{"entity": "previous_list_name", "value": "books"} to [bugs to fix]{"entity": "new_list_name", "value": "bugs to fix"}
+      - update list name [books]{"entity": "previous_list_name", "value": "books"} to [exploratory testing]{"entity": "new_list_name", "value": "exploratory testing"}
+      - update list name [videos]{"entity": "previous_list_name", "value": "videos"} to [speech recogntion]{"entity": "new_list_name", "value": "speech recogntion"}
+      - update list name [videos]{"entity": "previous_list_name", "value": "videos"} to [speech recognition]{"entity": "new_list_name", "value": "speech recognition"}
+      - update list name [videos]{"entity": "previous_list_name", "value": "videos"} to [books]{"entity": "new_list_name", "value": "books"}
+      - update list name [videos]{"entity": "previous_list_name", "value": "videos"} to [videos]{"entity": "new_list_name", "value": "videos"}
+      - update list name [videos]{"entity": "previous_list_name", "value": "videos"} to [movies]{"entity": "new_list_name", "value": "movies"}
+      - update list name [videos]{"entity": "previous_list_name", "value": "videos"} to [movies to watch]{"entity": "new_list_name", "value": "movies to watch"}
+      - update list name [videos]{"entity": "previous_list_name", "value": "videos"} to [features]{"entity": "new_list_name", "value": "features"}
+      - update list name [videos]{"entity": "previous_list_name", "value": "videos"} to [songs]{"entity": "new_list_name", "value": "songs"}
+      - update list name [videos]{"entity": "previous_list_name", "value": "videos"} to [bugs to fix]{"entity": "new_list_name", "value": "bugs to fix"}
+      - update list name [videos]{"entity": "previous_list_name", "value": "videos"} to [exploratory testing]{"entity": "new_list_name", "value": "exploratory testing"}
+      - update list name [movies]{"entity": "previous_list_name", "value": "movies"} to [speech recogntion]{"entity": "new_list_name", "value": "speech recogntion"}
+      - update list name [movies]{"entity": "previous_list_name", "value": "movies"} to [speech recognition]{"entity": "new_list_name", "value": "speech recognition"}
+      - update list name [movies]{"entity": "previous_list_name", "value": "movies"} to [books]{"entity": "new_list_name", "value": "books"}
+      - update list name [movies]{"entity": "previous_list_name", "value": "movies"} to [videos]{"entity": "new_list_name", "value": "videos"}
+      - update list name [movies]{"entity": "previous_list_name", "value": "movies"} to [movies]{"entity": "new_list_name", "value": "movies"}
+      - update list name [movies]{"entity": "previous_list_name", "value": "movies"} to [movies to watch]{"entity": "new_list_name", "value": "movies to watch"}
+      - update list name [movies]{"entity": "previous_list_name", "value": "movies"} to [features]{"entity": "new_list_name", "value": "features"}
+      - update list name [movies]{"entity": "previous_list_name", "value": "movies"} to [songs]{"entity": "new_list_name", "value": "songs"}
+      - update list name [movies]{"entity": "previous_list_name", "value": "movies"} to [bugs to fix]{"entity": "new_list_name", "value": "bugs to fix"}
+      - update list name [movies]{"entity": "previous_list_name", "value": "movies"} to [exploratory testing]{"entity": "new_list_name", "value": "exploratory testing"}
+      - update list name [movies to watch]{"entity": "previous_list_name", "value": "movies to watch"} to [speech recogntion]{"entity": "new_list_name", "value": "speech recogntion"}
+      - update list name [movies to watch]{"entity": "previous_list_name", "value": "movies to watch"} to [speech recognition]{"entity": "new_list_name", "value": "speech recognition"}
+      - update list name [movies to watch]{"entity": "previous_list_name", "value": "movies to watch"} to [books]{"entity": "new_list_name", "value": "books"}
+      - update list name [movies to watch]{"entity": "previous_list_name", "value": "movies to watch"} to [videos]{"entity": "new_list_name", "value": "videos"}
+      - update list name [movies to watch]{"entity": "previous_list_name", "value": "movies to watch"} to [movies]{"entity": "new_list_name", "value": "movies"}
+      - update list name [movies to watch]{"entity": "previous_list_name", "value": "movies to watch"} to [movies to watch]{"entity": "new_list_name", "value": "movies to watch"}
+      - update list name [movies to watch]{"entity": "previous_list_name", "value": "movies to watch"} to [features]{"entity": "new_list_name", "value": "features"}
+      - update list name [movies to watch]{"entity": "previous_list_name", "value": "movies to watch"} to [songs]{"entity": "new_list_name", "value": "songs"}
+      - update list name [movies to watch]{"entity": "previous_list_name", "value": "movies to watch"} to [bugs to fix]{"entity": "new_list_name", "value": "bugs to fix"}
+      - update list name [movies to watch]{"entity": "previous_list_name", "value": "movies to watch"} to [exploratory testing]{"entity": "new_list_name", "value": "exploratory testing"}
+      - update list name [features]{"entity": "previous_list_name", "value": "features"} to [speech recogntion]{"entity": "new_list_name", "value": "speech recogntion"}
+      - update list name [features]{"entity": "previous_list_name", "value": "features"} to [speech recognition]{"entity": "new_list_name", "value": "speech recognition"}
+      - update list name [features]{"entity": "previous_list_name", "value": "features"} to [books]{"entity": "new_list_name", "value": "books"}
+      - update list name [features]{"entity": "previous_list_name", "value": "features"} to [videos]{"entity": "new_list_name", "value": "videos"}
+      - update list name [features]{"entity": "previous_list_name", "value": "features"} to [movies]{"entity": "new_list_name", "value": "movies"}
+      - change list name [achsah]{"entity": "previous_list_name", "value": "achsah"} to [speech recogntion]{"entity": "new_list_name", "value": "speech recogntion"}
+      - change list name [achsah]{"entity": "previous_list_name", "value": "achsah"} to [speech recognition]{"entity": "new_list_name", "value": "speech recognition"}
+      - change list name [achsah]{"entity": "previous_list_name", "value": "achsah"} to [books]{"entity": "new_list_name", "value": "books"}
+      - change list name [achsah]{"entity": "previous_list_name", "value": "achsah"} to [videos]{"entity": "new_list_name", "value": "videos"}
+      - change list name [achsah]{"entity": "previous_list_name", "value": "achsah"} to [movies]{"entity": "new_list_name", "value": "movies"}
+      - change list name [achsah]{"entity": "previous_list_name", "value": "achsah"} to [movies to watch]{"entity": "new_list_name", "value": "movies to watch"}
+      - change list name [achsah]{"entity": "previous_list_name", "value": "achsah"} to [features]{"entity": "new_list_name", "value": "features"}
+      - change list name [achsah]{"entity": "previous_list_name", "value": "achsah"} to [songs]{"entity": "new_list_name", "value": "songs"}
+      - change list name [achsah]{"entity": "previous_list_name", "value": "achsah"} to [bugs to fix]{"entity": "new_list_name", "value": "bugs to fix"}
+      - change list name [achsah]{"entity": "previous_list_name", "value": "achsah"} to [exploratory testing]{"entity": "new_list_name", "value": "exploratory testing"}
+      - change list name [books]{"entity": "previous_list_name", "value": "books"} to [speech recogntion]{"entity": "new_list_name", "value": "speech recogntion"}
+      - change list name [books]{"entity": "previous_list_name", "value": "books"} to [speech recognition]{"entity": "new_list_name", "value": "speech recognition"}
+      - change list name [books]{"entity": "previous_list_name", "value": "books"} to [books]{"entity": "new_list_name", "value": "books"}
+      - change list name [books]{"entity": "previous_list_name", "value": "books"} to [videos]{"entity": "new_list_name", "value": "videos"}
+      - change list name [books]{"entity": "previous_list_name", "value": "books"} to [movies]{"entity": "new_list_name", "value": "movies"}
+      - change list name [books]{"entity": "previous_list_name", "value": "videos"} to [movies to watch]{"entity": "new_list_name", "value": "movies to watch"}
+      - change list name [books]{"entity": "previous_list_name", "value": "books"} to [features]{"entity": "new_list_name", "value": "features"}
+      - change list name [books]{"entity": "previous_list_name", "value": "books"} to [songs]{"entity": "new_list_name", "value": "songs"}
+      - change list name [books]{"entity": "previous_list_name", "value": "books"} to [bugs to fix]{"entity": "new_list_name", "value": "bugs to fix"}
+      - change list name [books]{"entity": "previous_list_name", "value": "books"} to [exploratory testing]{"entity": "new_list_name", "value": "exploratory testing"}
+      - change list name [videos]{"entity": "previous_list_name", "value": "videos"} to [speech recogntion]{"entity": "new_list_name", "value": "speech recogntion"}
+      - change list name [videos]{"entity": "previous_list_name", "value": "videos"} to [speech recognition]{"entity": "new_list_name", "value": "speech recognition"}
+      - change list name [videos]{"entity": "previous_list_name", "value": "videos"} to [books]{"entity": "new_list_name", "value": "books"}
+      - change list name [videos]{"entity": "previous_list_name", "value": "videos"} to [videos]{"entity": "new_list_name", "value": "videos"}
+      - change list name [videos]{"entity": "previous_list_name", "value": "videos"} to [movies]{"entity": "new_list_name", "value": "movies"}
+      - change list name [videos]{"entity": "previous_list_name", "value": "videos"} to [movies to watch]{"entity": "new_list_name", "value": "movies to watch"}
+      - change list name [videos]{"entity": "previous_list_name", "value": "videos"} to [features]{"entity": "new_list_name", "value": "features"}
+      - change list name [videos]{"entity": "previous_list_name", "value": "videos"} to [songs]{"entity": "new_list_name", "value": "songs"}
+      - change list name [videos]{"entity": "previous_list_name", "value": "videos"} to [bugs to fix]{"entity": "new_list_name", "value": "bugs to fix"}
+      - change list name [videos]{"entity": "previous_list_name", "value": "videos"} to [exploratory testing]{"entity": "new_list_name", "value": "exploratory testing"}
+      - change list name [movies]{"entity": "previous_list_name", "value": "movies"} to [speech recogntion]{"entity": "new_list_name", "value": "speech recogntion"}
+      - change list name [movies]{"entity": "previous_list_name", "value": "movies"} to [speech recognition]{"entity": "new_list_name", "value": "speech recognition"}
+      - change list name [movies]{"entity": "previous_list_name", "value": "movies"} to [books]{"entity": "new_list_name", "value": "books"}
+      - change list name [movies]{"entity": "previous_list_name", "value": "movies"} to [videos]{"entity": "new_list_name", "value": "videos"}
+      - change list name [movies]{"entity": "previous_list_name", "value": "movies"} to [movies]{"entity": "new_list_name", "value": "movies"}
+      - change list name [movies]{"entity": "previous_list_name", "value": "movies"} to [movies to watch]{"entity": "new_list_name", "value": "movies to watch"}
+      - change list name [movies]{"entity": "previous_list_name", "value": "movies"} to [features]{"entity": "new_list_name", "value": "features"}
+      - change list name [movies]{"entity": "previous_list_name", "value": "movies"} to [songs]{"entity": "new_list_name", "value": "songs"}
+      - change list name [movies]{"entity": "previous_list_name", "value": "movies"} to [bugs to fix]{"entity": "new_list_name", "value": "bugs to fix"}
+      - change list name [movies]{"entity": "previous_list_name", "value": "movies"} to [exploratory testing]{"entity": "new_list_name", "value": "exploratory testing"}
+      - change list name [movies to watch]{"entity": "previous_list_name", "value": "movies to watch"} to [speech recogntion]{"entity": "new_list_name", "value": "speech recogntion"}
+      - change list name [movies to watch]{"entity": "previous_list_name", "value": "movies to watch"} to [speech recognition]{"entity": "new_list_name", "value": "speech recognition"}
+      - change list name [movies to watch]{"entity": "previous_list_name", "value": "movies to watch"} to [books]{"entity": "new_list_name", "value": "books"}
+      - change list name [movies to watch]{"entity": "previous_list_name", "value": "movies to watch"} to [videos]{"entity": "new_list_name", "value": "videos"}
+      - change list name [movies to watch]{"entity": "previous_list_name", "value": "movies to watch"} to [movies]{"entity": "new_list_name", "value": "movies"}
+      - change list name [movies to watch]{"entity": "previous_list_name", "value": "movies to watch"} to [movies to watch]{"entity": "new_list_name", "value": "movies to watch"}
+      - change list name [movies to watch]{"entity": "previous_list_name", "value": "movies to watch"} to [features]{"entity": "new_list_name", "value": "features"}
+      - change list name [movies to watch]{"entity": "previous_list_name", "value": "movies to watch"} to [songs]{"entity": "new_list_name", "value": "songs"}
+      - change list name [movies to watch]{"entity": "previous_list_name", "value": "movies to watch"} to [bugs to fix]{"entity": "new_list_name", "value": "bugs to fix"}
+      - change list name [movies to watch]{"entity": "previous_list_name", "value": "movies to watch"} to [exploratory testing]{"entity": "new_list_name", "value": "exploratory testing"}
+      - change list name [features]{"entity": "previous_list_name", "value": "features"} to [speech recogntion]{"entity": "new_list_name", "value": "speech recogntion"}
+      - change list name [features]{"entity": "previous_list_name", "value": "features"} to [speech recognition]{"entity": "new_list_name", "value": "speech recognition"}
+      - change list name [features]{"entity": "previous_list_name", "value": "features"} to [books]{"entity": "new_list_name", "value": "books"}
+      - change list name [features]{"entity": "previous_list_name", "value": "features"} to [videos]{"entity": "new_list_name", "value": "videos"}
+      - change list name [features]{"entity": "previous_list_name", "value": "features"} to [movies]{"entity": "new_list_name", "value": "movies"}
+      - change list name [features]{"entity": "previous_list_name", "value": "features"} to [movies to watch]{"entity": "new_list_name", "value": "movies to watch"}
+      - change list name [features]{"entity": "previous_list_name", "value": "features"} to [features]{"entity": "new_list_name", "value": "features"}
+      - change list name [features]{"entity": "previous_list_name", "value": "features"} to [songs]{"entity": "new_list_name", "value": "songs"}
+      - change list name [features]{"entity": "previous_list_name", "value": "features"} to [bugs to fix]{"entity": "new_list_name", "value": "bugs to fix"}
+      - change list name [features]{"entity": "previous_list_name", "value": "features"} to [exploratory testing]{"entity": "new_list_name", "value": "exploratory testing"}
+      - change list name [songs]{"entity": "previous_list_name", "value": "songs"} to [speech recogntion]{"entity": "new_list_name", "value": "speech recogntion"}
+      - change list name [songs]{"entity": "previous_list_name", "value": "songs"} to [speech recognition]{"entity": "new_list_name", "value": "speech recognition"}
+      - change list name [songs]{"entity": "previous_list_name", "value": "songs"} to [books]{"entity": "new_list_name", "value": "books"}
+      - change list name [songs]{"entity": "previous_list_name", "value": "songs"} to [videos]{"entity": "new_list_name", "value": "videos"}
+
+- intent: create_card
+    examples: |
+      - create card [achsah]{"entity": "card_name_to_create", "value": "achsah"}
+      - create card [speech recogntion]{"entity": "card_name_to_create", "value": "speech recogntion"}
+      - create card [speech recognition]{"entity": "card_name_to_create", "value": "speech recognition"}
+      - create card [image classification] {"entity": "card_name_to_create", "value": "image classification"}
+      - create card [data visualization] {"entity": "card_name_to_create", "value": "data visualization"}
+      - create card [sentiment analysis] {"entity": "card_name_to_create", "value": "sentiment analysis"}
+      - create card [machine translation] {"entity": "card_name_to_create", "value": "machine translation"}
+      - create card [natural language processing] {"entity": "card_name_to_create", "value": "natural language processing"}
+      - create card [fraud detection] {"entity": "card_name_to_create", "value": "fraud detection"}
+      - create card [recommendation system] {"entity": "card_name_to_create", "value": "recommendation system"}
+      - create card [customer segmentation] {"entity": "card_name_to_create", "value": "customer segmentation"}
+      - create card [time series forecasting] {"entity": "card_name_to_create", "value": "time series forecasting"}
+      - create card [object detection] {"entity": "card_name_to_create", "value": "object detection"}
+      - create card [speech synthesis] {"entity": "card_name_to_create", "value": "speech synthesis"}
+      - create card [emotion recognition] {"entity": "card_name_to_create", "value": "emotion recognition"}
+      - create card [text summarization] {"entity": "card_name_to_create", "value": "text summarization"}
+      - create card [anomaly detection] {"entity": "card_name_to_create", "value": "anomaly detection"}
+      - create card [chatbot development] {"entity": "card_name_to_create", "value": "chatbot development"}
+      - create card [face recognition] {"entity": "card_name_to_create", "value": "face recognition"}
+      - create card [speech enhancement] {"entity": "card_name_to_create", "value": "speech enhancement"}
+      - create card [customer churn prediction] {"entity": "card_name_to_create", "value": "customer churn prediction"}
+      - create card [named entity recognition] {"entity": "card_name_to_create", "value": "named entity recognition"}
+      - create card [Artificial Intelligence | Research] {"entity": "card_name_to_create", "value": "Artificial Intelligence Research"}
+      - create card [Machine Learning | Projects] {"entity": "card_name_to_create", "value": "Machine Learning Projects"}
+      - create card [Data Analysis | Visualization] {"entity": "card_name_to_create", "value": "Data Analysis Visualization"}
+      - create card [Programming | Code] {"entity": "card_name_to_create", "value": "Programming Code"}
+      - create card [Web Development | Frontend] {"entity": "card_name_to_create", "value": "Web Development Frontend"}
+      - create card [Backend Development | APIs] {"entity": "card_name_to_create", "value": "Backend Development APIs"}
+      - create card [Mobile App Development | UI/UX] {"entity": "card_name_to_create", "value": "Mobile App Development UI/UX"}
+      - create card [Data Science | Algorithms] {"entity": "card_name_to_create", "value": "Data Science Algorithms"}
+      - create card [Cybersecurity | Threats] {"entity": "card_name_to_create", "value": "Cybersecurity Threats"}
+      - create card [Cloud Computing | Infrastructure] {"entity": "card_name_to_create", "value": "Cloud Computing Infrastructure"}
+      - create card [Big Data | Analytics] {"entity": "card_name_to_create", "value": "Big Data Analytics"}
+      - create card [Blockchain | Smart Contracts] {"entity": "card_name_to_create", "value": "Blockchain Smart Contracts"}
+      - create card [Internet of Things | Sensors] {"entity": "card_name_to_create", "value": "Internet of Things Sensors"}
+      - create card [Virtual Reality | Gaming] {"entity": "card_name_to_create", "value": "Virtual Reality Gaming"}
+      - create card [Augmented Reality | Applications] {"entity": "card_name_to_create", "value": "Augmented Reality Applications"}
+      - create card [Computer Vision | Image Processing] {"entity": "card_name_to_create", "value": "Computer Vision Image Processing"}
+      - create card [Natural Language Processing | Chatbots] {"entity": "card_name_to_create", "value": "Natural Language Processing Chatbots"}
+      - create card [Data Engineering | ETL] {"entity": "card_name_to_create", "value": "Data Engineering ETL"}
+      - create card [Art | Design] {"entity": "card_name_to_create", "value": "Art Design"}
+      - create card [Software Engineering | Agile Development] {"entity": "card_name_to_create", "value": "Software Engineering Agile Development"}
+      - create card [speech-to-text conversion] {"entity": "card_name_to_create", "value": "speech-to-text conversion"}
+      - create card [books]{"entity": "card_name_to_create", "value": "books"}
+      - create card [videos]{"entity": "card_name_to_create", "value": "videos"}
+      - create card [movies]{"entity": "card_name_to_create", "value": "movies"}
+      - create card [movies to watch]{"entity": "card_name_to_create", "value": "movies to watch"}
+      - create card [features]{"entity": "card_name_to_create", "value": "features"}
+      - create card [songs]{"entity": "card_name_to_create", "value": "songs"}
+      - create card [bugs to fix]{"entity": "card_name_to_create", "value": "bugs to fix"}
+      - create card [exploratory testing]{"entity": "card_name_to_create", "value": "exploratory testing"}
+      - create card [roadmap]{"entity": "card_name_to_create", "value": "roadmap"}
+      - create card [goals]{"entity": "card_name_to_create", "value": "goals"}
+      - create card [goals for 2023]{"entity": "card_name_to_create", "value": "goals for 2023"}
+      - create card [UX issues]{"entity": "card_name_to_create", "value": "UX issues"}
+      - create card [backlogs]{"entity": "card_name_to_create", "value": "backlogs"}
+      - create card [analysis]{"entity": "card_name_to_create", "value": "analysis"}
+      - create card [Employee status]{"entity": "card_name_to_create", "value": "Employee status"}
+      - create card [Customer feedback] {"entity": "card_name_to_create", "value": "customer feedback"}
+      - create card [Bug tracking] {"entity": "card_name_to_create", "value": "bug tracking"}
+      - create card [Project management] {"entity": "card_name_to_create", "value": "project management"}
+      - create card [Task organization] {"entity": "card_name_to_create", "value": "task organization"}
+      - create card [Budget tracking] {"entity": "card_name_to_create", "value": "budget tracking"}
+      - create card [Meeting scheduling] {"entity": "card_name_to_create", "value": "meeting scheduling"}
+      - create card [Content planning] {"entity": "card_name_to_create", "value": "content planning"}
+      - create card [Event coordination] {"entity": "card_name_to_create", "value": "event coordination"}
+      - create card [Team collaboration] {"entity": "card_name_to_create", "value": "team collaboration"}
+      - create card [Product roadmap] {"entity": "card_name_to_create", "value": "product roadmap"}
+      - create card [Resource allocation] {"entity": "card_name_to_create", "value": "resource allocation"}
+      - create card [Issue tracking] {"entity": "card_name_to_create", "value": "issue tracking"}
+      - create card [Sales pipeline] {"entity": "card_name_to_create", "value": "sales pipeline"}
+      - create card [Feature planning] {"entity": "card_name_to_create", "value": "feature planning"}
+      - create card [Inventory management] {"entity": "card_name_to_create", "value": "inventory management"}
+      - create card [Project collaboration] {"entity": "card_name_to_create", "value": "project collaboration"}
+      - create card [User research] {"entity": "card_name_to_create", "value": "user research"}
+      - create card [Content creation] {"entity": "card_name_to_create", "value": "content creation"}
+      - create card [Workflow automation] {"entity": "card_name_to_create", "value": "workflow automation"}
+      - create card [Marketing campaign] {"entity": "card_name_to_create", "value": "marketing campaign"}
+      - create card [Quality assurance] {"entity": "card_name_to_create", "value": "quality assurance"}
+      - create card [Data analysis] {"entity": "card_name_to_create", "value": "data analysis"}
+      - create card [Customer support] {"entity": "card_name_to_create", "value": "customer support"}
+      - create card [Task tracking] {"entity": "card_name_to_create", "value": "task tracking"}
+      - create card [Feedback collection] {"entity": "card_name_to_create", "value": "feedback collection"}
+      - create card [Project planning] {"entity": "card_name_to_create", "value": "project planning"}
+      - create card [Knowledge base] {"entity": "card_name_to_create", "value": "knowledge base"}
+      - create card [Time tracking] {"entity": "card_name_to_create", "value": "time tracking"}
+      - create card [Content management] {"entity": "card_name_to_create", "value": "content management"}
+      - create card [Issue management] {"entity": "card_name_to_create", "value": "issue management"}
+      - add card [achsah]{"entity": "card_name_to_create", "value": "achsah"}
+      - add card [speech recogntion]{"entity": "card_name_to_create", "value": "speech recogntion"}
+      - add card [speech recognition]{"entity": "card_name_to_create", "value": "speech recognition"}
+      - add card [books]{"entity": "card_name_to_create", "value": "books"}
+      - add card [videos]{"entity": "card_name_to_create", "value": "videos"}
+      - add card [movies]{"entity": "card_name_to_create", "value": "movies"}
+      - add card [movies to watch]{"entity": "card_name_to_create", "value": "movies to watch"}
+      - add card [features]{"entity": "card_name_to_create", "value": "features"}
+      - add card [songs]{"entity": "card_name_to_create", "value": "songs"}
+      - add card [bugs to fix]{"entity": "card_name_to_create", "value": "bugs to fix"}
+      - add card [exploratory testing]{"entity": "card_name_to_create", "value": "exploratory testing"}
+      - add card [roadmap]{"entity": "card_name_to_create", "value": "roadmap"}
+      - add card [goals]{"entity": "card_name_to_create", "value": "goals"}
+      - add card [goals for 2023]{"entity": "card_name_to_create", "value": "goals for 2023"}
+      - add card [UX issues]{"entity": "card_name_to_create", "value": "UX issues"}
+      - add card [backlogs]{"entity": "card_name_to_create", "value": "backlogs"}
+      - add card [analysis]{"entity": "card_name_to_create", "value": "analysis"}
+      - add card [Employee status]{"entity": "card_name_to_create", "value": "Employee status"}
+      - create a new card [achsah]{"entity": "card_name_to_create", "value": "achsah"}
+      - create a new card [speech recogntion]{"entity": "card_name_to_create", "value": "speech recogntion"}
+      - create a new card [speech recognition]{"entity": "card_name_to_create", "value": "speech recognition"}
+      - create a new card [books]{"entity": "card_name_to_create", "value": "books"}
+      - create a new card [videos]{"entity": "card_name_to_create", "value": "videos"}
+      - create a new card [movies]{"entity": "card_name_to_create", "value": "movies"}
+      - create a new card [movies to watch]{"entity": "card_name_to_create", "value": "movies to watch"}
+      - create a new card [features]{"entity": "card_name_to_create", "value": "features"}
+      - create a new card [songs]{"entity": "card_name_to_create", "value": "songs"}
+      - create a new card [bugs to fix]{"entity": "card_name_to_create", "value": "bugs to fix"}
+      - create a new card [exploratory testing]{"entity": "card_name_to_create", "value": "exploratory testing"}
+      - create a new card [roadmap]{"entity": "card_name_to_create", "value": "roadmap"}
+      - create a new card [goals]{"entity": "card_name_to_create", "value": "goals"}
+      - create a new card [goals for 2023]{"entity": "card_name_to_create", "value": "goals for 2023"}
+      - create a new card [UX issues]{"entity": "card_name_to_create", "value": "UX issues"}
+      - create a new card [backlogs]{"entity": "card_name_to_create", "value": "backlogs"}
+      - create a new card [analysis]{"entity": "card_name_to_create", "value": "analysis"}
+      - create a new card [Employee status]{"entity": "card_name_to_create", "value": "Employee status"}
+      - create a new card [work]{"entity": "card_name_to_create", "value": "work"}
+      - create a new card [projects]{"entity": "card_name_to_create", "value": "projects"}
+      - create a new card [ideas]{"entity": "card_name_to_create", "value": "ideas"}
+      - create a new card [recipes]{"entity": "card_name_to_create", "value": "recipes"}
+      - create a new card [shopping]{"entity": "card_name_to_create", "value": "shopping"}
+      - create a new card [inspiration]{"entity": "card_name_to_create", "value": "inspiration"}
+      - create a new card [travel]{"entity": "card_name_to_create", "value": "travel"}
+      - create a new card [fitness]{"entity": "card_name_to_create", "value": "fitness"}
+      - create a new card [music]{"entity": "card_name_to_create", "value": "music"}
+      - create a new card [quotes]{"entity": "card_name_to_create", "value": "quotes"}
+      - create a new card [photography]{"entity": "card_name_to_create", "value": "photography"}
+      - create a new card [art]{"entity": "card_name_to_create", "value": "art"}
+      - create a new card [goals]{"entity": "card_name_to_create", "value": "goals"}
+      - create a new card [coding]{"entity": "card_name_to_create", "value": "coding"}
+      - create a new card [design]{"entity": "card_name_to_create", "value": "design"}
+      - create a new card [memes]{"entity": "card_name_to_create", "value": "memes"}
+      - create a new card [quotes to remember]{"entity": "card_name_to_create", "value": "quotes to remember"}
+      - create a new card [crafts]{"entity": "card_name_to_create", "value": "crafts"}
+      - create a new card [wishlist]{"entity": "card_name_to_create", "value": "wishlist"}
+      - create a new card [technology]{"entity": "card_name_to_create", "value": "technology"}
+      - create a new card [architecture]{"entity": "card_name_to_create", "value": "architecture"}
+      - create a new card [fashion]{"entity": "card_name_to_create", "value": "fashion"}
+      - create a new card [food]{"entity": "card_name_to_create", "value": "food"}
+      - create a new card [pets]{"entity": "card_name_to_create", "value": "pets"}
+      - create a new card [celebrities]{"entity": "card_name_to_create", "value": "celebrities"}
+      - create a new card [quotes for motivation]{"entity": "card_name_to_create", "value": "quotes for motivation"}
+      - create a new card [gardening]{"entity": "card_name_to_create", "value": "gardening"}
+      - create a new card [movies to watch later]{"entity": "card_name_to_create", "value": "movies to watch later"}
+      - create a new card [recipes to try]{"entity": "card_name_to_create", "value": "recipes to try"}
+      - add a card named [achsah]{"entity": "card_name_to_create", "value": "achsah"}
+      - add a card named [speech recogntion]{"entity": "card_name_to_create", "value": "speech recogntion"}
+      - add a card named [speech recognition]{"entity": "card_name_to_create", "value": "speech recognition"}
+      - add a card named [books]{"entity": "card_name_to_create", "value": "books"}
+      - add a card named [videos]{"entity": "card_name_to_create", "value": "videos"}
+      - add a card named [movies]{"entity": "card_name_to_create", "value": "movies"}
+      - add a card named [movies to watch]{"entity": "card_name_to_create", "value": "movies to watch"}
+      - add a card named [features]{"entity": "card_name_to_create", "value": "features"}
+      - add a card named [songs]{"entity": "card_name_to_create", "value": "songs"}
+      - add a card named [bugs to fix]{"entity": "card_name_to_create", "value": "bugs to fix"}
+      - add a card named [exploratory testing]{"entity": "card_name_to_create", "value": "exploratory testing"}
+      - add a card named [roadmap]{"entity": "card_name_to_create", "value": "roadmap"}
+      - add a card named [goals]{"entity": "card_name_to_create", "value": "goals"}
+      - add a card named [goals for 2023]{"entity": "card_name_to_create", "value": "goals for 2023"}
+      - add a card named [UX issues]{"entity": "card_name_to_create", "value": "UX issues"}
+      - add a card named [backlogs]{"entity": "card_name_to_create", "value": "backlogs"}
+      - add a card named [analysis]{"entity": "card_name_to_create", "value": "analysis"}
+      - add a card named [Employee status]{"entity": "card_name_to_create", "value": "Employee status"}
+      - add a card named [travel destinations]{"entity": "card_name_to_create", "value": "travel destinations"}
+      - add a card named [recipes]{"entity": "card_name_to_create", "value": "recipes"}
+      - add a card named [coding projects]{"entity": "card_name_to_create", "value": "coding projects"}
+      - add a card named [workout routines]{"entity": "card_name_to_create", "value": "workout routines"}
+      - add a card named [vacation ideas]{"entity": "card_name_to_create", "value": "vacation ideas"}
+      - add a card named [favorite books]{"entity": "card_name_to_create", "value": "favorite books"}
+      - add a card named [art inspiration]{"entity": "card_name_to_create", "value": "art inspiration"}
+      - add a card named [customer feedback]{"entity": "card_name_to_create", "value": "customer feedback"}
+      - add a card named [budget planning]{"entity": "card_name_to_create", "value": "budget planning"}
+      - add a card named [meeting minutes]{"entity": "card_name_to_create", "value": "meeting minutes"}
+      - add a card named [project ideas]{"entity": "card_name_to_create", "value": "project ideas"}
+      - add a card named [product roadmap]{"entity": "card_name_to_create", "value": "product roadmap"}
+      - add a card named [design concepts]{"entity": "card_name_to_create", "value": "design concepts"}
+      - add a card named [bug reports]{"entity": "card_name_to_create", "value": "bug reports"}
+      - add a card named [team collaboration]{"entity": "card_name_to_create", "value": "team collaboration"}
+      - add a card named [marketing strategies]{"entity": "card_name_to_create", "value": "marketing strategies"}
+      - add a card named [customer testimonials]{"entity": "card_name_to_create", "value": "customer testimonials"}
+      - add a card named [new features]{"entity": "card_name_to_create", "value": "new features"}
+      - add a card named [project management]{"entity": "card_name_to_create", "value": "project management"}
+      - add a card named [task tracking]{"entity": "card_name_to_create", "value": "task tracking"}
+      - add a card named [client proposals]{"entity": "card_name_to_create", "value": "client proposals"}
+      - add a card named [data analysis]{"entity": "card_name_to_create", "value": "data analysis"}
+      - add a card named [user experience]{"entity": "card_name_to_create", "value": "user experience"}
+      - add a card named [bug fixes]{"entity": "card_name_to_create", "value": "bug fixes"}
+      - add a card named [content ideas]{"entity": "card_name_to_create", "value": "content ideas"}
+      - add a card named [social media]{"entity": "card_name_to_create", "value": "social media"}
+      - add a card named [customer support]{"entity": "card_name_to_create", "value": "customer support"}
+      - add a card named [team goals]{"entity": "card_name_to_create", "value": "team goals"}
+      - add a card named [productivity tips]{"entity": "card_name_to_create", "value": "productivity tips"}
+      - add card [football match]{"entity": "card_name_to_create", "value": "football match"}
+      - add card [project management]{"entity": "card_name_to_create", "value": "project management"}
+      - add card [meeting agenda]{"entity": "card_name_to_create", "value": "meeting agenda"}
+      - add card [team collaboration]{"entity": "card_name_to_create", "value": "team collaboration"}
+      - add card [task tracking]{"entity": "card_name_to_create", "value": "task tracking"}
+      - add card [bug tracking]{"entity": "card_name_to_create", "value": "bug tracking"}
+      - add card [design inspiration]{"entity": "card_name_to_create", "value": "design inspiration"}
+      - add card [recipe ideas]{"entity": "card_name_to_create", "value": "recipe ideas"}
+      - add card [marketing strategies]{"entity": "card_name_to_create", "value": "marketing strategies"}
+      - add card [customer feedback]{"entity": "card_name_to_create", "value": "customer feedback"}
+      - add card [financial analysis]{"entity": "card_name_to_create", "value": "financial analysis"}
+      - add card [workout routines]{"entity": "card_name_to_create", "value": "workout routines"}
+      - add card [travel plans]{"entity": "card_name_to_create", "value": "travel plans"}
+      - add card [job applications]{"entity": "card_name_to_create", "value": "job applications"}
+      - add card [book recommendations]{"entity": "card_name_to_create", "value": "book recommendations"}
+      - add card [project ideas]{"entity": "card_name_to_create", "value": "project ideas"}
+      - add card [customer support]{"entity": "card_name_to_create", "value": "customer support"}
+      - add card [bug fixes]{"entity": "card_name_to_create", "value": "bug fixes"}
+      - add card [user interface]{"entity": "card_name_to_create", "value": "user interface"}
+      - add card [data analysis]{"entity": "card_name_to_create", "value": "data analysis"}
+      - add card [vacation plans]{"entity": "card_name_to_create", "value": "vacation plans"}
+      - add card [coding challenges]{"entity": "card_name_to_create", "value": "coding challenges"}
+      - add card [budgeting]{"entity": "card_name_to_create", "value": "budgeting"}
+      - add card [project milestones]{"entity": "card_name_to_create", "value": "project milestones"}
+      - add card [team goals]{"entity": "card_name_to_create", "value": "team goals"}
+      - add card [client meetings]{"entity": "card_name_to_create", "value": "client meetings"}
+      - add card [content ideas]{"entity": "card_name_to_create", "value": "content ideas"}
+      - add card [bug reports]{"entity": "card_name_to_create", "value": "bug reports"}
+      - add card [social media]{"entity": "card_name_to_create", "value": "social media"}
+      - add card [sales leads]{"entity": "card_name_to_create", "value": "sales leads"}
+      - create a card named [achsah]{"entity": "card_name_to_create", "value": "achsah"}
+      - create a card named [speech recogntion]{"entity": "card_name_to_create", "value": "speech recogntion"}
+      - create a card named [speech recognition]{"entity": "card_name_to_create", "value": "speech recognition"}
+      - create a card named [books]{"entity": "card_name_to_create", "value": "books"}
+      - create a card named [videos]{"entity": "card_name_to_create", "value": "videos"}
+      - create a card named [movies]{"entity": "card_name_to_create", "value": "movies"}
+      - create a card named [movies to watch]{"entity": "card_name_to_create", "value": "movies to watch"}
+      - create a card named [features]{"entity": "card_name_to_create", "value": "features"}
+      - create a new card [Finance]{"entity": "card_name_to_create", "value": "Finance"}
+      - create card [Recipes]{"entity": "card_name_to_create", "value": "Recipes"}
+      - create card [Travel Plans]{"entity": "card_name_to_create", "value": "Travel Plans"}
+      - add a card named [Marketing]{"entity": "card_name_to_create", "value": "Marketing"}
+      - create a card named [Project Management]{"entity": "card_name_to_create", "value": "Project Management"}
+      - add card [Tasks]{"entity": "card_name_to_create", "value": "Tasks"}
+      - create card [Design Ideas]{"entity": "card_name_to_create", "value": "Design Ideas"}
+      - create a new card [Customer Feedback]{"entity": "card_name_to_create", "value": "Customer Feedback"}
+      - create card [Workouts]{"entity": "card_name_to_create", "value": "Workouts"}
+      - create a new card [Product Launch]{"entity": "card_name_to_create", "value": "Product Launch"}
+      - add card [Shopping card]{"entity": "card_name_to_create", "value": "Shopping card"}
+      - create a card named [Event Planning]{"entity": "card_name_to_create", "value": "Event Planning"}
+      - create card [Inspiration]{"entity": "card_name_to_create", "value": "Inspiration"}
+      - add a card named [Bug Tracking]{"entity": "card_name_to_create", "value": "Bug Tracking"}
+      - create a card named [Meeting Agenda]{"entity": "card_name_to_create", "value": "Meeting Agenda"}
+      - create card [Home Renovation]{"entity": "card_name_to_create", "value": "Home Renovation"}
+      - add card [Fitness Goals]{"entity": "card_name_to_create", "value": "Fitness Goals"}
+      - create card [Job Applications]{"entity": "card_name_to_create", "value": "Job Applications"}
+      - create a new card [Social Media]{"entity": "card_name_to_create", "value": "Social Media"}
+      - add a card named [Research]{"entity": "card_name_to_create", "value": "Research"}
+      - create a card named [Budget Planning]{"entity": "card_name_to_create", "value": "Budget Planning"}
+      - create card [Recipe Ideas]{"entity": "card_name_to_create", "value": "Recipe Ideas"}
+      - add card [Project Tasks]{"entity": "card_name_to_create", "value": "Project Tasks"}
+      - create card [Travel Bucket card]{"entity": "card_name_to_create", "value": "Travel Bucket card"}
+      - create a new card [Team Collaboration]{"entity": "card_name_to_create", "value": "Team Collaboration"}
+      - create card [Art Inspiration]{"entity": "card_name_to_create", "value": "Art Inspiration"}
+      - add a card named [Sales Leads]{"entity": "card_name_to_create", "value": "Sales Leads"}
+      - create a card named [Content Strategy]{"entity": "card_name_to_create", "value": "Content Strategy"}
+      - create card [Project Milestones]{"entity": "card_name_to_create", "value": "Project Milestones"}
+      - add card [Recipe Collection]{"entity": "card_name_to_create", "value": "Recipe Collection"}
+      - create card [Vacation Plans]{"entity": "card_name_to_create", "value": "Vacation Plans"}
+
+  - intent: update_card_name
+    examples: |
+      - update card name [achsah]{"entity": "previous_card_name", "value": "achsah"} to [speech recogntion]{"entity": "new_card_name", "value": "speech recogntion"}
+      - update card name [achsah]{"entity": "previous_card_name", "value": "achsah"} to [speech recognition]{"entity": "new_card_name", "value": "speech recognition"}
+      - update card name [achsah]{"entity": "previous_card_name", "value": "achsah"} to [books]{"entity": "new_card_name", "value": "books"}
+      - update card name [achsah]{"entity": "previous_card_name", "value": "achsah"} to [videos]{"entity": "new_card_name", "value": "videos"}
+      - update card name [achsah]{"entity": "previous_card_name", "value": "achsah"} to [movies]{"entity": "new_card_name", "value": "movies"}
+      - update card name [achsah]{"entity": "previous_card_name", "value": "achsah"} to [movies to watch]{"entity": "new_card_name", "value": "movies to watch"}
+      - update card name [achsah]{"entity": "previous_card_name", "value": "achsah"} to [features]{"entity": "new_card_name", "value": "features"}
+      - update card name [achsah]{"entity": "previous_card_name", "value": "achsah"} to [songs]{"entity": "new_card_name", "value": "songs"}
+      - update card name [achsah]{"entity": "previous_card_name", "value": "achsah"} to [bugs to fix]{"entity": "new_card_name", "value": "bugs to fix"}
+      - update card name [achsah]{"entity": "previous_card_name", "value": "achsah"} to [exploratory testing]{"entity": "new_card_name", "value": "exploratory testing"}
+      - update card name [books]{"entity": "previous_card_name", "value": "books"} to [speech recogntion]{"entity": "new_card_name", "value": "speech recogntion"}
+      - update card name [books]{"entity": "previous_card_name", "value": "books"} to [speech recognition]{"entity": "new_card_name", "value": "speech recognition"}
+      - update card name [books]{"entity": "previous_card_name", "value": "books"} to [books]{"entity": "new_card_name", "value": "books"}
+      - update card name [books]{"entity": "previous_card_name", "value": "books"} to [videos]{"entity": "new_card_name", "value": "videos"}
+      - update card name [books]{"entity": "previous_card_name", "value": "books"} to [movies]{"entity": "new_card_name", "value": "movies"}
+      - update card name [books]{"entity": "previous_card_name", "value": "videos"} to [movies to watch]{"entity": "new_card_name", "value": "movies to watch"}
+      - update card name [books]{"entity": "previous_card_name", "value": "books"} to [features]{"entity": "new_card_name", "value": "features"}
+      - update card name [books]{"entity": "previous_card_name", "value": "books"} to [songs]{"entity": "new_card_name", "value": "songs"}
+      - update card name [books]{"entity": "previous_card_name", "value": "books"} to [bugs to fix]{"entity": "new_card_name", "value": "bugs to fix"}
+      - update card name [books]{"entity": "previous_card_name", "value": "books"} to [exploratory testing]{"entity": "new_card_name", "value": "exploratory testing"}
+      - update card name [videos]{"entity": "previous_card_name", "value": "videos"} to [speech recogntion]{"entity": "new_card_name", "value": "speech recogntion"}
+      - update card name [videos]{"entity": "previous_card_name", "value": "videos"} to [speech recognition]{"entity": "new_card_name", "value": "speech recognition"}
+      - update card name [videos]{"entity": "previous_card_name", "value": "videos"} to [books]{"entity": "new_card_name", "value": "books"}
+      - update card name [videos]{"entity": "previous_card_name", "value": "videos"} to [videos]{"entity": "new_card_name", "value": "videos"}
+      - update card name [videos]{"entity": "previous_card_name", "value": "videos"} to [movies]{"entity": "new_card_name", "value": "movies"}
+      - update card name [videos]{"entity": "previous_card_name", "value": "videos"} to [movies to watch]{"entity": "new_card_name", "value": "movies to watch"}
+      - update card name [videos]{"entity": "previous_card_name", "value": "videos"} to [features]{"entity": "new_card_name", "value": "features"}
+      - update card name [videos]{"entity": "previous_card_name", "value": "videos"} to [songs]{"entity": "new_card_name", "value": "songs"}
+      - update card name [videos]{"entity": "previous_card_name", "value": "videos"} to [bugs to fix]{"entity": "new_card_name", "value": "bugs to fix"}
+      - update card name [videos]{"entity": "previous_card_name", "value": "videos"} to [exploratory testing]{"entity": "new_card_name", "value": "exploratory testing"}
+      - update card name [movies]{"entity": "previous_card_name", "value": "movies"} to [speech recogntion]{"entity": "new_card_name", "value": "speech recogntion"}
+      - update card name [movies]{"entity": "previous_card_name", "value": "movies"} to [speech recognition]{"entity": "new_card_name", "value": "speech recognition"}
+      - update card name [movies]{"entity": "previous_card_name", "value": "movies"} to [books]{"entity": "new_card_name", "value": "books"}
+      - update card name [movies]{"entity": "previous_card_name", "value": "movies"} to [videos]{"entity": "new_card_name", "value": "videos"}
+      - update card name [movies]{"entity": "previous_card_name", "value": "movies"} to [movies]{"entity": "new_card_name", "value": "movies"}
+      - update card name [movies]{"entity": "previous_card_name", "value": "movies"} to [movies to watch]{"entity": "new_card_name", "value": "movies to watch"}
+      - update card name [movies]{"entity": "previous_card_name", "value": "movies"} to [features]{"entity": "new_card_name", "value": "features"}
+      - update card name [movies]{"entity": "previous_card_name", "value": "movies"} to [songs]{"entity": "new_card_name", "value": "songs"}
+      - update card name [movies]{"entity": "previous_card_name", "value": "movies"} to [bugs to fix]{"entity": "new_card_name", "value": "bugs to fix"}
+      - update card name [movies]{"entity": "previous_card_name", "value": "movies"} to [exploratory testing]{"entity": "new_card_name", "value": "exploratory testing"}
+      - update card name [movies to watch]{"entity": "previous_card_name", "value": "movies to watch"} to [speech recogntion]{"entity": "new_card_name", "value": "speech recogntion"}
+      - update card name [movies to watch]{"entity": "previous_card_name", "value": "movies to watch"} to [speech recognition]{"entity": "new_card_name", "value": "speech recognition"}
+      - update card name [movies to watch]{"entity": "previous_card_name", "value": "movies to watch"} to [books]{"entity": "new_card_name", "value": "books"}
+      - update card name [movies to watch]{"entity": "previous_card_name", "value": "movies to watch"} to [videos]{"entity": "new_card_name", "value": "videos"}
+      - update card name [movies to watch]{"entity": "previous_card_name", "value": "movies to watch"} to [movies]{"entity": "new_card_name", "value": "movies"}
+      - update card name [movies to watch]{"entity": "previous_card_name", "value": "movies to watch"} to [movies to watch]{"entity": "new_card_name", "value": "movies to watch"}
+      - update card name [movies to watch]{"entity": "previous_card_name", "value": "movies to watch"} to [features]{"entity": "new_card_name", "value": "features"}
+      - update card name [movies to watch]{"entity": "previous_card_name", "value": "movies to watch"} to [songs]{"entity": "new_card_name", "value": "songs"}
+      - update card name [movies to watch]{"entity": "previous_card_name", "value": "movies to watch"} to [bugs to fix]{"entity": "new_card_name", "value": "bugs to fix"}
+      - update card name [movies to watch]{"entity": "previous_card_name", "value": "movies to watch"} to [exploratory testing]{"entity": "new_card_name", "value": "exploratory testing"}
+      - update card name [features]{"entity": "previous_card_name", "value": "features"} to [speech recogntion]{"entity": "new_card_name", "value": "speech recogntion"}
+      - update card name [features]{"entity": "previous_card_name", "value": "features"} to [speech recognition]{"entity": "new_card_name", "value": "speech recognition"}
+      - update card name [features]{"entity": "previous_card_name", "value": "features"} to [books]{"entity": "new_card_name", "value": "books"}
+      - update card name [features]{"entity": "previous_card_name", "value": "features"} to [videos]{"entity": "new_card_name", "value": "videos"}
+      - update card name [features]{"entity": "previous_card_name", "value": "features"} to [movies]{"entity": "new_card_name", "value": "movies"}
+      - change card name [achsah]{"entity": "previous_card_name", "value": "achsah"} to [speech recogntion]{"entity": "new_card_name", "value": "speech recogntion"}
+      - change card name [achsah]{"entity": "previous_card_name", "value": "achsah"} to [speech recognition]{"entity": "new_card_name", "value": "speech recognition"}
+      - change card name [achsah]{"entity": "previous_card_name", "value": "achsah"} to [books]{"entity": "new_card_name", "value": "books"}
+      - change card name [achsah]{"entity": "previous_card_name", "value": "achsah"} to [videos]{"entity": "new_card_name", "value": "videos"}
+      - change card name [achsah]{"entity": "previous_card_name", "value": "achsah"} to [movies]{"entity": "new_card_name", "value": "movies"}
+      - change card name [achsah]{"entity": "previous_card_name", "value": "achsah"} to [movies to watch]{"entity": "new_card_name", "value": "movies to watch"}
+      - change card name [achsah]{"entity": "previous_card_name", "value": "achsah"} to [features]{"entity": "new_card_name", "value": "features"}
+      - change card name [achsah]{"entity": "previous_card_name", "value": "achsah"} to [songs]{"entity": "new_card_name", "value": "songs"}
+      - change card name [achsah]{"entity": "previous_card_name", "value": "achsah"} to [bugs to fix]{"entity": "new_card_name", "value": "bugs to fix"}
+      - change card name [achsah]{"entity": "previous_card_name", "value": "achsah"} to [exploratory testing]{"entity": "new_card_name", "value": "exploratory testing"}
+      - change card name [books]{"entity": "previous_card_name", "value": "books"} to [speech recogntion]{"entity": "new_card_name", "value": "speech recogntion"}
+      - change card name [books]{"entity": "previous_card_name", "value": "books"} to [speech recognition]{"entity": "new_card_name", "value": "speech recognition"}
+      - change card name [books]{"entity": "previous_card_name", "value": "books"} to [books]{"entity": "new_card_name", "value": "books"}
+      - change card name [books]{"entity": "previous_card_name", "value": "books"} to [videos]{"entity": "new_card_name", "value": "videos"}
+      - change card name [books]{"entity": "previous_card_name", "value": "books"} to [movies]{"entity": "new_card_name", "value": "movies"}
+      - change card name [books]{"entity": "previous_card_name", "value": "videos"} to [movies to watch]{"entity": "new_card_name", "value": "movies to watch"}
+      - change card name [books]{"entity": "previous_card_name", "value": "books"} to [features]{"entity": "new_card_name", "value": "features"}
+      - change card name [books]{"entity": "previous_card_name", "value": "books"} to [songs]{"entity": "new_card_name", "value": "songs"}
+      - change card name [books]{"entity": "previous_card_name", "value": "books"} to [bugs to fix]{"entity": "new_card_name", "value": "bugs to fix"}
+      - change card name [books]{"entity": "previous_card_name", "value": "books"} to [exploratory testing]{"entity": "new_card_name", "value": "exploratory testing"}
+      - change card name [videos]{"entity": "previous_card_name", "value": "videos"} to [speech recogntion]{"entity": "new_card_name", "value": "speech recogntion"}
+      - change card name [videos]{"entity": "previous_card_name", "value": "videos"} to [speech recognition]{"entity": "new_card_name", "value": "speech recognition"}
+      - change card name [videos]{"entity": "previous_card_name", "value": "videos"} to [books]{"entity": "new_card_name", "value": "books"}
+      - change card name [videos]{"entity": "previous_card_name", "value": "videos"} to [videos]{"entity": "new_card_name", "value": "videos"}
+      - change card name [videos]{"entity": "previous_card_name", "value": "videos"} to [movies]{"entity": "new_card_name", "value": "movies"}
+      - change card name [videos]{"entity": "previous_card_name", "value": "videos"} to [movies to watch]{"entity": "new_card_name", "value": "movies to watch"}
+      - change card name [videos]{"entity": "previous_card_name", "value": "videos"} to [features]{"entity": "new_card_name", "value": "features"}
+      - change card name [videos]{"entity": "previous_card_name", "value": "videos"} to [songs]{"entity": "new_card_name", "value": "songs"}
+      - change card name [videos]{"entity": "previous_card_name", "value": "videos"} to [bugs to fix]{"entity": "new_card_name", "value": "bugs to fix"}
+      - change card name [videos]{"entity": "previous_card_name", "value": "videos"} to [exploratory testing]{"entity": "new_card_name", "value": "exploratory testing"}
+      - change card name [movies]{"entity": "previous_card_name", "value": "movies"} to [speech recogntion]{"entity": "new_card_name", "value": "speech recogntion"}
+      - change card name [movies]{"entity": "previous_card_name", "value": "movies"} to [speech recognition]{"entity": "new_card_name", "value": "speech recognition"}
+      - change card name [movies]{"entity": "previous_card_name", "value": "movies"} to [books]{"entity": "new_card_name", "value": "books"}
+      - change card name [movies]{"entity": "previous_card_name", "value": "movies"} to [videos]{"entity": "new_card_name", "value": "videos"}
+      - change card name [movies]{"entity": "previous_card_name", "value": "movies"} to [movies]{"entity": "new_card_name", "value": "movies"}
+      - change card name [movies]{"entity": "previous_card_name", "value": "movies"} to [movies to watch]{"entity": "new_card_name", "value": "movies to watch"}
+      - change card name [movies]{"entity": "previous_card_name", "value": "movies"} to [features]{"entity": "new_card_name", "value": "features"}
+      - change card name [movies]{"entity": "previous_card_name", "value": "movies"} to [songs]{"entity": "new_card_name", "value": "songs"}
+      - change card name [movies]{"entity": "previous_card_name", "value": "movies"} to [bugs to fix]{"entity": "new_card_name", "value": "bugs to fix"}
+      - change card name [movies]{"entity": "previous_card_name", "value": "movies"} to [exploratory testing]{"entity": "new_card_name", "value": "exploratory testing"}
+      - change card name [movies to watch]{"entity": "previous_card_name", "value": "movies to watch"} to [speech recogntion]{"entity": "new_card_name", "value": "speech recogntion"}
+      - change card name [movies to watch]{"entity": "previous_card_name", "value": "movies to watch"} to [speech recognition]{"entity": "new_card_name", "value": "speech recognition"}
+      - change card name [movies to watch]{"entity": "previous_card_name", "value": "movies to watch"} to [books]{"entity": "new_card_name", "value": "books"}
+      - change card name [movies to watch]{"entity": "previous_card_name", "value": "movies to watch"} to [videos]{"entity": "new_card_name", "value": "videos"}
+      - change card name [movies to watch]{"entity": "previous_card_name", "value": "movies to watch"} to [movies]{"entity": "new_card_name", "value": "movies"}
+      - change card name [movies to watch]{"entity": "previous_card_name", "value": "movies to watch"} to [movies to watch]{"entity": "new_card_name", "value": "movies to watch"}
+      - change card name [movies to watch]{"entity": "previous_card_name", "value": "movies to watch"} to [features]{"entity": "new_card_name", "value": "features"}
+      - change card name [movies to watch]{"entity": "previous_card_name", "value": "movies to watch"} to [songs]{"entity": "new_card_name", "value": "songs"}
+      - change card name [movies to watch]{"entity": "previous_card_name", "value": "movies to watch"} to [bugs to fix]{"entity": "new_card_name", "value": "bugs to fix"}
+      - change card name [movies to watch]{"entity": "previous_card_name", "value": "movies to watch"} to [exploratory testing]{"entity": "new_card_name", "value": "exploratory testing"}
+      - change card name [features]{"entity": "previous_card_name", "value": "features"} to [speech recogntion]{"entity": "new_card_name", "value": "speech recogntion"}
+      - change card name [features]{"entity": "previous_card_name", "value": "features"} to [speech recognition]{"entity": "new_card_name", "value": "speech recognition"}
+      - change card name [features]{"entity": "previous_card_name", "value": "features"} to [books]{"entity": "new_card_name", "value": "books"}
+      - change card name [features]{"entity": "previous_card_name", "value": "features"} to [videos]{"entity": "new_card_name", "value": "videos"}
+      - change card name [features]{"entity": "previous_card_name", "value": "features"} to [movies]{"entity": "new_card_name", "value": "movies"}
+      - change card name [features]{"entity": "previous_card_name", "value": "features"} to [movies to watch]{"entity": "new_card_name", "value": "movies to watch"}
+      - change card name [features]{"entity": "previous_card_name", "value": "features"} to [features]{"entity": "new_card_name", "value": "features"}
+      - change card name [features]{"entity": "previous_card_name", "value": "features"} to [songs]{"entity": "new_card_name", "value": "songs"}
+      - change card name [features]{"entity": "previous_card_name", "value": "features"} to [bugs to fix]{"entity": "new_card_name", "value": "bugs to fix"}
+      - change card name [features]{"entity": "previous_card_name", "value": "features"} to [exploratory testing]{"entity": "new_card_name", "value": "exploratory testing"}
+      - change card name [songs]{"entity": "previous_card_name", "value": "songs"} to [speech recogntion]{"entity": "new_card_name", "value": "speech recogntion"}
+      - change card name [songs]{"entity": "previous_card_name", "value": "songs"} to [speech recognition]{"entity": "new_card_name", "value": "speech recognition"}
+      - change card name [songs]{"entity": "previous_card_name", "value": "songs"} to [books]{"entity": "new_card_name", "value": "books"}
+      - change card name [songs]{"entity": "previous_card_name", "value": "songs"} to [videos]{"entity": "new_card_name", "value": "videos"}
