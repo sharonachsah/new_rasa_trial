@@ -6,6 +6,7 @@ from queue import Queue
 from tempfile import NamedTemporaryFile
 from time import sleep
 
+import requests
 import speech_recognition as sr
 import streamlit as st
 import whisper
@@ -85,12 +86,20 @@ def recognize_speech(audio_model_path: str, start_recognition: bool = False):
                     f.write(wav_data.read())
 
                 result = audio_model.transcribe(temp_file, fp16=False)
-                text = result["text"].strip()
+                text = result["text"]
+                # Save list to string
+                # text = " ".join(text)
+                # print("Text from transcribe:", text, type(text))
+
+                # text = text[-1].strip()
 
                 if phrase_complete:
                     transcription = text
                 else:
                     transcription = text
+
+                if transcription:
+                    send_transcription_to_rasa(transcription)
 
                 text_area_key = f"transcription_text_area_{counter}"
                 counter += 1
@@ -103,6 +112,23 @@ def recognize_speech(audio_model_path: str, start_recognition: bool = False):
             break
 
     return recognizer
+
+
+def send_transcription_to_rasa(transcription: str):
+    """Send transcription to Rasa."""
+    rasa_server_url = "http://localhost:5005"
+    # remove dot from transcription
+    transcription = transcription.strip(".")
+    print("\nTranscription Payload:", transcription)
+
+    payload = {"message": transcription.lower()}
+
+    response = requests.post(f"{rasa_server_url}/webhooks/rest/webhook", json=payload)
+
+    if response.status_code == 200:
+        print("Bot said: ", response.json()[0]["text"])
+    else:
+        print("Error: ", response.status_code, response.text)
 
 
 if __name__ == "__main__":

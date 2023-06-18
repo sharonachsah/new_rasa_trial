@@ -16,6 +16,7 @@ intents:
       use_entities:
         - user_voice_input
   - open_trello
+
   - open_board:
       use_entities:
         - board_name_to_open
@@ -27,6 +28,20 @@ intents:
       use_entities:
         - previous_board_name
         - new_board_name
+  - create_list:
+      use_entities:
+        - list_name_to_create
+  - update_list_name:
+      use_entities:
+        - previous_list_name
+        - new_list_name
+  - create_card:
+      use_entities:
+        - card_name_to_create
+  - update_card_name:
+      use_entities:
+        - previous_card_name
+        - new_card_name
 
 entities:
   - user_voice_input

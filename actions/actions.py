@@ -6,12 +6,12 @@ from rasa_sdk.events import SlotSet
 from rasa_sdk.executor import CollectingDispatcher
 
 from actions.board_functions import (
+    add_board,
     open_board,
     open_trello,
-    add_board,
     update_board_name,
 )
-from actions.speechtotext import recognize_speech
+from actions.list_functions import add_list
 
 
 # This is a Python class that defines an action called "action_hello_world" which sends a message
@@ -137,3 +137,24 @@ class ActionTakeVoiceInput(Action):
 
 
 # recognize_speech(audio_model="C:/new_rasa_trial/whisper_models/base.en.pt")
+
+
+class ActionCreateList(Action):
+    def name(self) -> Text:
+        return "action_create_list"
+
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ):
+        entity_value = tracker.get_slot("list_name_to_create")
+        entity_value1 = tracker.get_slot("board_name_to_create_list")
+        add_list(boardnametoaddlist=entity_value1, listnametoadd=entity_value)
+        dispatcher.utter_message(text="Created new list, please check your browser.")
+
+        return [
+            SlotSet("list_name_to_create", entity_value),
+            SlotSet("board_name_to_create_list", entity_value1),
+        ]
