@@ -14,9 +14,9 @@ from actions.board_functions import (
 from actions.speechtotext import recognize_speech
 
 
+# This is a Python class that defines an action called "action_hello_world" which sends a message
+# "Hello Dude!" to the user.
 class ActionHelloWorld(Action):
-    """This is a custom action to say hello to the user"""
-
     def name(self) -> Text:
         return "action_hello_world"
 
@@ -31,9 +31,9 @@ class ActionHelloWorld(Action):
         return []
 
 
+# This is a Python class that defines an action to open Trello and sends a message to the user
+# confirming that Trello has been opened.
 class ActionOpenTrello(Action):
-    """This is a custom action to open trello in the browser"""
-
     def name(self) -> Text:
         return "action_open_trello"
 
@@ -44,9 +44,8 @@ class ActionOpenTrello(Action):
         return [SlotSet("query", query)]
 
 
+# This is a Python class that defines an action to open a board and return a message to the user.
 class ActionOpenBoard(Action):
-    """This is a custom action to open a board in the browser"""
-
     def name(self) -> Text:
         return "action_open_board"
 
@@ -66,9 +65,8 @@ class ActionOpenBoard(Action):
         return [SlotSet("board_name_to_open", entity_value)]
 
 
+# This is a Python class that creates a Trello board and returns a message to the user.
 class ActionCreateBoard(Action):
-    """This is a custom action to open a board in the browser"""
-
     def name(self) -> Text:
         return "action_create_board"
 
@@ -88,9 +86,8 @@ class ActionCreateBoard(Action):
         return [SlotSet("board_name_to_create", entity_value)]
 
 
+# This is a Python class that updates the name of a board and returns a message to the user.
 class ActionUpdateBoardName(Action):
-    """This is a custom action to open a board in the browser"""
-
     def name(self) -> Text:
         return "action_update_board_name"
 
@@ -115,10 +112,12 @@ class ActionUpdateBoardName(Action):
         ]
 
 
+# This is a Rasa action class that takes voice input from the user and transcribes it using a
+# pre-trained audio model.
 class ActionTakeVoiceInput(Action):
     def name(self) -> Text:
         return "action_take_voice_input"
-    
+
     async def run(
         self,
         dispatcher: CollectingDispatcher,
@@ -126,14 +125,15 @@ class ActionTakeVoiceInput(Action):
         domain: Dict[Text, Any],
     ) -> List[Dict]:
         dispatcher.utter_message(text="Please speak now...")
-        recognize_speech(audio_model="C:/new_rasa_trial/whisper_models/base.en.pt")
-        speech = recognize_speech.transcription = []
-        print(speech)
+        # recognize_speech(audio_model="C:/new_rasa_trial/whisper_models/base.en.pt")
+        # speech = recognize_speech.transcription = []
+        # print(speech)
         dispatcher.utter_message(
             text=f'You said: {tracker.get_slot("user_voice_input")}'
         )
         return [
             SlotSet("user_voice_input", tracker.get_slot("user_voice_input")),
         ]
-    
+
+
 # recognize_speech(audio_model="C:/new_rasa_trial/whisper_models/base.en.pt")

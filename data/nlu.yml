@@ -600,7 +600,7 @@ nlu:
       - change board name [songs]{"entity": "previous_board_name", "value": "songs"} to [books]{"entity": "new_board_name", "value": "books"}
       - change board name [songs]{"entity": "previous_board_name", "value": "songs"} to [videos]{"entity": "new_board_name", "value": "videos"}
 
-- intent: create_list
+  - intent: create_list
     examples: |
       - create list [achsah]{"entity": "list_name_to_create", "value": "achsah"}
       - create list [speech recogntion]{"entity": "list_name_to_create", "value": "speech recogntion"}
@@ -993,7 +993,7 @@ nlu:
       - change list name [songs]{"entity": "previous_list_name", "value": "songs"} to [books]{"entity": "new_list_name", "value": "books"}
       - change list name [songs]{"entity": "previous_list_name", "value": "songs"} to [videos]{"entity": "new_list_name", "value": "videos"}
 
-- intent: create_card
+  - intent: create_card
     examples: |
       - create card [achsah]{"entity": "card_name_to_create", "value": "achsah"}
       - create card [speech recogntion]{"entity": "card_name_to_create", "value": "speech recogntion"}

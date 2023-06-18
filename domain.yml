@@ -35,6 +35,12 @@ entities:
   - board_name_to_create
   - previous_board_name
   - new_board_name
+  - list_name_to_create
+  - previous_list_name
+  - new_list_name
+  - card_name_to_create
+  - previous_card_name
+  - new_card_name
 
 slots:
   user_voice_input:
@@ -79,8 +85,6 @@ slots:
     mappings:
       - type: from_entity
         entity: new_board_name
-
-  
 
 responses:
   utter_greet:

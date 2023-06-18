@@ -41,6 +41,13 @@ def add_board(boardnametoadd: str):
 
 
 def open_board(boardnametoopen: str):
+    """
+    This function opens a Trello board in the web browser if it exists, given a board name as input.
+
+    :param boardnametoopen: The parameter `boardnametoopen` is a string that represents the name of the
+    Trello board that the user wants to open
+    :type boardnametoopen: str
+    """
     board_name = re.sub(r"[^\w\s]", "", boardnametoopen)
     # board_name = board_name.strip().replace(" ", "-")
     boards = client.list_boards()

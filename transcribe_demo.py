@@ -33,13 +33,13 @@ def main(audio_model):
     )
     parser.add_argument(
         "--record_timeout",
-        default=4,
+        default=30,
         help="How real time the recording is in seconds.",
         type=float,
     )
     parser.add_argument(
         "--phrase_timeout",
-        default=2,
+        default=4,
         help="How much empty space between recordings before we "
         "consider it a new line in the transcription.",
         type=float,
@@ -162,7 +162,8 @@ def main(audio_model):
     print("\n\nTranscription:")
     for line in transcription:
         print(line)
+    return line
 
 
 if __name__ == "__main__":
-    main(audio_model="C:/new_rasa_trial/whisper_models/base.en.pt")
+    main(audio_model="X:/new_rasa_trial/whisper_models/tiny.en.pt")

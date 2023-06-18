@@ -4,6 +4,7 @@ import os
 import azure.cognitiveservices.speech as speechsdk
 
 
+
 def recognizer():
     """This function will take in audio and convert it to text"""
     speech_config = speechsdk.SpeechConfig(
