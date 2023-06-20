@@ -49,7 +49,7 @@ def open_board(boardnametoopen: str):
     :type boardnametoopen: str
     """
     board_name = re.sub(r"[^\w\s]", "", boardnametoopen)
-    # board_name = board_name.strip().replace(" ", "-")
+    # board_name = board_name.s.replace(" ", "-")
     boards = client.list_boards()
     board_names = {
         board.name.lower() for board in boards

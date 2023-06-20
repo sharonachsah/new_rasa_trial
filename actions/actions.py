@@ -148,7 +148,7 @@ class ActionUpdateListName(Action):
             SlotSet("board_name_to_update_list", entity_value1),
             SlotSet("new_list_name", entity_value2),
         ]
-    
+
 class ActionCreateCard(Action):
     def name(self) -> Text:
         return "action_create_card"
@@ -168,7 +168,7 @@ class ActionCreateCard(Action):
             SlotSet("card_name_to_create", entity_value),
             SlotSet("list_name_to_create_card", entity_value1),
         ]
-    
+
 
 class ActionUpdateCardName(Action):
     def name(self) -> Text:

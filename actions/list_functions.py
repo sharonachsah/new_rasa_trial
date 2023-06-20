@@ -17,7 +17,7 @@ def add_list(boardname: str, listname: str):
             board.add_list(listname)
 
 
-def update_list(boardname: str, listname: str, newname: str):
+def update_list_name(boardname: str, listname: str, newname: str):
     """
     It takes a Trello client object as an argument, asks the user for the name of a board, and then
     updates the name of a list on that board with a name that the user provides.
