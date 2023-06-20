@@ -33,11 +33,6 @@ stories:
       - intent: goodbye
       - action: utter_goodbye
 
-  - story: user speech
-    steps:
-      - intent: voice_input
-      - action: action_take_voice_input
-      
   - story: open trello
     steps:
       - intent: open_trello
@@ -79,3 +74,51 @@ stories:
       # - slot_was_set:
       #     - previous_board_name: previous_board_name
       #     - new_board_name: new_board_name
+
+  - story: create list
+    steps:
+      - intent: create_list
+        entities:
+          - list_name_to_create: "Achsah"
+          - board_name: "demo"
+      - action: action_create_list
+      - action: utter_create_list
+      # - slot_was_set:
+      #     - list_name: list_name
+
+  - story: update list name
+    steps:
+      - intent: update_list_name
+        entities:
+          - previous_list_name: "Achsah"
+          - new_list_name: "list1"
+          - board_name: "demo"
+      - action: action_update_list_name
+      - action: utter_update_list_name
+      # - slot_was_set:
+      #     - previous_list_name: previous_list_name
+      #     - new_list_name: new_list_name
+
+  - story: create card
+    steps:
+      - intent: create_card
+        entities:
+          - card_name_to_create: "Achsah"
+      - action: action_create_card
+      - action: utter_create_card
+      # - slot_was_set:
+      #     - card_name: card_name
+
+  - story: update card name
+    steps:
+      - intent: update_card_name
+        entities:
+          - previous_card_name: "Achsah"
+          - new_card_name: "card1"
+          - list_name: "list1"
+          - board_name: "demo"
+      - action: action_update_card_name
+      - action: utter_update_card_name
+      # - slot_was_set:
+      #     - previous_card_name: previous_card_name
+      #     - new_card_name: new_card_name

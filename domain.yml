@@ -11,19 +11,14 @@ intents:
   - greet
   - hello_world
   - mood_great
-  - mood_unhappy
-  - voice_input:
-      use_entities:
-        - user_voice_input
+  - mood_unhappy  
   - open_trello
-
   - open_board:
       use_entities:
         - board_name_to_open
   - create_board:
       use_entities:
         - board_name_to_create
-
   - update_board_name:
       use_entities:
         - previous_board_name
@@ -31,21 +26,31 @@ intents:
   - create_list:
       use_entities:
         - list_name_to_create
+        - board_name_to_create_list
   - update_list_name:
       use_entities:
         - previous_list_name
         - new_list_name
+        - board_name_to_update_list
   - create_card:
       use_entities:
         - card_name_to_create
+        - list_name_to_create_card
+        - board_name_to_create_card
   - update_card_name:
       use_entities:
         - previous_card_name
         - new_card_name
+        - board_name_to_update_card
+        - list_name_to_update_card
 
 entities:
-  - user_voice_input
   - query
+  - board_name_to_create_card
+  - list_name_to_create_card
+  - board_name_to_update_card
+  - list_name_to_update_card
+  - board_name_to_create_list
   - board_name_to_open
   - board_name_to_create
   - previous_board_name
@@ -58,13 +63,6 @@ entities:
   - new_card_name
 
 slots:
-  user_voice_input:
-    type: text
-    influence_conversation: true
-    mappings:
-      - type: from_entity
-        entity: user_voice_input
-
   query:
     type: text
     influence_conversation: true
@@ -101,6 +99,90 @@ slots:
       - type: from_entity
         entity: new_board_name
 
+  list_name_to_create:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: list_name_to_create
+
+  previous_list_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: previous_list_name
+
+  new_list_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: new_list_name
+
+  board_name_to_create_list:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: board_name_to_create_list
+
+  card_name_to_create:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: card_name_to_create
+  
+  previous_card_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: previous_card_name
+  
+  new_card_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: new_card_name
+
+  update_card_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: update_card_name
+
+  board_name_to_update_card:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: board_name_to_update_card
+
+  list_name_to_update_card:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: list_name_to_update_card
+
+  board_name_to_create_card:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: board_name_to_create_card
+
+  list_name_to_create_card:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: list_name_to_create_card
+
 responses:
   utter_greet:
     - text: Hey! How are you?
@@ -121,19 +203,36 @@ responses:
     - text: I have created the board you asked for in your browser
   utter_update_board_name:
     - text: I have updated the board name you asked for in your browser
+  utter_create_list:
+    - text: I have created the list you asked for in your browser
+  utter_update_list_name:
+    - text: I have updated the list name you asked for in your browser
+  utter_create_card:
+    - text: I have created the card you asked for in your browser
+  utter_update_card_name:
+    - text: I have updated the card name you asked for in your browser  
 
 actions:
   - utter_iamabot
   - utter_greet
   - utter_goodbye
   - action_hello_world
-  - action_take_voice_input
   - action_open_trello
   - action_open_board
   - utter_open_board
   - action_create_board
   - utter_create_board
   - action_update_board_name
+  - utter_update_board_name
+  - action_create_list
+  - utter_create_list
+  - action_update_list_name
+  - utter_update_list_name
+  - action_create_card
+  - utter_create_card
+  - action_update_card_name
+  - utter_update_card_name
+
 # - board_memberships
 # - board_labels
 # - board_lists

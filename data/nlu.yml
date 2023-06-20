@@ -96,18 +96,6 @@ nlu:
     examples: |
       - hello world!
       - hello world
-
-  - intent: voice_input
-    examples: |
-      - [hello guys]{"entity": "user_voice_input", "value": "hello guys"}
-      - [hello my world]{"entity": "user_voice_input", "value": "hello my world"}
-      - [hello world how are you]{"entity": "user_voice_input", "value": "hello world how are you"}
-      - [hello world how are you doing]{"entity": "user_voice_input", "value": "hello world how are you doing"}
-      - [hello world how are you doing today]{"entity": "user_voice_input", "value": "hello world how are you doing today"}
-      - [Hey bud]{"entity": "user_voice_input", "value": "Hey bud"}
-      - [cool, good day]{"entity": "user_voice_input", "value": "cool, good day"}
-      - [How you doing]{"entity": "user_voice_input", "value": "How you doing"}
-
   - intent: open_trello
     examples: |
       - open trello
@@ -870,6 +858,297 @@ nlu:
       - create a list named [Content Strategy]{"entity": "list_name_to_create", "value": "Content Strategy"}
       - create list [Project Milestones]{"entity": "list_name_to_create", "value": "Project Milestones"}
       - add list [Recipe Collection]{"entity": "list_name_to_create", "value": "Recipe Collection"}
+      - create list [picnic plans]{"entity": "list_name_to_create", "value": "picnic plans"} to board [picnic plans]{"entity": "board_name_to_create_list", "value": "picnic plans"}
+      - create list [speech recogntion]{"entity": "list_name_to_create", "value": "speech recogntion"} to board [Demo]{"entity": "board_name_to_create_list", "value": "picnic plans"}
+      - create list [speech recognition]{"entity": "list_name_to_create", "value": "speech recognition"} in board [paradox]{"entity": "board_name_to_create_list", "value": "picnic plans"}
+      - create list [image classification] {"entity": "list_name_to_create", "value": "image classification"} to board [polyglot]{"entity": "board_name_to_create_list", "value": "picnic plans"}
+      - create list [data visualization] {"entity": "list_name_to_create", "value": "data visualization"} to board [Achsah]{"entity": "board_name_to_create_list", "value": "Achsah"}
+      - create list [sentiment analysis] {"entity": "list_name_to_create", "value": "sentiment analysis"} in board [polyglot]{"entity": "board_name_to_create_list", "value": "polyglot"}
+      - create list [machine translation] {"entity": "list_name_to_create", "value": "machine translation"} to board [polyglot]{"entity": "board_name_to_create_list", "value": "polyglot"}
+      - create list [natural language processing] {"entity": "list_name_to_create", "value": "natural language processing"} in board [polyglot]{"entity": "board_name_to_create_list", "value": "polyglot"}
+      - create list [fraud detection] {"entity": "list_name_to_create", "value": "fraud detection"} in board [polyglot]{"entity": "board_name_to_create_list", "value": "polyglot"}
+      - create list [recommendation system] {"entity": "list_name_to_create", "value": "recommendation system"} to board [polyglot]{"entity": "board_name_to_create_list", "value": "polyglot"}
+      - create list [customer segmentation] {"entity": "list_name_to_create", "value": "customer segmentation"} in board [polyglot]{"entity": "board_name_to_create_list", "value": "Polyglot"}
+      - create list [time series forecasting] {"entity": "list_name_to_create", "value": "time series forecasting"} to board [polyglot]{"entity": "board_name_to_create_list", "value": "Polyglot"}
+      - create list [object detection] {"entity": "list_name_to_create", "value": "object detection"} to board [polyglot]{"entity": "board_name_to_create_list", "value": "polyglot"}
+      - create list [speech synthesis] {"entity": "list_name_to_create", "value": "speech synthesis"} on board [polyglot]{"entity": "board_name_to_create_list", "value": "polyglot"}
+      - create list [emotion recognition] {"entity": "list_name_to_create", "value": "emotion recognition"} to board [polyglot]{"entity": "board_name_to_create_list", "value": "polyglot"}
+      - create list [text summarization] {"entity": "list_name_to_create", "value": "text summarization"} to board [polyglot]{"entity": "board_name_to_create_list", "value": "polyglot"} in board [polyglot]{"entity": "board_name_to_create_list", "value": "paradox"}
+      - create list [anomaly detection] {"entity": "list_name_to_create", "value": "anomaly detection"} to board [paradox]{"entity": "board_name_to_create_list", "value": "paradox"}
+      - create list [chatbot development] {"entity": "list_name_to_create", "value": "chatbot development"} to board [paradox]{"entity": "board_name_to_create_list", "value": "paradox"}
+      - create list [face recognition] {"entity": "list_name_to_create", "value": "face recognition"} to board [paradox]{"entity": "board_name_to_create_list", "value": "paradox"}
+      - create list [speech enhancement] {"entity": "list_name_to_create", "value": "speech enhancement"} on board [paradox]{"entity": "board_name_to_create_list", "value": "paradox"}
+      - create list [customer churn prediction] {"entity": "list_name_to_create", "value": "customer churn prediction"} to board [paradox]{"entity": "board_name_to_create_list", "value": "paradox"}
+      - create list [named entity recognition] {"entity": "list_name_to_create", "value": "named entity recognition"} to board [paradox]{"entity": "board_name_to_create_list", "value": "paradox"}
+      - create list [Artificial Intelligence | Research] {"entity": "list_name_to_create", "value": "Artificial Intelligence Research"} to board [paradox]{"entity": "board_name_to_create_list", "value": "paradox"}
+      - create list [Machine Learning | Projects] {"entity": "list_name_to_create", "value": "Machine Learning Projects"} on board [paradox]{"entity": "board_name_to_create_list", "value": "paradox"}
+      - create list [Data Analysis | Visualization] {"entity": "list_name_to_create", "value": "Data Analysis Visualization"} to board [paradox]{"entity": "board_name_to_create_list", "value": "paradox"}
+      - create list [Programming | Code] {"entity": "list_name_to_create", "value": "Programming Code"} to board [paradox]{"entity": "board_name_to_create_list", "value": "paradox"}
+      - create list [Web Development | Frontend] {"entity": "list_name_to_create", "value": "Web Development Frontend"} to board [paradox]{"entity": "board_name_to_create_list", "value": "paradox"}
+      - create list [Backend Development | APIs] {"entity": "list_name_to_create", "value": "Backend Development APIs"} on board [paradox]{"entity": "board_name_to_create_list", "value": "paradox"}
+      - create list [Mobile App Development | UI/UX] {"entity": "list_name_to_create", "value": "Mobile App Development UI/UX"} to board [demo]{"entity": "board_name_to_create_list", "value": "demo"}
+      - create list [Data Science | Algorithms] {"entity": "list_name_to_create", "value": "Data Science Algorithms"} on board [demo]{"entity": "board_name_to_create_list", "value": "demo"}
+      - create list [Cybersecurity | Threats] {"entity": "list_name_to_create", "value": "Cybersecurity Threats"} to board [demo]{"entity": "board_name_to_create_list", "value": "demo"}
+      - create list [Cloud Computing | Infrastructure] {"entity": "list_name_to_create", "value": "Cloud Computing Infrastructure"} to board [demo]{"entity": "board_name_to_create_list", "value": "demo"}
+      - create list [Big Data | Analytics] {"entity": "list_name_to_create", "value": "Big Data Analytics"} on board [demo]{"entity": "board_name_to_create_list", "value": "demo"}
+      - create list [Blockchain | Smart Contracts] {"entity": "list_name_to_create", "value": "Blockchain Smart Contracts"} in board [test]{"entity": "board_name_to_create_list", "value": "test"}
+      - create list [Internet of Things | Sensors] {"entity": "list_name_to_create", "value": "Internet of Things Sensors"} to board [test]{"entity": "board_name_to_create_list", "value": "test"}
+      - create list [Virtual Reality | Gaming] {"entity": "list_name_to_create", "value": "Virtual Reality Gaming"} on board [test]{"entity": "board_name_to_create_list", "value": "test"}
+      - create list [Augmented Reality | Applications] {"entity": "list_name_to_create", "value": "Augmented Reality Applications"} in board [test]{"entity": "board_name_to_create_list", "value": "test"}
+      - create list [Computer Vision | Image Processing] {"entity": "list_name_to_create", "value": "Computer Vision Image Processing"} to board [test]{"entity": "board_name_to_create_list", "value": "test"}
+      - create list [Natural Language Processing | Chatbots] {"entity": "list_name_to_create", "value": "Natural Language Processing Chatbots"} in board [Sharon]{"entity": "board_name_to_create_list", "value": "Sharon"}
+      - create list [Data Engineering | ETL] {"entity": "list_name_to_create", "value": "Data Engineering ETL"} on board [Sharon]{"entity": "board_name_to_create_list", "value": "Sharon"}
+      - create list [Art | Design] {"entity": "list_name_to_create", "value": "Art Design"} in board [Sharon]{"entity": "board_name_to_create_list", "value": "Sharon"}
+      - create list [Software Engineering | Agile Development] {"entity": "list_name_to_create", "value": "Software Engineering Agile Development"} to board [Sharon]{"entity": "board_name_to_create_list", "value": "Sharon"}
+      - create list [speech-to-text conversion] {"entity": "list_name_to_create", "value": "speech-to-text conversion"} to board [Sharon]{"entity": "board_name_to_create_list", "value": "Sharon"}
+      - create list [books]{"entity": "list_name_to_create", "value": "books"} to board [Sharon]{"entity": "board_name_to_create_list", "value": "Sharon"}
+      - create list [videos]{"entity": "list_name_to_create", "value": "videos"} to board [Sharon]{"entity": "board_name_to_create_list", "value": "Sharon"}
+      - create list [movies]{"entity": "list_name_to_create", "value": "movies"} to board [Sharon]{"entity": "board_name_to_create_list", "value": "Sharon"}
+      - create list [movies to watch]{"entity": "list_name_to_create", "value": "movies to watch"} to board [Sharon]{"entity": "board_name_to_create_list", "value": "Sharon"}
+      - create list [features]{"entity": "list_name_to_create", "value": "features"} to board [Sharon]{"entity": "board_name_to_create_list", "value": "Sharon"}
+      - create list [songs]{"entity": "list_name_to_create", "value": "songs"} to board [Sharon]{"entity": "board_name_to_create_list", "value": "Sharon"}
+      - create list [bugs to fix]{"entity": "list_name_to_create", "value": "bugs to fix"} in board [Sharon]{"entity": "board_name_to_create_list", "value": "Sharon"}
+      - create list [exploratory testing]{"entity": "list_name_to_create", "value": "exploratory testing"} to board [Sharon]{"entity": "board_name_to_create_list", "value": "Sharon"}
+      - create list [roadmap]{"entity": "list_name_to_create", "value": "roadmap"} in board [Sharon]{"entity": "board_name_to_create_list", "value": "Sharon"}
+      - create list [goals]{"entity": "list_name_to_create", "value": "goals"} to board [Sharon]{"entity": "board_name_to_create_list", "value": "paradox"}
+      - create list [goals for 2023]{"entity": "list_name_to_create", "value": "goals for 2023"} in board [paradox]{"entity": "board_name_to_create_list", "value": "paradox"}
+      - create list [UX issues]{"entity": "list_name_to_create", "value": "UX issues"} to board [paradox]{"entity": "board_name_to_create_list", "value": "paradox"}
+      - create list [backlogs]{"entity": "list_name_to_create", "value": "backlogs"} in board [paradox]{"entity": "board_name_to_create_list", "value": "paradox"}
+      - create list [analysis]{"entity": "list_name_to_create", "value": "analysis"} to board [paradox]{"entity": "board_name_to_create_list", "value": "paradox"}
+      - create list [Employee status]{"entity": "list_name_to_create", "value": "Employee status"} in board [paradox]{"entity": "board_name_to_create_list", "value": "paradox"}
+      - create list [Customer feedback] {"entity": "list_name_to_create", "value": "customer feedback"} to board [paradox]{"entity": "board_name_to_create_list", "value": "paradox"}
+      - create list [Bug tracking] {"entity": "list_name_to_create", "value": "bug tracking"} in board [paradox]{"entity": "board_name_to_create_list", "value": "python"}
+      - create list [Project management] {"entity": "list_name_to_create", "value": "project management"} to board [python]{"entity": "board_name_to_create_list", "value": "python"}
+      - create list [Task organization] {"entity": "list_name_to_create", "value": "task organization"} in board [python]{"entity": "board_name_to_create_list", "value": "python"}
+      - create list [Budget tracking] {"entity": "list_name_to_create", "value": "budget tracking"} to board [python]{"entity": "board_name_to_create_list", "value": "python"}
+      - create list [Meeting scheduling] {"entity": "list_name_to_create", "value": "meeting scheduling"} to board [python]{"entity": "board_name_to_create_list", "value": "python"}
+      - create list [Content planning] {"entity": "list_name_to_create", "value": "content planning"} in board [python]{"entity": "board_name_to_create_list", "value": "python"}
+      - create list [Event coordination] {"entity": "list_name_to_create", "value": "event coordination"} to board [python]{"entity": "board_name_to_create_list", "value": "python"}
+      - create list [Team collaboration] {"entity": "list_name_to_create", "value": "team collaboration"} in board [python]{"entity": "board_name_to_create_list", "value": "python"}
+      - create list [Product roadmap] {"entity": "list_name_to_create", "value": "product roadmap"} to board [python]{"entity": "board_name_to_create_list", "value": "python"}
+      - create list [Resource allocation] {"entity": "list_name_to_create", "value": "resource allocation"} in board [python]{"entity": "board_name_to_create_list", "value": "python"}
+      - create list [Issue tracking] {"entity": "list_name_to_create", "value": "issue tracking"} to board [tcs project]{"entity": "board_name_to_create_list", "value": "tcs project"}
+      - create list [Sales pipeline] {"entity": "list_name_to_create", "value": "sales pipeline"} in board [tcs project]{"entity": "board_name_to_create_list", "value": "tcs project"}
+      - create list [Feature planning] {"entity": "list_name_to_create", "value": "feature planning"} to board [tcs project]{"entity": "board_name_to_create_list", "value": "tcs project"}
+      - create list [Inventory management] {"entity": "list_name_to_create", "value": "inventory management"} to board [tcs project]{"entity": "board_name_to_create_list", "value": "tcs project"}
+      - create list [Project collaboration] {"entity": "list_name_to_create", "value": "project collaboration"} in board [tcs project]{"entity": "board_name_to_create_list", "value": "tcs project"}
+      - create list [User research] {"entity": "list_name_to_create", "value": "user research"} in board [tcs project]{"entity": "board_name_to_create_list", "value": "tcs project"}
+      - create list [Content creation] {"entity": "list_name_to_create", "value": "content creation"} to board [tcs project]{"entity": "board_name_to_create_list", "value": "mymini project"}
+      - create list [Workflow automation] {"entity": "list_name_to_create", "value": "workflow automation"} in board [mymini project]{"entity": "board_name_to_create_list", "value": "mymini project"}
+      - create list [Marketing campaign] {"entity": "list_name_to_create", "value": "marketing campaign"} to board [mymini project]{"entity": "board_name_to_create_list", "value": "mymini project"}
+      - create list [Quality assurance] {"entity": "list_name_to_create", "value": "quality assurance"} in board [mymini project]{"entity": "board_name_to_create_list", "value": "mymini project"}
+      - create list [Data analysis] {"entity": "list_name_to_create", "value": "data analysis"} in board [mymini project]{"entity": "board_name_to_create_list", "value": "mymini project"}
+      - create list [Customer support] {"entity": "list_name_to_create", "value": "customer support"} to board [mymini project]{"entity": "board_name_to_create_list", "value": "mymini project"}
+      - create list [Task tracking] {"entity": "list_name_to_create", "value": "task tracking"} to board [mymini project]{"entity": "board_name_to_create_list", "value": "mymini project"}
+      - create list [Feedback collection] {"entity": "list_name_to_create", "value": "feedback collection"} in board [mymini project]{"entity": "board_name_to_create_list", "value": "mymini project"}
+      - create list [Project planning] {"entity": "list_name_to_create", "value": "project planning"} in board [mymini project]{"entity": "board_name_to_create_list", "value": "mymini project"}
+      - create list [Knowledge base] {"entity": "list_name_to_create", "value": "knowledge base"} to board [mymini project]{"entity": "board_name_to_create_list", "value": "mymini project"}
+      - create list [Time tracking] {"entity": "list_name_to_create", "value": "time tracking"} in board [mymini project]{"entity": "board_name_to_create_list", "value": "mymini project"}
+      - create list [Content management] {"entity": "list_name_to_create", "value": "content management"} to board [rasa trial]{"entity": "board_name_to_create_list", "value": "rasa trial"}
+      - create list [Issue management] {"entity": "list_name_to_create", "value": "issue management"} to board [rasa trial]{"entity": "board_name_to_create_list", "value": "rasa trial"}
+      - add list [rasa trial]{"entity": "list_name_to_create", "value": "rasa trial"} to board [rasa trial]{"entity": "board_name_to_create_list", "value": "rasa trial"}
+      - add list [speech recogntion]{"entity": "list_name_to_create", "value": "speech recogntion"} in board [rasa trial]{"entity": "board_name_to_create_list", "value": "rasa trial"}
+      - add list [speech recognition]{"entity": "list_name_to_create", "value": "speech recognition"} to board [rasa trial]{"entity": "board_name_to_create_list", "value": "rasa trial"}
+      - add list [books]{"entity": "list_name_to_create", "value": "books"} to board [rasa trial]{"entity": "board_name_to_create_list", "value": "rasa trial"}
+      - add list [videos]{"entity": "list_name_to_create", "value": "videos"} in board [deep learning]{"entity": "board_name_to_create_list", "value": "deep learning"}
+      - add list [movies]{"entity": "list_name_to_create", "value": "movies"} to board [deep learning]{"entity": "board_name_to_create_list", "value": "deep learning"}
+      - add list [movies to watch]{"entity": "list_name_to_create", "value": "movies in watch"} in board [deep learning]{"entity": "board_name_to_create_list", "value": "deep learning"}
+      - add list [features]{"entity": "list_name_to_create", "value": "features"} to board [deep learning]{"entity": "board_name_to_create_list", "value": "deep learning"}
+      - add list [songs]{"entity": "list_name_to_create", "value": "songs"} to board [deep learning]{"entity": "board_name_to_create_list", "value": "deep learning"}
+      - add list [bugs to fix]{"entity": "list_name_to_create", "value": "bugs to fix"} in board [deep learning]{"entity": "board_name_to_create_list", "value": "deep learning"}
+      - add list [exploratory testing]{"entity": "list_name_to_create", "value": "exploratory testing"} to board [deep learning]{"entity": "board_name_to_create_list", "value": "deep learning"}
+      - add list [roadmap]{"entity": "list_name_to_create", "value": "roadmap"} in board [deep learning]{"entity": "board_name_to_create_list", "value": "deep learning"}
+      - add list [goals]{"entity": "list_name_to_create", "value": "goals"} to board [deep learning]{"entity": "board_name_to_create_list", "value": "deep learning"}
+      - add list [goals for 2023]{"entity": "list_name_to_create", "value": "goals for 2023"} to board [deep learning]{"entity": "board_name_to_create_list", "value": "machine learning"}
+      - add list [UX issues]{"entity": "list_name_to_create", "value": "UX issues"} in board [machine learning]{"entity": "board_name_to_create_list", "value": "machine learning"}
+      - add list [backlogs]{"entity": "list_name_to_create", "value": "backlogs"} to board [machine learning]{"entity": "board_name_to_create_list", "value": "machine learning"}
+      - add list [analysis]{"entity": "list_name_to_create", "value": "analysis"} in board [machine learning]{"entity": "board_name_to_create_list", "value": "machine learning"}
+      - add list [Employee status]{"entity": "list_name_to_create", "value": "Employee status"} to board [machine learning]{"entity": "board_name_to_create_list", "value": "machine learning"}
+      - create a new list [machine learning]{"entity": "list_name_to_create", "value": "machine learning"} in board [machine learning]{"entity": "board_name_to_create_list", "value": "machine learning"}
+      - create a new list [speech recogntion]{"entity": "list_name_to_create", "value": "speech recogntion"} to board [machine learning]{"entity": "board_name_to_create_list", "value": "machine learning"}
+      - create a new list [speech recognition]{"entity": "list_name_to_create", "value": "speech recognition"} in board [machine learning]{"entity": "board_name_to_create_list", "value": "machine learning"}
+      - create a new list [books]{"entity": "list_name_to_create", "value": "books"} in board [todays task]{"entity": "board_name_to_create_list", "value": "todays task"}
+      - create a new list [videos]{"entity": "list_name_to_create", "value": "videos"} to board [todays task]{"entity": "board_name_to_create_list", "value": "todays task"}
+      - create a new list [movies]{"entity": "list_name_to_create", "value": "movies"} in board [todays task]{"entity": "board_name_to_create_list", "value": "todays task"}
+      - create a new list [movies to watch]{"entity": "list_name_to_create", "value": "movies to watch"} to board [todays task]{"entity": "board_name_to_create_list", "value": "todays task"}
+      - create a new list [features]{"entity": "list_name_to_create", "value": "features"} to board [todays task]{"entity": "board_name_to_create_list", "value": "todays task"}
+      - create a new list [songs]{"entity": "list_name_to_create", "value": "songs"} to board [todays task]{"entity": "board_name_to_create_list", "value": "todays task"}
+      - create a new list [bugs to fix]{"entity": "list_name_to_create", "value": "bugs in fix"} to board [todays task]{"entity": "board_name_to_create_list", "value": "todays task"}
+      - create a new list [exploratory testing]{"entity": "list_name_to_create", "value": "exploratory testing"} to board [todays task]{"entity": "board_name_to_create_list", "value": "todays task"}
+      - create a new list [roadmap]{"entity": "list_name_to_create", "value": "roadmap"} to board [todays task]{"entity": "board_name_to_create_list", "value": "todays task"}
+      - create a new list [goals]{"entity": "list_name_to_create", "value": "goals"} to board [tomorrows task list]{"entity": "board_name_to_create_list", "value": "tomorrows task list"}
+      - create a new list [goals for 2023]{"entity": "list_name_to_create", "value": "goals for 2023"} to board [tomorrows task list]{"entity": "board_name_to_create_list", "value": "tomorrows task list"}
+      - create a new list [UX issues]{"entity": "list_name_to_create", "value": "UX issues"} in board [tomorrows task list]{"entity": "board_name_to_create_list", "value": "tomorrows task list"}
+      - create a new list [backlogs]{"entity": "list_name_to_create", "value": "backlogs"} to board [tomorrows task list]{"entity": "board_name_to_create_list", "value": "tomorrows task list"}
+      - create a new list [analysis]{"entity": "list_name_to_create", "value": "analysis"} to board [tomorrows task list]{"entity": "board_name_to_create_list", "value": "tomorrows task list"}
+      - create a new list [Employee status]{"entity": "list_name_to_create", "value": "Employee status"} to board [tomorrows task list]{"entity": "board_name_to_create_list", "value": "tomorrows task list"}
+      - create a new list [work]{"entity": "list_name_to_create", "value": "work"} to board [tomorrows task list]{"entity": "board_name_to_create_list", "value": "tomorrows task list"}
+      - create a new list [projects]{"entity": "list_name_to_create", "value": "projects"} in board [tomorrows task list]{"entity": "board_name_to_create_list", "value": "tomorrows task list"}
+      - create a new list [ideas]{"entity": "list_name_to_create", "value": "ideas"} to board [tomorrows task list]{"entity": "board_name_to_create_list", "value": "tomorrows task list"}
+      - create a new list [recipes]{"entity": "list_name_to_create", "value": "recipes"} to board [tomorrows task list]{"entity": "board_name_to_create_list", "value": "tomorrows task list"}
+      - create a new list [shopping]{"entity": "list_name_to_create", "value": "shopping"} to board [tomorrows task list]{"entity": "board_name_to_create_list", "value": "tomorrows task list"}
+      - create a new list [inspiration]{"entity": "list_name_to_create", "value": "inspiration"} to board [tomorrows task list]{"entity": "board_name_to_create_list", "value": "tomorrows task list"}
+      - create a new list [travel]{"entity": "list_name_to_create", "value": "travel"} to board [Artificial intelligence]{"entity": "board_name_to_create_list", "value": "Artificial intelligence"}
+      - create a new list [fitness]{"entity": "list_name_to_create", "value": "fitness"} in board [Artificial intelligence]{"entity": "board_name_to_create_list", "value": "Artificial intelligence"}
+      - create a new list [music]{"entity": "list_name_to_create", "value": "music"} to board [Artificial intelligence]{"entity": "board_name_to_create_list", "value": "Artificial intelligence"}
+      - create a new list [quotes]{"entity": "list_name_to_create", "value": "quotes"} to board [Artificial intelligence]{"entity": "board_name_to_create_list", "value": "Artificial intelligence"}
+      - create a new list [photography]{"entity": "list_name_to_create", "value": "photography"} to board [Artificial intelligence]{"entity": "board_name_to_create_list", "value": "Artificial intelligence"}
+      - create a new list [art]{"entity": "list_name_to_create", "value": "art"} to board [Artificial intelligence]{"entity": "board_name_to_create_list", "value": "Artificial intelligence"}
+      - create a new list [goals]{"entity": "list_name_to_create", "value": "goals"} to board [Artificial intelligence]{"entity": "board_name_to_create_list", "value": "Artificial intelligence"}
+      - create a new list [coding]{"entity": "list_name_to_create", "value": "coding"} to board [Artificial intelligence]{"entity": "board_name_to_create_list", "value": "Artificial intelligence"}
+      - create a new list [design]{"entity": "list_name_to_create", "value": "design"} in board [Artificial intelligence]{"entity": "board_name_to_create_list", "value": "Artificial intelligence"}
+      - create a new list [memes]{"entity": "list_name_to_create", "value": "memes"} to board [Artificial intelligence]{"entity": "board_name_to_create_list", "value": "Artificial intelligence"}
+      - create a new list [quotes to remember]{"entity": "list_name_to_create", "value": "quotes to remember"} to board [Artificial intelligence]{"entity": "board_name_to_create_list", "value": "Artificial intelligence"}
+      - create a new list [crafts]{"entity": "list_name_to_create", "value": "crafts"} to board [Genesis]{"entity": "board_name_to_create_list", "value": "Genesis"}
+      - create a new list [wishlist]{"entity": "list_name_to_create", "value": "wishlist"} in board [Genesis]{"entity": "board_name_to_create_list", "value": "Genesis"}
+      - create a new list [technology]{"entity": "list_name_to_create", "value": "technology"} to board [Genesis]{"entity": "board_name_to_create_list", "value": "Genesis"}
+      - create a new list [architecture]{"entity": "list_name_to_create", "value": "architecture"} to board [Genesis]{"entity": "board_name_to_create_list", "value": "Genesis"}
+      - create a new list [fashion]{"entity": "list_name_to_create", "value": "fashion"} to board [Genesis]{"entity": "board_name_to_create_list", "value": "Genesis"}
+      - create a new list [food]{"entity": "list_name_to_create", "value": "food"} to board [Genesis]{"entity": "board_name_to_create_list", "value": "Genesis"}
+      - create a new list [pets]{"entity": "list_name_to_create", "value": "pets"} to board [Genesis]{"entity": "board_name_to_create_list", "value": "Genesis"}
+      - create a new list [celebrities]{"entity": "list_name_to_create", "value": "celebrities"} to board [Genesis]{"entity": "board_name_to_create_list", "value": "Genesis"}
+      - create a new list [quotes for motivation]{"entity": "list_name_to_create", "value": "quotes for motivation"} in board [Genesis]{"entity": "board_name_to_create_list", "value": "Genesis"}
+      - create a new list [gardening]{"entity": "list_name_to_create", "value": "gardening"} to board [Genesis]{"entity": "board_name_to_create_list", "value": "Genesis"}
+      - create a new list [movies to watch later]{"entity": "list_name_to_create", "value": "movies to watch later"} to board [streamlit]{"entity": "board_name_to_create_list", "value": "streamlit"}
+      - create a new list [recipes to try]{"entity": "list_name_to_create", "value": "recipes in try"} to board [streamlit]{"entity": "board_name_to_create_list", "value": "streamlit"}
+      - add a list named [streamlit]{"entity": "list_name_to_create", "value": "streamlit"} to board [streamlit]{"entity": "board_name_to_create_list", "value": "streamlit"}
+      - add a list named [speech recogntion]{"entity": "list_name_to_create", "value": "speech recogntion"} to board [streamlit]{"entity": "board_name_to_create_list", "value": "streamlit"}
+      - add a list named [speech recognition]{"entity": "list_name_to_create", "value": "speech recognition"} to board [streamlit]{"entity": "board_name_to_create_list", "value": "streamlit"}
+      - add a list named [books]{"entity": "list_name_to_create", "value": "books"} to board [streamlit]{"entity": "board_name_to_create_list", "value": "streamlit"}
+      - add a list named [videos]{"entity": "list_name_to_create", "value": "videos"} in board [streamlit]{"entity": "board_name_to_create_list", "value": "streamlit"}
+      - add a list named [movies]{"entity": "list_name_to_create", "value": "movies"} to board [streamlit]{"entity": "board_name_to_create_list", "value": "streamlit"}
+      - add a list named [movies to watch]{"entity": "list_name_to_create", "value": "movies in watch"} to board [streamlit]{"entity": "board_name_to_create_list", "value": "streamlit"}
+      - add a list named [features]{"entity": "list_name_to_create", "value": "features"} to board [streamlit]{"entity": "board_name_to_create_list", "value": "streamlit"}
+      - add a list named [songs]{"entity": "list_name_to_create", "value": "songs"} to board [streamlit]{"entity": "board_name_to_create_list", "value": "streamlit"}
+      - add a list named [bugs to fix]{"entity": "list_name_to_create", "value": "bugs in fix"} to board [streamlit]{"entity": "board_name_to_create_list", "value": "streamlit"}
+      - add a list named [exploratory testing]{"entity": "list_name_to_create", "value": "exploratory testing"} to board [streamlit]{"entity": "board_name_to_create_list", "value": "streamlit"}
+      - add a list named [roadmap]{"entity": "list_name_to_create", "value": "roadmap"} to board [streamlit]{"entity": "board_name_to_create_list", "value": "streamlit"}
+      - add a list named [goals]{"entity": "list_name_to_create", "value": "goals"} in board [streamlit]{"entity": "board_name_to_create_list", "value": "streamlit"}
+      - add a list named [goals for 2023]{"entity": "list_name_to_create", "value": "goals for 2023"} in board [streamlit]{"entity": "board_name_to_create_list", "value": "streamlit"}
+      - add a list named [UX issues]{"entity": "list_name_to_create", "value": "UX issues"} to board [streamlit]{"entity": "board_name_to_create_list", "value": "streamlit"}
+      - add a list named [backlogs]{"entity": "list_name_to_create", "value": "backlogs"} in board [streamlit]{"entity": "board_name_to_create_list", "value": "streamlit"}
+      - add a list named [analysis]{"entity": "list_name_to_create", "value": "analysis"} to board [streamlit]{"entity": "board_name_to_create_list", "value": "streamlit"}
+      - add a list named [Employee status]{"entity": "list_name_to_create", "value": "Employee status"} to board [streamlit]{"entity": "board_name_to_create_list", "value": "streamlit"}
+      - add a list named [travel destinations]{"entity": "list_name_to_create", "value": "travel destinations"} in board [streamlit]{"entity": "board_name_to_create_list", "value": "streamlit"}
+      - add a list named [recipes]{"entity": "list_name_to_create", "value": "recipes"} to board [streamlit]{"entity": "board_name_to_create_list", "value": "streamlit"}
+      - add a list named [coding projects]{"entity": "list_name_to_create", "value": "coding projects"} to board [streamlit]{"entity": "board_name_to_create_list", "value": "analysis structure"}
+      - add a list named [workout routines]{"entity": "list_name_to_create", "value": "workout routines"} in board [analysis structure]{"entity": "board_name_to_create_list", "value": "analysis structure"}
+      - add a list named [vacation ideas]{"entity": "list_name_to_create", "value": "vacation ideas"} in board [analysis structure]{"entity": "board_name_to_create_list", "value": "analysis structure"}
+      - add a list named [favorite books]{"entity": "list_name_to_create", "value": "favorite books"} to board [analysis structure]{"entity": "board_name_to_create_list", "value": "analysis structure"}
+      - add a list named [art inspiration]{"entity": "list_name_to_create", "value": "art inspiration"} to board [analysis structure]{"entity": "board_name_to_create_list", "value": "analysis structure"}
+      - add a list named [customer feedback]{"entity": "list_name_to_create", "value": "customer feedback"} to board [analysis structure]{"entity": "board_name_to_create_list", "value": "analysis structure"}
+      - add a list named [budget planning]{"entity": "list_name_to_create", "value": "budget planning"} to board [analysis structure]{"entity": "board_name_to_create_list", "value": "analysis structure"}
+      - add a list named [meeting minutes]{"entity": "list_name_to_create", "value": "meeting minutes"} to board [analysis structure]{"entity": "board_name_to_create_list", "value": "analysis structure"}
+      - add a list named [project ideas]{"entity": "list_name_to_create", "value": "project ideas"} to board [analysis structure]{"entity": "board_name_to_create_list", "value": "analysis structure"}
+      - add a list named [product roadmap]{"entity": "list_name_to_create", "value": "product roadmap"} in board [analysis structure]{"entity": "board_name_to_create_list", "value": "analysis structure"}
+      - add a list named [design concepts]{"entity": "list_name_to_create", "value": "design concepts"} to board [analysis structure]{"entity": "board_name_to_create_list", "value": "analysis structure"}
+      - add a list named [bug reports]{"entity": "list_name_to_create", "value": "bug reports"} to board [analysis structure]{"entity": "board_name_to_create_list", "value": "analysis structure"}
+      - add a list named [team collaboration]{"entity": "list_name_to_create", "value": "team collaboration"} in board [analysis structure]{"entity": "board_name_to_create_list", "value": "timesheet"}
+      - add a list named [marketing strategies]{"entity": "list_name_to_create", "value": "marketing strategies"} to board [timesheet]{"entity": "board_name_to_create_list", "value": "timesheet"}
+      - add a list named [customer testimonials]{"entity": "list_name_to_create", "value": "customer testimonials"} in board [timesheet]{"entity": "board_name_to_create_list", "value": "timesheet"}
+      - add a list named [new features]{"entity": "list_name_to_create", "value": "new features"} in board [timesheet]{"entity": "board_name_to_create_list", "value": "timesheet"}
+      - add a list named [project management]{"entity": "list_name_to_create", "value": "project management"} in board [timesheet]{"entity": "board_name_to_create_list", "value": "timesheet"}
+      - add a list named [task tracking]{"entity": "list_name_to_create", "value": "task tracking"} to board [timesheet]{"entity": "board_name_to_create_list", "value": "timesheet"}
+      - add a list named [client proposals]{"entity": "list_name_to_create", "value": "client proposals"} in board [timesheet]{"entity": "board_name_to_create_list", "value": "timesheet"}
+      - add a list named [data analysis]{"entity": "list_name_to_create", "value": "data analysis"} to board [timesheet]{"entity": "board_name_to_create_list", "value": "timesheet"}
+      - add a list named [user experience]{"entity": "list_name_to_create", "value": "user experience"} in board [timesheet]{"entity": "board_name_to_create_list", "value": "timesheet"}
+      - add a list named [bug fixes]{"entity": "list_name_to_create", "value": "bug fixes"} to board [timesheet]{"entity": "board_name_to_create_list", "value": "timesheet"}
+      - add a list named [content ideas]{"entity": "list_name_to_create", "value": "content ideas"} to board [timesheet]{"entity": "board_name_to_create_list", "value": "timesheet"}
+      - add a list named [social media]{"entity": "list_name_to_create", "value": "social media"} in board [timesheet]{"entity": "board_name_to_create_list", "value": "timesheet"}
+      - add a list named [customer support]{"entity": "list_name_to_create", "value": "customer support"} to board [timesheet]{"entity": "board_name_to_create_list", "value": "timesheet"}
+      - add a list named [team goals]{"entity": "list_name_to_create", "value": "team goals"} to board [timesheet]{"entity": "board_name_to_create_list", "value": "timesheet"}
+      - add a list named [productivity tips]{"entity": "list_name_to_create", "value": "productivity tips"} to board [timesheet]{"entity": "board_name_to_create_list", "value": "timesheet"}
+      - add list [football match]{"entity": "list_name_to_create", "value": "football match"} to board [timesheet]{"entity": "board_name_to_create_list", "value": "timesheet"}
+      - add list [project management]{"entity": "list_name_to_create", "value": "project management"} in board [timesheet]{"entity": "board_name_to_create_list", "value": "timesheet"}
+      - add list [meeting agenda]{"entity": "list_name_to_create", "value": "meeting agenda"} to board [project Pcap]{"entity": "board_name_to_create_list", "value": "project Pcap"}
+      - add list [team collaboration]{"entity": "list_name_to_create", "value": "team collaboration"} to board [project Pcap]{"entity": "board_name_to_create_list", "value": "project Pcap"}
+      - add list [task tracking]{"entity": "list_name_to_create", "value": "task tracking"} to board [project Pcap]{"entity": "board_name_to_create_list", "value": "project Pcap"}
+      - add list [bug tracking]{"entity": "list_name_to_create", "value": "bug tracking"} to board [project Pcap]{"entity": "board_name_to_create_list", "value": "project Pcap"}
+      - add list [design inspiration]{"entity": "list_name_to_create", "value": "design inspiration"} to board [project Pcap]{"entity": "board_name_to_create_list", "value": "project Pcap"}
+      - add list [recipe ideas]{"entity": "list_name_to_create", "value": "recipe ideas"} in board [project Pcap]{"entity": "board_name_to_create_list", "value": "project Pcap"}
+      - add list [marketing strategies]{"entity": "list_name_to_create", "value": "marketing strategies"} to board [project Pcap]{"entity": "board_name_to_create_list", "value": "project Pcap"}
+      - add list [customer feedback]{"entity": "list_name_to_create", "value": "customer feedback"} to board [project Pcap]{"entity": "board_name_to_create_list", "value": "project Pcap"}
+      - add list [financial analysis]{"entity": "list_name_to_create", "value": "financial analysis"} in board [project Pcap]{"entity": "board_name_to_create_list", "value": "project Pcap"}
+      - add list [workout routines]{"entity": "list_name_to_create", "value": "workout routines"} to board [project Pcap]{"entity": "board_name_to_create_list", "value": "project Pcap"}
+      - add list [travel plans]{"entity": "list_name_to_create", "value": "travel plans"} in board [project Pcap]{"entity": "board_name_to_create_list", "value": "project Pcap"}
+      - add list [job applications]{"entity": "list_name_to_create", "value": "job applications"} to board [project Pcap]{"entity": "board_name_to_create_list", "value": "project Pcap"}
+      - add list [book recommendations]{"entity": "list_name_to_create", "value": "book recommendations"} in board [project Pcap]{"entity": "board_name_to_create_list", "value": "project Pcap"}
+      - add list [project ideas]{"entity": "list_name_to_create", "value": "project ideas"} in board [project Pcap]{"entity": "board_name_to_create_list", "value": "project Pcap"}
+      - add list [customer support]{"entity": "list_name_to_create", "value": "customer support"} to board [project Pcap]{"entity": "board_name_to_create_list", "value": "project Pcap"}
+      - add list [bug fixes]{"entity": "list_name_to_create", "value": "bug fixes"} to board [project Pcap]{"entity": "board_name_to_create_list", "value": "project Pcap"}
+      - add list [user interface]{"entity": "list_name_to_create", "value": "user interface"} in board [project Pcap]{"entity": "board_name_to_create_list", "value": "project Pcap"}
+      - add list [data analysis]{"entity": "list_name_to_create", "value": "data analysis"} to board [project Pcap]{"entity": "board_name_to_create_list", "value": "project Pcap"}
+      - add list [vacation plans]{"entity": "list_name_to_create", "value": "vacation plans"} to board [project Pcap]{"entity": "board_name_to_create_list", "value": "project Pcap"}
+      - add list [coding challenges]{"entity": "list_name_to_create", "value": "coding challenges"} in board [face recognition]{"entity": "board_name_to_create_list", "value": "face recognition"}
+      - add list [budgeting]{"entity": "list_name_to_create", "value": "budgeting"} to board [face recognition]{"entity": "board_name_to_create_list", "value": "face recognition"}
+      - add list [project milestones]{"entity": "list_name_to_create", "value": "project milestones"} in board [face recognition]{"entity": "board_name_to_create_list", "value": "face recognition"}
+      - add list [team goals]{"entity": "list_name_to_create", "value": "team goals"} to board [face recognition]{"entity": "board_name_to_create_list", "value": "face recognition"}
+      - add list [client meetings]{"entity": "list_name_to_create", "value": "client meetings"} to board [face recognition]{"entity": "board_name_to_create_list", "value": "face recognition"}
+      - add list [content ideas]{"entity": "list_name_to_create", "value": "content ideas"} in board [face recognition]{"entity": "board_name_to_create_list", "value": "face recognition"}
+      - add list [bug reports]{"entity": "list_name_to_create", "value": "bug reports"} to board [face recognition]{"entity": "board_name_to_create_list", "value": "face recognition"}
+      - add list [social media]{"entity": "list_name_to_create", "value": "social media"} to board [face recognition]{"entity": "board_name_to_create_list", "value": "face recognition"}
+      - add list [sales leads]{"entity": "list_name_to_create", "value": "sales leads"} in board [face recognition]{"entity": "board_name_to_create_list", "value": "face recognition"}
+      - create a list named [face recognition]{"entity": "list_name_to_create", "value": "face recognition"} to board [face recognition]{"entity": "board_name_to_create_list", "value": "face recognition"}
+      - create a list named [speech recogntion]{"entity": "list_name_to_create", "value": "speech recogntion"} to board [face recognition]{"entity": "board_name_to_create_list", "value": "face recognition"}
+      - create a list named [speech recognition]{"entity": "list_name_to_create", "value": "speech recognition"} to board [face recognition]{"entity": "board_name_to_create_list", "value": "face recognition"}
+      - create a list named [books]{"entity": "list_name_to_create", "value": "books"} to board [face recognition]{"entity": "board_name_to_create_list", "value": "face recognition"}
+      - create a list named [videos]{"entity": "list_name_to_create", "value": "videos"} in board [face recognition]{"entity": "board_name_to_create_list", "value": "face recognition"}
+      - create a list named [movies]{"entity": "list_name_to_create", "value": "movies"} to board [face recognition]{"entity": "board_name_to_create_list", "value": "face recognition"}
+      - create a list named [movies to watch]{"entity": "list_name_to_create", "value": "movies to watch"} to board [face recognition]{"entity": "board_name_to_create_list", "value": "face recognition"}
+      - create a list named [features]{"entity": "list_name_to_create", "value": "features"} to board [face recognition]{"entity": "board_name_to_create_list", "value": "face recognition"}
+      - create a new list [Finance]{"entity": "list_name_to_create", "value": "Finance"} to board [face recognition]{"entity": "board_name_to_create_list", "value": "face recognition"}
+      - create list [Recipes]{"entity": "list_name_to_create", "value": "Recipes"} to board [face recognition]{"entity": "board_name_to_create_list", "value": "face recognition"}
+      - create list [Travel Plans]{"entity": "list_name_to_create", "value": "Travel Plans"} in board [face recognition]{"entity": "board_name_to_create_list", "value": "face recognition"}
+      - add a list named [Marketing]{"entity": "list_name_to_create", "value": "Marketing"} to board [face recognition]{"entity": "board_name_to_create_list", "value": "face recognition"}
+      - create a list named [Project Management]{"entity": "list_name_to_create", "value": "Project Management"} to board [face recognition]{"entity": "board_name_to_create_list", "value": "face recognition"}
+      - add list [Tasks]{"entity": "list_name_to_create", "value": "Tasks"} to board [face recognition]{"entity": "board_name_to_create_list", "value": "face recognition"}
+      - create list [Design Ideas]{"entity": "list_name_to_create", "value": "Design Ideas"} in board [face recognition]{"entity": "board_name_to_create_list", "value": "face recognition"}
+      - create a new list [Customer Feedback]{"entity": "list_name_to_create", "value": "Customer Feedback"} to board [face recognition]{"entity": "board_name_to_create_list", "value": "face recognition"}
+      - create list [Workouts]{"entity": "list_name_to_create", "value": "Workouts"} to board [face recognition]{"entity": "board_name_to_create_list", "value": "face recognition"}
+      - create a new list [Product Launch]{"entity": "list_name_to_create", "value": "Product Launch"} to board [face recognition]{"entity": "board_name_to_create_list", "value": "face recognition"}
+      - add list [Shopping List]{"entity": "list_name_to_create", "value": "Shopping List"} in board [face recognition]{"entity": "board_name_to_create_list", "value": "face recognition"}
+      - create a list named [Event Planning]{"entity": "list_name_to_create", "value": "Event Planning"} to board [face recognition]{"entity": "board_name_to_create_list", "value": "face recognition"}
+      - create list [Inspiration]{"entity": "list_name_to_create", "value": "Inspiration"} to board [face recognition]{"entity": "board_name_to_create_list", "value": "face recognition"}
+      - add a list named [Bug Tracking]{"entity": "list_name_to_create", "value": "Bug Tracking"} to board [face recognition]{"entity": "board_name_to_create_list", "value": "picnic plans"}
+      - create a list named [Meeting Agenda]{"entity": "list_name_to_create", "value": "Meeting Agenda"} in board [picnic plans]{"entity": "board_name_to_create_list", "value": "picnic plans"}
+      - create list [Home Renovation]{"entity": "list_name_to_create", "value": "Home Renovation"} to board [picnic plans]{"entity": "board_name_to_create_list", "value": "picnic plans"}
+      - add list [Fitness Goals]{"entity": "list_name_to_create", "value": "Fitness Goals"} to board [picnic plans]{"entity": "board_name_to_create_list", "value": "picnic plans"}
+      - create list [Job Applications]{"entity": "list_name_to_create", "value": "Job Applications"} in board [picnic plans]{"entity": "board_name_to_create_list", "value": "picnic plans"}
+      - create a new list [Social Media]{"entity": "list_name_to_create", "value": "Social Media"} to board [picnic plans]{"entity": "board_name_to_create_list", "value": "picnic plans"}
+      - add a list named [Research]{"entity": "list_name_to_create", "value": "Research"} in board [picnic plans]{"entity": "board_name_to_create_list", "value": "picnic plans"}
+      - create a list named [Budget Planning]{"entity": "list_name_to_create", "value": "Budget Planning"} to board [picnic plans]{"entity": "board_name_to_create_list", "value": "picnic plans"}
+      - create list [Recipe Ideas]{"entity": "list_name_to_create", "value": "Recipe Ideas"} to board [picnic plans]{"entity": "board_name_to_create_list", "value": "picnic plans"}
+      - add list [Project Tasks]{"entity": "list_name_to_create", "value": "Project Tasks"} to board [picnic plans]{"entity": "board_name_to_create_list", "value": "picnic plans"}
+      - create list [Travel Bucket List]{"entity": "list_name_to_create", "value": "Travel Bucket List"} in board [picnic plans]{"entity": "board_name_to_create_list", "value": "picnic plans"}
+      - create a new list [Team Collaboration]{"entity": "list_name_to_create", "value": "Team Collaboration"} to board [picnic plans]{"entity": "board_name_to_create_list", "value": "picnic plans"}
+      - create list [Art Inspiration]{"entity": "list_name_to_create", "value": "Art Inspiration"} in board [picnic plans]{"entity": "board_name_to_create_list", "value": "picnic plans"}
+      - add a list named [Sales Leads]{"entity": "list_name_to_create", "value": "Sales Leads"} on board [picnic plans]{"entity": "board_name_to_create_list", "value": "picnic plans"}
+      - create a list named [Content Strategy]{"entity": "list_name_to_create", "value": "Content Strategy"} in board [picnic plans]{"entity": "board_name_to_create_list", "value": "picnic plans"}
+      - create list [Project Milestones]{"entity": "list_name_to_create", "value": "Project Milestones"} to board [picnic plans]{"entity": "board_name_to_create_list", "value": "picnic plans"}
+      - create a list called [sales leads]{"entity": "list_name_to_create", "value": "sales leads"} on the [picnic plans]{"entity": "board_name_to_create_list", "value": "picnic plans"} board.
+      - on the [picnic plans]{"entity": "board_name_to_create_list", "value": "picnic plans"} board, add a list named [sales leads]{"entity": "list_name_to_create", "value": "sales leads"}.
+      - add a list to the [picnic plans]{"entity": "board_name_to_create_list", "value": "picnic plans"} board, named [sales leads]{"entity": "list_name_to_create", "value": "sales leads"}.
+      - create a list named [content strategy]{"entity": "list_name_to_create", "value": "content strategy"} on the [picnic plans]{"entity": "board_name_to_create_list", "value": "picnic plans"} board.
+      - on the [picnic plans]{"entity": "board_name_to_create_list", "value": "picnic plans"} board, create a list called [content strategy]{"entity": "list_name_to_create", "value": "content strategy"}.
+      - add a list to the [picnic plans]{"entity": "board_name_to_create_list", "value": "picnic plans"} board, named [content strategy]{"entity": "list_name_to_create", "value": "content strategy"}.
+      - create the [project milestones]{"entity": "list_name_to_create", "value": "project milestones"} list for the [picnic plans]{"entity": "board_name_to_create_list", "value": "picnic plans"} board.
+      - on the [picnic plans]{"entity": "board_name_to_create_list", "value": "picnic plans"} board, create a list called [project milestones]{"entity": "list_name_to_create", "value": "project milestones"}.
+      - add the [project milestones]{"entity": "list_name_to_create", "value": "project milestones"} list to the [picnic plans]{"entity": "board_name_to_create_list", "value": "picnic plans"} board.
+      - create a list named [project milestones]{"entity": "list_name_to_create", "value": "project milestones"} on the [picnic plans]{"entity": "board_name_to_create_list", "value": "picnic plans"} board.
+      - on the [picnic plans]{"entity": "board_name_to_create_list", "value": "picnic plans"} board, add a list called [project milestones]{"entity": "list_name_to_create", "value": "project milestones"}.
+      - add a list to the [picnic plans]{"entity": "board_name_to_create_list", "value": "picnic plans"} board, named [project milestones]{"entity": "list_name_to_create", "value": "project milestones"}.
+      - create a list called [project milestones]{"entity": "list_name_to_create", "value": "project milestones"} on the [picnic plans]{"entity": "board_name_to_create_list", "value": "picnic plans"} board.
+      - on the [picnic plans]{"entity": "board_name_to_create_list", "value": "picnic plans"} board, create a list named [project milestones]{"entity": "list_name_to_create", "value": "project milestones"}.
+      - add a list to the [picnic plans]{"entity": "board_name_to_create_list", "value": "picnic plans"} board, called [project milestones]{"entity": "list_name_to_create", "value": "project milestones"}.
+      - create a list named [project milestones]{"entity": "list_name_to_create", "value": "project milestones"} on the [picnic plans]{"entity": "board_name_to_create_list", "value": "picnic plans"} board.
+      - on the [picnic plans]{"entity": "board_name_to_create_list", "value": "picnic plans"} board, add a list named [project milestones]{"entity": "list_name_to_create", "value": "project milestones"}.
+      - add a list to the [picnic plans]{"entity": "board_name_to_create_list", "value": "picnic plans"} board, named [project milestones]{"entity": "list_name_to_create", "value": "project milestones"}.
+      - create a list called [project milestones]{"entity": "list_name_to_create", "value": "project milestones"} on the [picnic plans]{"entity": "board_name_to_create_list", "value": "picnic plans"} board.
+      - on the [picnic plans]{"entity": "board_name_to_create_list", "value": "picnic plans"} board, create a list named [project milestones]{"entity": "list_name_to_create", "value": "project milestones"}.
+      - add a list to the [picnic plans]{"entity": "board_name_to_create_list", "value": "picnic plans"} board, called [project milestones]{"entity": "list_name_to_create", "value": "project milestones"}.
+      - create a list named [project milestones]{"entity": "list_name_to_create", "value": "project milestones"} on the [picnic plans]{"entity": "board_name_to_create_list", "value": "picnic plans"} board.
+      - on the [picnic plans]{"entity": "board_name_to_create_list", "value": "picnic plans"} board, add a list named [project milestones]{"entity": "list_name_to_create", "value": "project milestones"}.
+      - add a list to the [picnic plans]{"entity": "board_name_to_create_list", "value": "picnic plans"} board, named [project milestones]{"entity": "list_name_to_create", "value": "project milestones"}.
 
   - intent: update_list_name
     examples: |
@@ -992,6 +1271,34 @@ nlu:
       - change list name [songs]{"entity": "previous_list_name", "value": "songs"} to [speech recognition]{"entity": "new_list_name", "value": "speech recognition"}
       - change list name [songs]{"entity": "previous_list_name", "value": "songs"} to [books]{"entity": "new_list_name", "value": "books"}
       - change list name [songs]{"entity": "previous_list_name", "value": "songs"} to [videos]{"entity": "new_list_name", "value": "videos"}
+      - update list name [achsah]{"entity": "previous_list_name", "value": "achsah"} to [speech recogntion]{"entity": "new_list_name", "value": "speech recogntion"} of board [demo]{"entity": "board_name", "value": "demo"}
+      - change list name [books]{"entity": "previous_list_name", "value": "books"} to [exploratory testing]{"entity": "new_list_name", "value": "exploratory testing"} on board [demo]{"entity": "board_name", "value": "demo"}
+      - update list name [achsah]{"entity": "previous_list_name", "value": "achsah"} to [speech recogntion]{"entity": "new_list_name", "value": "speech recogntion"} in board [demo]{"entity": "board_name", "value": "demo"}
+      - change list name [books]{"entity": "previous_list_name", "value": "books"} to [exploratory testing]{"entity": "new_list_name", "value": "exploratory testing"} from board [demo]{"entity": "board_name", "value": "demo"}
+      - update the list name [achsah]{"entity": "previous_list_name", "value": "achsah"} to [speech recognition]{"entity": "new_list_name", "value": "speech recognition"} for the [demo]{"entity": "board_name", "value": "demo"} board.
+      - change the list name of [achsah]{"entity": "previous_list_name", "value": "achsah"} to [speech recognition]{"entity": "new_list_name", "value": "speech recognition"} on the [demo]{"entity": "board_name", "value": "demo"} board.
+      - update the list name [achsah]{"entity": "previous_list_name", "value": "achsah"} to [speech recognition]{"entity": "new_list_name", "value": "speech recognition"} within the [demo]{"entity": "board_name", "value": "demo"} board.
+      - change the list name [books]{"entity": "previous_list_name", "value": "books"} to [exploratory testing]{"entity": "new_list_name", "value": "exploratory testing"} on the [demo]{"entity": "board_name", "value": "demo"} board.
+      - update the list name of [books]{"entity": "previous_list_name", "value": "books"} to [exploratory testing]{"entity": "new_list_name", "value": "exploratory testing"} for the [demo]{"entity": "board_name", "value": "demo"} board.
+      - change the list name [books]{"entity": "previous_list_name", "value": "books"} to [exploratory testing]{"entity": "new_list_name", "value": "exploratory testing"} within the [demo]{"entity": "board_name", "value": "demo"} board.
+      - update the list name [achsah]{"entity": "previous_list_name", "value": "achsah"} to [speech recognition]{"entity": "new_list_name", "value": "speech recognition"} in the [demo]{"entity": "board_name", "value": "demo"} board.
+      - change the list name of [achsah]{"entity": "previous_list_name", "value": "achsah"} to [speech recognition]{"entity": "new_list_name", "value": "speech recognition"} on the [demo]{"entity": "board_name", "value": "demo"} board.
+      - update the list name [achsah]{"entity": "previous_list_name", "value": "achsah"} to [speech recognition]{"entity": "new_list_name", "value": "speech recognition"} within the [demo]{"entity": "board_name", "value": "demo"} board.
+      - change the list name [books]{"entity": "previous_list_name", "value": "books"} to [exploratory testing]{"entity": "new_list_name", "value": "exploratory testing"} from the [demo]{"entity": "board_name", "value": "demo"} board.
+      - update the list name of [books]{"entity": "previous_list_name", "value": "books"} to [exploratory testing]{"entity": "new_list_name", "value": "exploratory testing"} on the [demo]{"entity": "board_name", "value": "demo"} board.
+      - change the list name [books]{"entity": "previous_list_name", "value": "books"} to [exploratory testing]{"entity": "new_list_name", "value": "exploratory testing"} within the [demo]{"entity": "board_name", "value": "demo"} board.
+      - update the list named [achsah]{"entity": "previous_list_name", "value": "achsah"} to [speech recognition]{"entity": "new_list_name", "value": "speech recognition"} on the [demo]{"entity": "board_name", "value": "demo"} board.
+      - change the name of the list [achsah]{"entity": "previous_list_name", "value": "achsah"} to [speech recognition]{"entity": "new_list_name", "value": "speech recognition"} for the [demo]{"entity": "board_name", "value": "demo"} board.
+      - rename the list [achsah]{"entity": "previous_list_name", "value": "achsah"} to [speech recognition]{"entity": "new_list_name", "value": "speech recognition"} within the [demo]{"entity": "board_name", "value": "demo"} board.
+      - update the list [books]{"entity": "previous_list_name", "value": "books"} to [exploratory testing]{"entity": "new_list_name", "value": "exploratory testing"} on the [demo]{"entity": "board_name", "value": "demo"} board.
+      - change the name of the list [books]{"entity": "previous_list_name", "value": "books"} to [exploratory testing]{"entity": "new_list_name", "value": "exploratory testing"} for the [demo]{"entity": "board_name", "value": "demo"} board.
+      - rename the list [books]{"entity": "previous_list_name", "value": "books"} to [exploratory testing]{"entity": "new_list_name", "value": "exploratory testing"} within the [demo]{"entity": "board_name", "value": "demo"} board.
+      - update the list named [achsah]{"entity": "previous_list_name", "value": "achsah"} to [speech recognition]{"entity": "new_list_name", "value": "speech recognition"} in the [demo]{"entity": "board_name", "value": "demo"} board.
+      - change the name of the list [achsah]{"entity": "previous_list_name", "value": "achsah"} to [speech recognition]{"entity": "new_list_name", "value": "speech recognition"} on the [demo]{"entity": "board_name", "value": "demo"} board.
+      - rename the list [achsah]{"entity": "previous_list_name", "value": "achsah"} to [speech recognition]{"entity": "new_list_name", "value": "speech recognition"} within the [demo]{"entity": "board_name", "value": "demo"} board.
+      - change the name of the list [books]{"entity": "previous_list_name", "value": "books"} to [exploratory testing]{"entity": "new_list_name", "value": "exploratory testing"} from the [demo]{"entity": "board_name", "value": "demo"} board.
+      - update the list [books]{"entity": "previous_list_name", "value": "books"} to [exploratory testing]{"entity": "new_list_name", "value": "exploratory testing"} on the [demo]{"entity": "board_name", "value": "demo"} board.
+      - rename the [books]{"entity": "previous_list_name", "value": "books"} list to [exploratory testing]{"entity": "new_list_name", "value": "exploratory testing"} within the [demo]{"entity": "board_name", "value": "demo"} board.
 
   - intent: create_card
     examples: |

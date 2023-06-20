@@ -11,7 +11,8 @@ from actions.board_functions import (
     open_trello,
     update_board_name,
 )
-from actions.list_functions import add_list
+from actions.list_functions import add_list, update_list_name
+from actions.card_functions import add_card, update_card_name
 
 
 # This is a Python class that defines an action called "action_hello_world" which sends a message
@@ -76,8 +77,6 @@ class ActionCreateBoard(Action):
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
-        # query = tracker.get_slot("board_name")
-        # entity_value = next(tracker.get_latest_entity_values("board_name"), None)
         entity_value = tracker.get_slot("board_name_to_create")
         # print(entity_value)
         add_board(boardnametoadd=entity_value)
@@ -97,9 +96,6 @@ class ActionUpdateBoardName(Action):
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
-        # query = tracker.get_slot("board_name")
-        # entity_value = next(tracker.get_latest_entity_values("board_name"), None
-        # print(entity_value)
         update_board_name(
             prev_board_name=tracker.get_slot("previous_board_name"),
             new_board_name=tracker.get_slot("new_board_name"),
@@ -110,34 +106,6 @@ class ActionUpdateBoardName(Action):
             SlotSet("previous_board_name", tracker.get_slot("previous_board_name")),
             SlotSet("new_board_name", tracker.get_slot("new_board_name")),
         ]
-
-
-# This is a Rasa action class that takes voice input from the user and transcribes it using a
-# pre-trained audio model.
-class ActionTakeVoiceInput(Action):
-    def name(self) -> Text:
-        return "action_take_voice_input"
-
-    async def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
-    ) -> List[Dict]:
-        dispatcher.utter_message(text="Please speak now...")
-        # recognize_speech(audio_model="C:/new_rasa_trial/whisper_models/base.en.pt")
-        # speech = recognize_speech.transcription = []
-        # print(speech)
-        dispatcher.utter_message(
-            text=f'You said: {tracker.get_slot("user_voice_input")}'
-        )
-        return [
-            SlotSet("user_voice_input", tracker.get_slot("user_voice_input")),
-        ]
-
-
-# recognize_speech(audio_model="C:/new_rasa_trial/whisper_models/base.en.pt")
-
 
 class ActionCreateList(Action):
     def name(self) -> Text:
@@ -151,10 +119,76 @@ class ActionCreateList(Action):
     ):
         entity_value = tracker.get_slot("list_name_to_create")
         entity_value1 = tracker.get_slot("board_name_to_create_list")
-        add_list(boardnametoaddlist=entity_value1, listnametoadd=entity_value)
+        add_list(boardname=entity_value1, listname=entity_value)
         dispatcher.utter_message(text="Created new list, please check your browser.")
 
         return [
             SlotSet("list_name_to_create", entity_value),
             SlotSet("board_name_to_create_list", entity_value1),
+        ]
+
+class ActionUpdateListName(Action):
+    def name(self) -> Text:
+        return "action_update_list_name"
+
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ):
+        entity_value = tracker.get_slot("list_name_to_update")
+        entity_value1 = tracker.get_slot("board_name_to_update_list")
+        entity_value2 = tracker.get_slot("new_list_name")
+        update_list_name(boardname=entity_value1, listname=entity_value, newname=entity_value2)
+        dispatcher.utter_message(text="Updated list, please check your browser.")
+
+        return [
+            SlotSet("list_name_to_update", entity_value),
+            SlotSet("board_name_to_update_list", entity_value1),
+            SlotSet("new_list_name", entity_value2),
+        ]
+    
+class ActionCreateCard(Action):
+    def name(self) -> Text:
+        return "action_create_card"
+
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ):
+        entity_value = tracker.get_slot("card_name_to_create")
+        entity_value1 = tracker.get_slot("list_name_to_create_card")
+        add_card(listname=entity_value1, cardname=entity_value)
+        dispatcher.utter_message(text="Created new card, please check your browser.")
+
+        return [
+            SlotSet("card_name_to_create", entity_value),
+            SlotSet("list_name_to_create_card", entity_value1),
+        ]
+    
+
+class ActionUpdateCardName(Action):
+    def name(self) -> Text:
+        return "action_update_card_name"
+
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ):
+        entity_value = tracker.get_slot("card_name_to_update")
+        entity_value1 = tracker.get_slot("list_name_to_update_card")
+        entity_value2 = tracker.get_slot("new_card_name")
+        entity_value3 = tracker.get_slot("board_name_to_update_card")
+        update_card_name(boardname=entity_value3, listname=entity_value1, cardname=entity_value, newname=entity_value2)
+        dispatcher.utter_message(text="Updated card, please check your browser.")
+
+        return [
+            SlotSet("card_name_to_update", entity_value),
+            SlotSet("list_name_to_update_card", entity_value1),
+            SlotSet("new_card_name", entity_value2),
         ]
