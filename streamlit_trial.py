@@ -166,14 +166,15 @@ if __name__ == "__main__":
     )
 
     if model_selection == "Tiny (Moderate Accuracy, Fast Response)":
-        audio_model_path = "X:/new_rasa_trial/whisper_models/tiny.en.pt"
+        audio_model_path = "C:/new_rasa_trial/whisper_models/tiny.en.pt"
     elif model_selection == "Base (Higher Accuracy, Slow Response)":
-        audio_model_path = "X:/new_rasa_trial/whisper_models/base.en.pt"
+        audio_model_path = "C:/new_rasa_trial/whisper_models/base.en.pt"
     elif model_selection == "Small (Highest Accuracy, Slowest Response)":
-        audio_model_path = "X:/new_rasa_trial/whisper_models/small.en.pt"
+        audio_model_path = "C:/new_rasa_trial/whisper_models/small.en.pt"
 
     if start_recognition := st.checkbox("Start/Stop Recognition"):
         recognize_speech(audio_model_path=audio_model_path, start_recognition=True)
     else:
         recognize_speech(audio_model_path=audio_model_path, start_recognition=False)
         sys.exit()
+

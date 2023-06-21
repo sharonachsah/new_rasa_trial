@@ -5,7 +5,6 @@ import streamlit as st
 # def load_audio_model(audio_model_path):
 #     return whisper.load_model(audio_model_path)
 
-
 if __name__ == "__main__":
     st.set_page_config(page_title="Real-Time Speech Recognition", page_icon="🎙️")
     st.title("Real-Time Speech Recognition")
