@@ -1,35 +1,40 @@
 """
 This file contains functions that will add, open, and update cards in a _list
 """
+from http import client
 import webbrowser
 
-from trello_functions.voiceassistant import speak, takecommand
+from actions.voiceassistant import speak, takecommand
+from actions.client_token import CLIENT
+
+client = CLIENT
 
 
-def add_card(client):
+def add_card(boardname:str, listname:str, cardname:str):
     """
     This function will add a card to a list.
 
     :param client: TrelloClient object
     """
-    board_name = get_input("What board do you want to add a card to?")
+    # boardname = get_input("What board do you want to add a card to?")
+    print(boardname)
     boards = client.list_boards()
-    matching_boards = [board for board in boards if board_name in board.name.lower()]
+    matching_boards = [board for board in boards if boardname in board.name.lower()]
     if not matching_boards:
-        speak(f"Could not find board with name {board_name}")
+        speak(f"Could not find board with name {boardname}")
         return
     board = matching_boards[0]
 
-    list_name = get_input("What list do you want to add a card to?")
+    # listname = get_input("What list do you want to add a card to?")
     lists = board.list_lists()
-    matching_lists = [lst for lst in lists if list_name in lst.name.lower()]
+    matching_lists = [lst for lst in lists if listname in lst.name.lower()]
     if not matching_lists:
-        speak(f"Could not find list with name {list_name}")
+        speak(f"Could not find list with name {listname}")
         return
     _list = matching_lists[0]
 
-    card_name = get_input("What do you want to name your card?")
-    _list.add_card(card_name)
+    # cardname = get_input("What do you want to name your card?")
+    _list.add_card(cardname)
 
 
 def get_input(prompt):

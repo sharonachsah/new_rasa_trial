@@ -4,7 +4,7 @@ from .cardfunctions import *
 from .clienttoken import *
 from .listfunctions import *
 from .trello_array import trello_array
-from .voiceassistant import *
+from ..actions.voiceassistant import *
 from .greetuser import *
 from .cardchecklistfunctions import *
 from .trello_array import *

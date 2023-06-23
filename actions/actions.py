@@ -161,7 +161,8 @@ class ActionCreateCard(Action):
     ):
         entity_value = tracker.get_slot("card_name_to_create")
         entity_value1 = tracker.get_slot("list_name_to_create_card")
-        add_card(listname=entity_value1, cardname=entity_value)
+        entity_value2 = tracker.get_slot("board_name_to_create_card")
+        add_card(listname=entity_value1, cardname=entity_value, boardname=entity_value2)
         dispatcher.utter_message(text="Created new card, please check your browser.")
 
         return [

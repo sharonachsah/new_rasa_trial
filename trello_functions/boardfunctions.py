@@ -2,7 +2,7 @@
 import re
 import webbrowser
 
-from trello_functions.voiceassistant import speak, takecommand
+from actions.voiceassistant import speak, takecommand
 
 # board_list = [board.name.lower() for board in client.list_boards()]
 # print(board_list)
