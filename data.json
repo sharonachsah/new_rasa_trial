@@ -1,0 +1,6 @@
+{
+    "name": "example",
+    "description": "example description",
+    "price": 10.5,
+    "tax": 1.5
+}
