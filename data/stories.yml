@@ -80,7 +80,7 @@ stories:
       - intent: create_list
         entities:
           - list_name_to_create: "Achsah"
-          - board_name: "demo"
+          - board_name_to_create_list: "demo"
       - action: action_create_list
       - action: utter_create_list
       # - slot_was_set:
@@ -104,6 +104,8 @@ stories:
       - intent: create_card
         entities:
           - card_name_to_create: "Achsah"
+          - list_name_to_create_card: "list1"
+          - board_name_to_create_card: "demo"
       - action: action_create_card
       - action: utter_create_card
       # - slot_was_set:
@@ -115,8 +117,8 @@ stories:
         entities:
           - previous_card_name: "Achsah"
           - new_card_name: "card1"
-          - list_name: "list1"
-          - board_name: "demo"
+          - board_name_to_update_card: "demo"
+          - list_name_to_update_card: "list1"
       - action: action_update_card_name
       - action: utter_update_card_name
       # - slot_was_set:

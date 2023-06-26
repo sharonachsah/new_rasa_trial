@@ -11,7 +11,7 @@ intents:
   - greet
   - hello_world
   - mood_great
-  - mood_unhappy  
+  - mood_unhappy
   - open_trello
   - open_board:
       use_entities:
@@ -45,22 +45,23 @@ intents:
         - list_name_to_update_card
 
 entities:
-  - query
+  - board_name_to_create
   - board_name_to_create_card
-  - list_name_to_create_card
-  - board_name_to_update_card
-  - list_name_to_update_card
   - board_name_to_create_list
   - board_name_to_open
-  - board_name_to_create
-  - previous_board_name
-  - new_board_name
-  - list_name_to_create
-  - previous_list_name
-  - new_list_name
+  - board_name_to_update_card
+  - board_name_to_update_list
   - card_name_to_create
-  - previous_card_name
+  - list_name_to_create
+  - list_name_to_create_card
+  - list_name_to_update_card
+  - new_board_name
   - new_card_name
+  - new_list_name
+  - previous_board_name
+  - previous_card_name
+  - previous_list_name
+  - query
 
 slots:
   query:
@@ -133,14 +134,14 @@ slots:
     mappings:
       - type: from_entity
         entity: card_name_to_create
-  
+
   previous_card_name:
     type: text
     influence_conversation: true
     mappings:
       - type: from_entity
         entity: previous_card_name
-  
+
   new_card_name:
     type: text
     influence_conversation: true
@@ -210,7 +211,7 @@ responses:
   utter_create_card:
     - text: I have created the card you asked for in your browser
   utter_update_card_name:
-    - text: I have updated the card name you asked for in your browser  
+    - text: I have updated the card name you asked for in your browser
 
 actions:
   - utter_iamabot
@@ -232,7 +233,6 @@ actions:
   - utter_create_card
   - action_update_card_name
   - utter_update_card_name
-
 # - board_memberships
 # - board_labels
 # - board_lists
