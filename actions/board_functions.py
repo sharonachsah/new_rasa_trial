@@ -48,7 +48,8 @@ def open_board(boardnametoopen: str):
     Trello board that the user wants to open
     :type boardnametoopen: str
     """
-    board_name = re.sub(r"[^\w\s]", "", boardnametoopen)
+    # board_name = re.sub(r"[^\w\s]", "", boardnametoopen)
+    board_name = boardnametoopen
     # board_name = board_name.s.replace(" ", "-")
     boards = client.list_boards()
     board_names = {

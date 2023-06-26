@@ -51,35 +51,5 @@ async def botSpeak(text: str):
     speak(text)
     sleep(0.2)
 
-# def send_transcription_to_rasa(transcription: str):
-#     """Send transcription to Rasa and display bot's response in Streamlit UI."""
-#     rasa_server_url = "http://localhost:5005"
-#     # Remove dot from transcription
-#     transcription = transcription.strip(".")
-
-#     print("\nTranscription Payload:", transcription)
-
-#     payload = {"message": transcription.lower()}
-
-#     response = requests.post(
-#         url=f"{rasa_server_url}/webhooks/rest/webhook", json=payload
-#     )
-#     bot_response: str = response.json()[0]["text"]
-#     print("Bot said: ", bot_response)
-#     speak(f"{bot_response}")
-#     sleep(0.2)
-
-    # if response.status_code == 200:
-    #     bot_response: str = response.json()[0]["text"]
-    #     print("Bot said: ", bot_response)
-    #     # st.write(
-    #     #     "Bot said: ", bot_response, "What else can I do for you?"
-    #     # )  # Display bot's response in Streamlit UI
-    #     speak(f"{bot_response}")
-    #     sleep(0.2)
-    # else:
-    #     print("Error: ", response.status_code, response.text)
-
-
 if __name__ == "__main__":
     uvicorn.run(app, host="localhost", port=80)

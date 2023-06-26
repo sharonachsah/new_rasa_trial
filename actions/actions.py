@@ -58,10 +58,14 @@ class ActionOpenBoard(Action):
     ) -> List[Dict[Text, Any]]:
         # query = tracker.get_slot("board_name")
         # entity_value = next(tracker.get_latest_entity_values("board_name"), None)
-        entity_value = tracker.get_slot("board_name_to_open")
+        # entity_value = tracker.get_slot("board_name_to_open")
         # print(entity_value)
-        open_board(boardnametoopen=entity_value)
-        dispatcher.utter_message(text="Opened board, please check your browser.")
+        entity_value = tracker.get_slot("board_name_to_open")
+        if entity_value == "":
+            dispatcher.utter_message(text="Please specify a board name.")
+        else:
+            open_board(boardnametoopen=entity_value)
+            dispatcher.utter_message(text=f"I have opened board {entity_value}, please check your browser.",)
 
         return [SlotSet("board_name_to_open", entity_value)]
 
@@ -77,10 +81,12 @@ class ActionCreateBoard(Action):
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
-        entity_value = tracker.get_slot("board_name_to_create")
-        # print(entity_value)
-        add_board(boardnametoadd=entity_value)
-        dispatcher.utter_message(text="Created new board, please check your browser.")
+        if tracker.get_slot("board_name_to_create") == "":
+            dispatcher.utter_message(text="Please specify a board name.")
+        else:
+            entity_value = tracker.get_slot("board_name_to_create")
+            add_board(boardnametoadd=entity_value)
+            dispatcher.utter_message(text=f"I have created new board {entity_value}, please check your browser.")
 
         return [SlotSet("board_name_to_create", entity_value)]
 
