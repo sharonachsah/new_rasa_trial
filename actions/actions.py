@@ -56,21 +56,19 @@ class ActionOpenBoard(Action):
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
-        # query = tracker.get_slot("board_name")
-        # entity_value = next(tracker.get_latest_entity_values("board_name"), None)
-        # entity_value = tracker.get_slot("board_name_to_open")
-        # print(entity_value)
-        entity_value = tracker.get_slot("board_name_to_open")
-        if entity_value == "":
+        board_name_to_open = tracker.get_slot("board_name_to_open")
+        if board_name_to_open == "":
             dispatcher.utter_message(text="Please specify a board name.")
         else:
-            open_board(boardnametoopen=entity_value)
-            dispatcher.utter_message(text=f"I have opened board {entity_value}, please check your browser.",)
+            open_board(boardnametoopen=board_name_to_open)
+            dispatcher.utter_message(text=f"I have opened board {board_name_to_open}, please check your browser.",)
 
-        return [SlotSet("board_name_to_open", entity_value)]
+        return [SlotSet("board_name_to_open", board_name_to_open)]
 
 
-# This is a Python class that creates a Trello board and returns a message to the user.
+
+# This is a Python class that creates a Trello board with a specified name and returns a message
+# confirming the creation of the board.
 class ActionCreateBoard(Action):
     def name(self) -> Text:
         return "action_create_board"
@@ -84,11 +82,11 @@ class ActionCreateBoard(Action):
         if tracker.get_slot("board_name_to_create") == "":
             dispatcher.utter_message(text="Please specify a board name.")
         else:
-            entity_value = tracker.get_slot("board_name_to_create")
-            add_board(boardnametoadd=entity_value)
-            dispatcher.utter_message(text=f"I have created new board {entity_value}, please check your browser.")
+            board_name_to_create = tracker.get_slot("board_name_to_create")
+            add_board(boardnametoadd=board_name_to_create)
+            dispatcher.utter_message(text=f"I have created new board {board_name_to_create}, please check your browser.")
 
-        return [SlotSet("board_name_to_create", entity_value)]
+        return [SlotSet("board_name_to_create", board_name_to_create)]
 
 
 # This is a Python class that updates the name of a board and returns a message to the user.
@@ -101,16 +99,18 @@ class ActionUpdateBoardName(Action):
         dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: Dict[Text, Any],
-    ) -> List[Dict[Text, Any]]:
+    ):
+        previous_board_name=tracker.get_slot("previous_board_name")
+        new_board_name=tracker.get_slot("new_board_name")
         update_board_name(
-            prev_board_name=tracker.get_slot("previous_board_name"),
-            new_board_name=tracker.get_slot("new_board_name"),
+            previous_board_name=previous_board_name,
+            new_board_name=new_board_name,
         )
-        dispatcher.utter_message(text="Updated board, please check your browser.")
+        dispatcher.utter_message(text=f"I have updated board name {previous_board_name} to {new_board_name}, please check your browser.")
 
         return [
-            SlotSet("previous_board_name", tracker.get_slot("previous_board_name")),
-            SlotSet("new_board_name", tracker.get_slot("new_board_name")),
+            SlotSet("previous_board_name", previous_board_name),
+            SlotSet("new_board_name", new_board_name),
         ]
 
 class ActionCreateList(Action):
@@ -123,14 +123,14 @@ class ActionCreateList(Action):
         tracker: Tracker,
         domain: Dict[Text, Any],
     ):
-        entity_value = tracker.get_slot("list_name_to_create")
-        entity_value1 = tracker.get_slot("board_name_to_create_list")
-        add_list(boardname=entity_value1, listname=entity_value)
-        dispatcher.utter_message(text="Created new list, please check your browser.")
+        list_name_to_create = tracker.get_slot("list_name_to_create")
+        board_name_to_create_list = tracker.get_slot("board_name_to_create_list")
+        add_list(boardname=board_name_to_create_list, listname=list_name_to_create)
+        dispatcher.utter_message(text=f"I have created new list named {list_name_to_create} in board{board_name_to_create_list}, please check your browser.")
 
         return [
-            SlotSet("list_name_to_create", entity_value),
-            SlotSet("board_name_to_create_list", entity_value1),
+            SlotSet("list_name_to_create", list_name_to_create),
+            SlotSet("board_name_to_create_list", board_name_to_create_list),
         ]
 
 class ActionUpdateListName(Action):
@@ -143,16 +143,16 @@ class ActionUpdateListName(Action):
         tracker: Tracker,
         domain: Dict[Text, Any],
     ):
-        entity_value = tracker.get_slot("list_name_to_update")
-        entity_value1 = tracker.get_slot("board_name_to_update_list")
-        entity_value2 = tracker.get_slot("new_list_name")
-        update_list_name(boardname=entity_value1, listname=entity_value, newname=entity_value2)
-        dispatcher.utter_message(text="Updated list, please check your browser.")
+        previous_list_name = tracker.get_slot("previous_list_name")
+        new_list_name = tracker.get_slot("new_list_name")
+        board_name_to_update_list = tracker.get_slot("board_name_to_update_list")
+        update_list_name(boardname=board_name_to_update_list, listname=previous_list_name, newname=new_list_name)
+        dispatcher.utter_message(text=f"I have updated the list named{previous_list_name} to {new_list_name} in board {board_name_to_update_list}, please check your browser.")
 
         return [
-            SlotSet("list_name_to_update", entity_value),
-            SlotSet("board_name_to_update_list", entity_value1),
-            SlotSet("new_list_name", entity_value2),
+            SlotSet("previous_list_name", previous_list_name),
+            SlotSet("new_list_name", new_list_name),
+            SlotSet("board_name_to_update_list", board_name_to_update_list),
         ]
 
 class ActionCreateCard(Action):
@@ -165,15 +165,16 @@ class ActionCreateCard(Action):
         tracker: Tracker,
         domain: Dict[Text, Any],
     ):
-        entity_value = tracker.get_slot("card_name_to_create")
-        entity_value1 = tracker.get_slot("list_name_to_create_card")
-        entity_value2 = tracker.get_slot("board_name_to_create_card")
-        add_card(listname=entity_value1, cardname=entity_value, boardname=entity_value2)
-        dispatcher.utter_message(text="Created new card, please check your browser.")
+        card_name_to_create = tracker.get_slot("card_name_to_create")
+        list_name_to_create_card = tracker.get_slot("list_name_to_create_card")
+        board_name_to_create_card = tracker.get_slot("board_name_to_create_card")
+        add_card(listname=list_name_to_create_card, cardname=card_name_to_create, boardname=board_name_to_create_card)
+        dispatcher.utter_message(text=f"I have created the new card named{card_name_to_create} in list {list_name_to_create_card} of board {board_name_to_create_card}, please check your browser.")
 
         return [
-            SlotSet("card_name_to_create", entity_value),
-            SlotSet("list_name_to_create_card", entity_value1),
+            SlotSet("card_name_to_create", card_name_to_create),
+            SlotSet("list_name_to_create_card", list_name_to_create_card),
+            SlotSet("board_name_to_create_card", board_name_to_create_card),
         ]
 
 
@@ -187,15 +188,18 @@ class ActionUpdateCardName(Action):
         tracker: Tracker,
         domain: Dict[Text, Any],
     ):
-        entity_value = tracker.get_slot("card_name_to_update")
-        entity_value1 = tracker.get_slot("list_name_to_update_card")
-        entity_value2 = tracker.get_slot("new_card_name")
-        entity_value3 = tracker.get_slot("board_name_to_update_card")
-        update_card_name(boardname=entity_value3, listname=entity_value1, cardname=entity_value, newname=entity_value2)
-        dispatcher.utter_message(text="Updated card, please check your browser.")
+        previous_card_name = tracker.get_slot("previous_card_name")
+        new_card_name = tracker.get_slot("new_card_name")
+        list_name_to_update_card = tracker.get_slot("list_name_to_update_card")
+        board_name_to_update_card = tracker.get_slot("board_name_to_update_card")
+
+        update_card_name(boardname=board_name_to_update_card, listname=list_name_to_update_card, cardname=previous_card_name, newname=new_card_name)
+
+        dispatcher.utter_message(text=f"I have updated card named {previous_card_name} to {new_card_name} in list{list_name_to_update_card} of board{board_name_to_update_card}, please check your browser.")
 
         return [
-            SlotSet("card_name_to_update", entity_value),
-            SlotSet("list_name_to_update_card", entity_value1),
-            SlotSet("new_card_name", entity_value2),
+            SlotSet("previous_card_name", previous_card_name),
+            SlotSet("new_card_name", new_card_name),
+            SlotSet("list_name_to_update_card", list_name_to_update_card),
+            SlotSet("board_name_to_update_card", board_name_to_update_card),
         ]

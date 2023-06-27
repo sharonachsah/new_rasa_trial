@@ -69,7 +69,7 @@ def open_board(boardnametoopen: str):
         print(f"Sorry, I couldn't find a board named {board_name}.")
 
 
-def update_board_name(prev_board_name: str, new_board_name: str):
+def update_board_name(previous_board_name: str, new_board_name: str):
     """
     This function will update a board
 
@@ -77,7 +77,7 @@ def update_board_name(prev_board_name: str, new_board_name: str):
     """
     boards = client.list_boards()
     for board in boards:
-        if prev_board_name in board.name:
+        if previous_board_name in board.name:
             board.set_name(new_board_name)
 
 

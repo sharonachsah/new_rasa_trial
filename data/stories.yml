@@ -92,7 +92,7 @@ stories:
         entities:
           - previous_list_name: "Achsah"
           - new_list_name: "list1"
-          - board_name: "demo"
+          - board_name_to_update_list: "demo"
       - action: action_update_list_name
       - action: utter_update_list_name
       # - slot_was_set:

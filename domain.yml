@@ -45,23 +45,23 @@ intents:
         - list_name_to_update_card
 
 entities:
-  - board_name_to_create
-  - board_name_to_create_card
-  - board_name_to_create_list
-  - board_name_to_open
-  - board_name_to_update_card
-  - board_name_to_update_list
-  - card_name_to_create
-  - list_name_to_create
-  - list_name_to_create_card
-  - list_name_to_update_card
-  - new_board_name
+  - query
   - new_card_name
   - new_list_name
-  - previous_board_name
+  - new_board_name
+  - board_name_to_open
   - previous_card_name
   - previous_list_name
-  - query
+  - card_name_to_create
+  - list_name_to_create
+  - previous_board_name
+  - board_name_to_create
+  - list_name_to_create_card
+  - list_name_to_update_card
+  - board_name_to_create_card
+  - board_name_to_create_list
+  - board_name_to_update_card
+  - board_name_to_update_list
 
 slots:
   query:
@@ -107,6 +107,13 @@ slots:
       - type: from_entity
         entity: list_name_to_create
 
+  board_name_to_create_list:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: board_name_to_create_list
+
   previous_list_name:
     type: text
     influence_conversation: true
@@ -121,19 +128,26 @@ slots:
       - type: from_entity
         entity: new_list_name
 
-  board_name_to_create_list:
-    type: text
-    influence_conversation: true
-    mappings:
-      - type: from_entity
-        entity: board_name_to_create_list
-
   card_name_to_create:
     type: text
     influence_conversation: true
     mappings:
       - type: from_entity
         entity: card_name_to_create
+
+  board_name_to_create_card:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: board_name_to_create_card
+
+  list_name_to_create_card:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: list_name_to_create_card
 
   previous_card_name:
     type: text
@@ -149,13 +163,6 @@ slots:
       - type: from_entity
         entity: new_card_name
 
-  update_card_name:
-    type: text
-    influence_conversation: true
-    mappings:
-      - type: from_entity
-        entity: update_card_name
-
   board_name_to_update_card:
     type: text
     influence_conversation: true
@@ -169,20 +176,6 @@ slots:
     mappings:
       - type: from_entity
         entity: list_name_to_update_card
-
-  board_name_to_create_card:
-    type: text
-    influence_conversation: true
-    mappings:
-      - type: from_entity
-        entity: board_name_to_create_card
-
-  list_name_to_create_card:
-    type: text
-    influence_conversation: true
-    mappings:
-      - type: from_entity
-        entity: list_name_to_create_card
 
 responses:
   utter_greet:
