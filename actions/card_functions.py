@@ -27,11 +27,14 @@ def add_card(boardname:str, listname:str, cardname:str):
 
     # listname = get_input("What list do you want to add a card to?")
     lists = board.list_lists()
+    print(lists)
     matching_lists = [lst for lst in lists if listname in lst.name.lower()]
+    print(matching_lists)
     if not matching_lists:
         speak(f"Could not find list with name {listname}")
         return
     _list = matching_lists[0]
+    print(_list)
 
     # cardname = get_input("What do you want to name your card?")
     _list.add_card(cardname)
