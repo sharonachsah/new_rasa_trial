@@ -57,11 +57,8 @@ class ActionOpenBoard(Action):
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
         board_name_to_open = tracker.get_slot("board_name_to_open")
-        if board_name_to_open == "":
-            dispatcher.utter_message(text="Please specify a board name.")
-        else:
-            open_board(boardnametoopen=board_name_to_open)
-            dispatcher.utter_message(text=f"I have opened board {board_name_to_open}, please check your browser.",)
+        open_board(boardnametoopen=board_name_to_open)
+        dispatcher.utter_message(text=f"I have opened board {board_name_to_open}, please check your browser.",)
 
         return [SlotSet("board_name_to_open", board_name_to_open)]
 
@@ -123,7 +120,7 @@ class ActionCreateList(Action):
     ):
         list_name_to_create = tracker.get_slot("list_name_to_create")
         board_name_to_create_list = tracker.get_slot("board_name_to_create_list")
-        add_list(boardname=board_name_to_create_list, listname=list_name_to_create)
+        add_list( listname=list_name_to_create, boardname=board_name_to_create_list)
         dispatcher.utter_message(text=f"I have created new list named {list_name_to_create} in board {board_name_to_create_list}, please check your browser.")
 
         return [
@@ -144,7 +141,7 @@ class ActionUpdateListName(Action):
         previous_list_name = tracker.get_slot("previous_list_name")
         new_list_name = tracker.get_slot("new_list_name")
         board_name_to_update_list = tracker.get_slot("board_name_to_update_list")
-        update_list_name(boardname=board_name_to_update_list, listname=previous_list_name, newname=new_list_name)
+        update_list_name(listname=previous_list_name, newname=new_list_name, boardname=board_name_to_update_list)
         dispatcher.utter_message(text=f"I have updated the list named {previous_list_name} to {new_list_name} in board {board_name_to_update_list}, please check your browser.")
 
         return [
@@ -166,7 +163,7 @@ class ActionCreateCard(Action):
         card_name_to_create = tracker.get_slot("card_name_to_create")
         list_name_to_create_card = tracker.get_slot("list_name_to_create_card")
         board_name_to_create_card = tracker.get_slot("board_name_to_create_card")
-        add_card(listname=list_name_to_create_card, cardname=card_name_to_create, boardname=board_name_to_create_card)
+        add_card(cardname=card_name_to_create, listname=list_name_to_create_card, boardname=board_name_to_create_card)
         dispatcher.utter_message(text=f"I have created the new card named {card_name_to_create} in list {list_name_to_create_card} of board {board_name_to_create_card}, please check your browser.")
 
         return [
@@ -191,7 +188,7 @@ class ActionUpdateCardName(Action):
         list_name_to_update_card = tracker.get_slot("list_name_to_update_card")
         board_name_to_update_card = tracker.get_slot("board_name_to_update_card")
 
-        update_card_name(boardname=board_name_to_update_card, listname=list_name_to_update_card, cardname=previous_card_name, newname=new_card_name)
+        update_card_name( cardname=previous_card_name, newname=new_card_name, listname=list_name_to_update_card, boardname=board_name_to_update_card)
 
         dispatcher.utter_message(text=f"I have updated card named {previous_card_name} to {new_card_name} in list {list_name_to_update_card} of board {board_name_to_update_card}, please check your browser.")
 

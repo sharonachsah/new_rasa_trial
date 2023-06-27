@@ -128,6 +128,13 @@ slots:
       - type: from_entity
         entity: new_list_name
 
+  board_name_to_update_list:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: board_name_to_update_list
+
   card_name_to_create:
     type: text
     influence_conversation: true
