@@ -15,14 +15,6 @@ def open_trello():
     # webbrowser.open(client.get_member("me").url)
 
 
-def get_all_boards():
-    """
-    This function retrieves and prints the IDs of all boards using the Trello API client.
-    """
-    boards = client.list_boards()
-    for board in boards:
-        print(board.id)
-
 
 def add_board(boardnametoadd: str):
     """
@@ -70,24 +62,7 @@ def open_board(boardnametoopen: str):
 
 
 def update_board_name(previous_board_name: str, new_board_name: str):
-    """
-    This function will update a board
-
-    :param client: TrelloClient object
-    """
-    boards = client.list_boards()
+    boards = [board for board in client.list_boards() if previous_board_name in board.name]
     for board in boards:
-        if previous_board_name in board.name:
-            board.set_name(new_board_name)
+        board.set_name(new_board_name)
 
-
-def delete_board(board_name: str):
-    """
-    This function will delete a board
-
-    :param client: TrelloClient object
-    """
-    boards = client.list_boards()
-    for board in boards:
-        if board_name in board.name:
-            board.close()

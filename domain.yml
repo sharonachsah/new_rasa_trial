@@ -15,53 +15,46 @@ intents:
   - open_trello
   - open_board:
       use_entities:
-        - board_name_to_open
+        - board_name
   - create_board:
       use_entities:
-        - board_name_to_create
+        - board_name
   - update_board_name:
       use_entities:
         - previous_board_name
         - new_board_name
   - create_list:
       use_entities:
-        - list_name_to_create
-        - board_name_to_create_list
+        - list_name
+        - board_name
   - update_list_name:
       use_entities:
         - previous_list_name
         - new_list_name
-        - board_name_to_update_list
+        - board_name
   - create_card:
       use_entities:
         - card_name_to_create
-        - list_name_to_create_card
-        - board_name_to_create_card
+        - list_name
+        - board_name
   - update_card_name:
       use_entities:
         - previous_card_name
         - new_card_name
-        - board_name_to_update_card
-        - list_name_to_update_card
+        - list_name
+        - board_name
 
 entities:
   - query
-  - new_card_name
-  - new_list_name
-  - new_board_name
-  - board_name_to_open
-  - previous_card_name
-  - previous_list_name
-  - card_name_to_create
-  - list_name_to_create
+  - board_name
   - previous_board_name
-  - board_name_to_create
-  - list_name_to_create_card
-  - list_name_to_update_card
-  - board_name_to_create_card
-  - board_name_to_create_list
-  - board_name_to_update_card
-  - board_name_to_update_list
+  - new_board_name
+  - list_name
+  - previous_list_name
+  - new_list_name
+  - card_name_to_create
+  - previous_card_name
+  - new_card_name
 
 slots:
   query:
@@ -72,19 +65,12 @@ slots:
         intent: open_trello
         entity: query
 
-  board_name_to_open:
+  board_name:
     type: text
     influence_conversation: true
     mappings:
       - type: from_entity
-        entity: board_name_to_open
-
-  board_name_to_create:
-    type: text
-    influence_conversation: true
-    mappings:
-      - type: from_entity
-        entity: board_name_to_create
+        entity: board_name
 
   previous_board_name:
     type: text
@@ -100,19 +86,12 @@ slots:
       - type: from_entity
         entity: new_board_name
 
-  list_name_to_create:
+  list_name:
     type: text
     influence_conversation: true
     mappings:
       - type: from_entity
-        entity: list_name_to_create
-
-  board_name_to_create_list:
-    type: text
-    influence_conversation: true
-    mappings:
-      - type: from_entity
-        entity: board_name_to_create_list
+        entity: list_name
 
   previous_list_name:
     type: text
@@ -128,33 +107,12 @@ slots:
       - type: from_entity
         entity: new_list_name
 
-  board_name_to_update_list:
-    type: text
-    influence_conversation: true
-    mappings:
-      - type: from_entity
-        entity: board_name_to_update_list
-
   card_name_to_create:
     type: text
     influence_conversation: true
     mappings:
       - type: from_entity
         entity: card_name_to_create
-
-  board_name_to_create_card:
-    type: text
-    influence_conversation: true
-    mappings:
-      - type: from_entity
-        entity: board_name_to_create_card
-
-  list_name_to_create_card:
-    type: text
-    influence_conversation: true
-    mappings:
-      - type: from_entity
-        entity: list_name_to_create_card
 
   previous_card_name:
     type: text
@@ -169,20 +127,6 @@ slots:
     mappings:
       - type: from_entity
         entity: new_card_name
-
-  board_name_to_update_card:
-    type: text
-    influence_conversation: true
-    mappings:
-      - type: from_entity
-        entity: board_name_to_update_card
-
-  list_name_to_update_card:
-    type: text
-    influence_conversation: true
-    mappings:
-      - type: from_entity
-        entity: list_name_to_update_card
 
 responses:
   utter_greet:
