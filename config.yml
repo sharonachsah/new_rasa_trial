@@ -16,26 +16,26 @@ pipeline:
   # # See https://rasa.com/docs/rasa/tuning-your-model for more information.
   - name: WhitespaceTokenizer
   - name: RegexFeaturizer
+  # - name: RegexEntityExtractor
+  #   case_sensitive: false
+  #   use_lookup_tables: false
+  #   use_regexes: true
   - name: LexicalSyntacticFeaturizer
-    BILOU_flag: true
+    # BILOU_flag: true
+  - name: CountVectorsFeaturizer
   - name: CountVectorsFeaturizer
     analyzer: char_wb
     min_ngram: 1
     max_ngram: 4
   - name: DIETClassifier
-    epochs: 300
-    batch_size: 64
     constrain_similarities: true
-    use_masked_language_model: true
-    number_of_transformer_layers: 4
+    # BILOU_flag: true
   - name: EntitySynonymMapper
   - name: ResponseSelector
-    epochs: 200
-    constrain_similarities: true
-    batch_size: 64
+    constrain_similarities: truea
   - name: FallbackClassifier
-    threshold: 0.3
-    ambiguity_threshold: 0.1
+    threshold: 0.5
+    ambiguity_threshold: 0.3
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/
@@ -49,11 +49,10 @@ policies:
   - name: UnexpecTEDIntentPolicy
     max_history: 5
     use_gpu: false
-    epochs: 200
-    batch_size: [32, 64]
+    epochs: 100
     constrain_similarities: true
   - name: TEDPolicy
     max_history: 5
-    epochs: 200
+    epochs: 100
     use_gpu: false
     constrain_similarities: true

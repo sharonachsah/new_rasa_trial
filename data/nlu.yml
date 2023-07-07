@@ -2,94 +2,94 @@ version: "3.1"
 nlu:
   - intent: greet
     examples: |
-      - good morning
-      - hey dude
-      - let's go
-      - morning
+      - hey
       - hello
+      - hi
       - hello there
+      - good morning
       - good evening
+      - morning
+      - hey there
+      - let's go
+      - hey dude
+      - good morning
       - good evening
       - good afternoon
-      - hey
-      - good morning
-      - hi
-      - hey there
 
   - intent: goodbye
     examples: |
-      - goodbye
-      - see you around
-      - good night
       - good by
+      - good night
       - bye
-      - bye bye
+      - goodbye
       - see you
+      - good by
       - see you later
       - have a nice day
+      - see you around
+      - bye bye
       - see you later
-      - good by
 
   - intent: affirm
     examples: |
-      - y
-      - that sounds good
-      - of course
-      - indeed
-      - correct
-      - why
       - yes
+      - why
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
 
   - intent: deny
     examples: |
-      - I don't think so
-      - n
-      - don't like that
       - no
+      - n
       - never
+      - I don't think so
+      - don't like that
       - no way
       - not really
 
   - intent: mood_great
     examples: |
-      - super stoked
-      - so perfect
-      - amazing
-      - so so perfect
-      - I am amazing
       - perfect
-      - wonderful
-      - I am going to save the world
-      - so good
       - great
-      - extremely good
+      - amazing
+      - feeling like a king
+      - wonderful
       - I am feeling very good
       - I am great
-      - feeling like a king
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
 
   - intent: mood_unhappy
     examples: |
-      - super sad
-      - I don't feel very well
-      - extremly sad
-      - not good
-      - I'm so sad
-      - so saad
       - my day was horrible
-      - sad
-      - not very good
-      - unhappy
-      - so sad
       - I am sad
-      - very sad
+      - I don't feel very well
       - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
 
   - intent: bot_challenge
     examples: |
-      - am I talking to a human?
-      - am I talking to a bot?
-      - are you a human?
       - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
       - how are you
 
   - intent: hello_world
@@ -100,188 +100,126 @@ nlu:
   - intent: open_trello
     examples: |
       - open trello
-      - open trello app
       - open trello boards
       - launch trello
-      - launch trello app
       - launch trello boards
 
   - intent: open_board
     examples: |
-      - open board [esakki]{"entity": "board_name"}
-      - open board [layout]{"entity": "board_name"}
-      - open board [movies]{"entity": "board_name"}
-      - open board [roadmap]{"entity": "board_name"}
-      - open board [analysis]{"entity": "board_name"}
-      - open board [backlogs]{"entity": "board_name"}
-      - open board [animation]{"entity": "board_name"}
-      - open board [user flow]{"entity": "board_name"}
-      - open board [UX issues]{"entity": "board_name"}
-      - open board [fix navbar]{"entity": "board_name"}
-      - open board [navigation]{"entity": "board_name"}
-      - open board [bugs to fix]{"entity": "board_name"}
-      - open board [IT strategy]{"entity": "board_name"}
-      - open board [Employee status]{"entity": "board_name"}
-      - open board [graphic element]{"entity": "board_name"}
-      - open board [movies to watch]{"entity": "board_name"}
-      - open board [places to visit]{"entity": "board_name"}
-      - open board [content strategy]{"entity": "board_name"}
-      - open board [roadmap to success]{"entity": "board_name"}
-      - open board [exploratory testing]{"entity": "board_name"}
-      - open board [features to implement]{"entity": "board_name"}
-      - open board [social login interaction]{"entity": "board_name"}
-      - open board [input field customization]{"entity": "board_name"}
-      - open board [accordion menu implementation]{"entity": "board_name"}
+      - open board [demo]{"entity": "open_board_name", "value": "demo"}
+      - open board [books]{"entity": "open_board_name", "value": "books"}
+      - open board [project]{"entity": "open_board_name", "value": "project"}
+      - open board [status]{"entity": "open_board_name", "value": "status"}
+      - open board [assignment]{"entity": "open_board_name", "value": "assignment"}
+
+  - regex: open_board_name
+    examples: |
+      - \b\w+\b|\b\w+\s\w+\b
 
   - intent: create_board
     examples: |
-      - create board [focus]{"entity": "board_name"}
-      - create board [plans]{"entity": "board_name"}
-      - create board [design]{"entity": "board_name"}
-      - create board [myvitals]{"entity": "board_name"}
-      - create board [typography]{"entity": "board_name"}
-      - create board [encryption]{"entity": "board_name"}
-      - create board [trellotalk]{"entity": "board_name"}
-      - create board [scalability]{"entity": "board_name"}
-      - create board [trello-talk]{"entity": "board_name"}
-      - create board [trello talk]{"entity": "board_name"}
-      - create board [accessibility]{"entity": "board_name"}
-      - create board [data security]{"entity": "board_name"}
-      - create board [social privacy]{"entity": "board_name"}
-      - create board [aesthetic appeal]{"entity": "board_name"}
-      - create board [scroll behaviour]{"entity": "board_name"}
-      - create board [prototyping tools]{"entity": "board_name"}
-      - create board [data table styling]{"entity": "board_name"
-      - create board [page layout toggle]{"entity": "board_name"}
-      - create board [wireframe sketching]{"entity": "board_name"}
-      - create board [code review process]{"entity": "board_name"}
-      - create board [data migration plan]{"entity": "board_name"}
-      - create board [mobile responsiveness]{"entity": "board_name"}
-      - create board [application integrity]{"entity": "board_name"}
-      - create board [error logging mechanism]{"entity": "board_name"}
-      - create board [stepper component styling]{"entity": "board_name"}
-      - create board [user experience designing]{"entity": "board_name"}
-      - create board [software update procedures]{"entity": "board_name"}
+      - create board [demo]{"entity": "board_create_name", "value": "demo"}
+      - create board [books]{"entity": "board_create_name", "value": "books"}
+      - create board [project]{"entity": "board_create_name", "value": "project"}
+      - create board [status]{"entity": "board_create_name", "value": "status"}
+      - create board [assignment]{"entity": "board_create_name", "value": "assignment"}
+
+  - regex: board_create_name
+    examples: |
+      - \b\w+\b|\b\w+\s\w+\b
 
   - intent: update_board_name
     examples: |
-      - update board [HR]{"entity": "previous_board_name"} to [sales]{"entity": "new_board_name"}
-      - update board [roadmap]{"entity": "previous_board_name"} to [checklist]{"entity": "new_board_name"}
-      - update board [support]{"entity": "previous_board_name"} to [analytics]{"entity": "new_board_name"}
-      - update board [training]{"entity": "previous_board_name"} to [goal setting]{"entity": "new_board_name"}
-      - update board [client]{"entity": "previous_board_name"} to [finance planning]{"entity": "new_board_name"}
-      - update board [interactivity]{"entity": "previous_board_name"} to [scalability]{"entity": "new_board_name"}
-      - update board [workflow]{"entity": "previous_board_name"} to [release planning]{"entity": "new_board_name"}
-      - update board [IT complianced]{"entity": "previous_board_name"} to [engineering]{"entity": "new_board_name"}
-      - update board [releases]{"entity": "previous_board_name"} to [production issues]{"entity": "new_board_name"}
-      - update board [version management]{"entity": "previous_board_name"} to [control]{"entity": "new_board_name"}
-      - update board [events]{"entity": "previous_board_name"} to [meeting agenda board]{"entity": "new_board_name"}
-      - update board [quality assurance]{"entity": "previous_board_name"} to [integration]{"entity": "new_board_name"}
-      - update board [research analysis]{"entity": "previous_board_name"} to [data science]{"entity": "new_board_name"}
-      - update board [sales funnel]{"entity": "previous_board_name"} to [marketing strategy]{"entity": "new_board_name"}
-      - update board [adventure]{"entity": "previous_board_name"} to [action adventure movie]{"entity": "new_board_name"}
-      - update board [bug reporting system]{"entity": "previous_board_name"} to [bug tracker]{"entity": "new_board_name"}
-      - update board [marketing]{"entity": "previous_board_name"} to [social media marketing]{"entity": "new_board_name"}
-      - update board [customer feedback]{"entity": "previous_board_name"} to [vendor relation]{"entity": "new_board_name"}
-      - update board [technical documentation]{"entity": "previous_board_name"} to [computing]{"entity": "new_board_name"}
-      - update board [time tracker]{"entity": "previous_board_name"} to [competitive analysis]{"entity": "new_board_name"}
-      - update board [visual studio code]{"entity": "previous_board_name"} to [product launch]{"entity": "new_board_name"}
-      - update board [roadblocks]{"entity": "previous_board_name"} to [task tracking dashboard]{"entity": "new_board_name"}
-      - update board [customer satisfaction survey]{"entity": "previous_board_name"} to [kanban]{"entity": "new_board_name"}
-      - update board [student collaboration hub]{"entity": "previous_board_name"} to [innovation]{"entity": "new_board_name"}
-      - update board [project pipeline management]{"entity": "previous_board_name"} to [decisions]{"entity": "new_board_name"}
-      - update board [user engagement analyzer]{"entity": "previous_board_name"} to [requirements]{"entity": "new_board_name"}
-      - update board [HR recruitment]{"entity": "previous_board_name"} to [employee training portal]{"entity": "new_board_name"}
-      - update board [financial management]{"entity": "previous_board_name"} to [design collaboration]{"entity": "new_board_name"}
-      - update board [agile development]{"entity": "previous_board_name"} to [market research platform]{"entity": "new_board_name"}
-      - update board [task manager scheduling]{"entity": "previous_board_name"} to [folder to workspace]{"entity": "new_board_name"}
-      - update board [marketing campaign automation]{"entity": "previous_board_name"} to [training program]{"entity": "new_board_name"}
-      - update board [induction program management]{"entity": "previous_board_name"} to [competitive market]{"entity": "new_board_name"}
-      - update board [progress analysis system]{"entity": "previous_board_name"} to [knowledge hub platform]{"entity": "new_board_name"}
-      - update board [team communication]{"entity": "previous_board_name"} to [campaign performance tracker]{"entity": "new_board_name"}
-      - update board [error reporting system]{"entity": "previous_board_name"} to [milestone tracking system]{"entity": "new_board_name"}
-      - update board [issue resolution system]{"entity": "previous_board_name"} to [note organization software]{"entity": "new_board_name"}
+      - update board name [status]{"entity": "old_board_name", "value": "status"} to [demo]{"entity": "new_board_name", "value": "demo"}
+      - update board name [books]{"entity": "old_board_name", "value": "books"} to [project]{"entity": "new_board_name", "value": "project"}
+      - update board name [project]{"entity": "old_board_name", "value": "project"} to [status]{"entity": "new_board_name", "value": "status"}
+      - update board name [demo]{"entity": "old_board_name", "value": "demo"} to [assignment]{"entity": "new_board_name", "value": "assignment"}
+      - update board name [assignment]{"entity": "old_board_name", "value": "assignment"} to [books]{"entity": "new_board_name", "value": "books"}
+
+  - regex: old_board_name
+    examples: |
+      - \b\w+\b|\b\w+\s\w+\b
+
+  - regex: new_board_name
+    examples: |
+      - \b\w+\b|\b\w+\s\w+\b
 
   - intent: create_list
     examples: |
-      - add list [brainstorming session]{"entity": "list_name"} to board [cybersecurity]{"entity": "board_name"}
-      - add list [cutting veggies]{"entity": "list_name"} to board [daily tasks list]{"entity": "board_name"}
-      - add list [deadline]{"entity": "list_name"} to board [teamwork board]{"entity": "board_name"}
-      - add list [DIY home improvement]{"entity": "list_name"} to board [singing practice]{"entity": "board_name"}
-      - add list [face to face meeting]{"entity": "list_name"} to board [python crash course]{"entity": "board_name"}
-      - add list [label organization]{"entity": "list_name"} to board [task prioritization]{"entity": "board_name"}
-      - add list [language learning practice]{"entity": "list_name"} to board [task sheet]{"entity": "board_name"}
-      - add list [learn to cook]{"entity": "list_name"} to board [collaborate]{"entity": "board_name"}
-      - add list [morning meditation routine]{"entity": "list_name"} to board [coding for beginners]{"entity": "board_name"}
-      - add list [music listening session]{"entity": "list_name"} to board [audio impairment]{"entity": "board_name"}
-      - add list [phone charging break]{"entity": "list_name"} to board [visual communication]{"entity": "board_name"}
-      - add list [projects to finish]{"entity": "list_name"} to board [mindmapping]{"entity": "board_name"}
-      - add list [read poem]{"entity": "list_name"} to board [customization]{"entity": "board_name"}
-      - add list [setup]{"entity": "list_name"} to board [notification reminder system]{"entity": "board_name"}
-      - add list [sprints]{"entity": "list_name"} to board [improvements dashboard]{"entity": "board_name"}
-      - add list [todays schedule]{"entity": "list_name"} to board [finish the tasks]{"entity": "board_name"}
-      - add list [todo]{"entity": "list_name"} to board [reminders]{"entity": "board_name"}
-      - add list [updates]{"entity": "list_name"} to board [due date management]{"entity": "board_name"}
-      - add list [user story]{"entity": "list_name"} to board [streamlit implementation]{"entity": "board_name"}
-      - add list [visualisation]{"entity": "list_name"} to board [files]{"entity": "board_name"}
-      - add list [write documentation]{"entity": "list_name"} to board [task delegation]{"entity": "board_name"}
-      - create list [brainstorming session]{"entity": "list_name"} in board [cybersecurity]{"entity": "board_name"}
-      - create list [cutting veggies]{"entity": "list_name"} in board [daily tasks list]{"entity": "board_name"}
-      - create list [deadline]{"entity": "list_name"} in board [teamwork board]{"entity": "board_name"}
-      - create list [DIY home improvement]{"entity": "list_name"} in board [singing practice]{"entity": "board_name"}
-      - create list [face to face meeting]{"entity": "list_name"} in board [python crash course]{"entity": "board_name"}
-      - create list [label organization]{"entity": "list_name"} in board [task prioritization]{"entity": "board_name"}
-      - create list [language learning practice]{"entity": "list_name"} in board [task sheet]{"entity": "board_name"}
-      - create list [learn to cook]{"entity": "list_name"} in board [collaborate]{"entity": "board_name"}
-      - create list [morning meditation routine]{"entity": "list_name"} in board [coding for beginners]{"entity": "board_name"}
-      - create list [music listening session]{"entity": "list_name"} in board [audio impairment]{"entity": "board_name"}
-      - create list [phone charging break]{"entity": "list_name"} in board [visual communication]{"entity": "board_name"}
-      - create list [projects to finish]{"entity": "list_name"} in board [mindmapping]{"entity": "board_name"}
-      - create list [read poem]{"entity": "list_name"} in board [customization]{"entity": "board_name"}
-      - create list [setup]{"entity": "list_name"} in board [notification reminder system]{"entity": "board_name"}
-      - create list [sprints]{"entity": "list_name"} in board [improvements dashboard]{"entity": "board_name"}
-      - create list [todays schedule]{"entity": "list_name"} in board [finish the tasks]{"entity": "board_name"}
-      - create list [todo]{"entity": "list_name"} in board [reminders]{"entity": "board_name"}
-      - create list [updates]{"entity": "list_name"} in board [due date management]{"entity": "board_name"}
-      - create list [user story]{"entity": "list_name"} in board [streamlit implementation]{"entity": "board_name"}
-      - create list [visualisation]{"entity": "list_name"} in board [files]{"entity": "board_name"}
-      - create list [write documentation]{"entity": "list_name"} in board [task delegation]{"entity": "board_name"}
+      - create list [books]{"entity": "list_name_create", "value": "books"} in board [demo]{"entity": "name_of_board_for_list", "value":"demo"}
+      - create list [songs]{"entity": "list_name_create", "value": "songs"} in board [demo]{"entity": "name_of_board_for_list", "value":"demo"}
+      - create list [project]{"entity": "list_name_create", "value": "project"} in board [demo]{"entity": "name_of_board_for_list", "value":"demo"}
+      - create list [videos]{"entity": "list_name_create", "value": "videos"} in board [demo]{"entity": "name_of_board_for_list", "value":"demo"}
+      - create list [movies]{"entity": "list_name_create", "value": "movies"} in board [demo]{"entity": "name_of_board_for_list", "value":"demo"}
+
+  - regex: list_name_create
+    examples: |
+      - \b\w+\b|\b\w+\s\w+\b
+
+  - regex: name_of_board_for_list
+    examples: |
+      - \b\w+\b|\b\w+\s\w+\b
 
   - intent: update_list_name
     examples: |
-      - update list [categorization]{"entity": "previous_list_name"} to [harmonious]{"entity": "new_list_name"} in board [unconventional]{"entity": "board_name"}
-      - update list [exhilarating]{"entity": "previous_list_name"} to [commercialization]{"entity": "new_list_name"} in board [reminiscence]{"entity": "board_name"}
-      - update list [filter through cards] {"entity": "previous_list_name"} to [application]{"entity": "new_list_name"} in board [healthtrack]{"entity": "board_name"}
-      - update list [translation]{"entity": "previous_list_name"} to [union territory]{"entity": "new_list_name"} in board [boundless curiosity]{"entity": "board_name"}
-      - update list [categorizing items]{"entity": "previous_list_name"} to [melodious harmony]{"entity": "new_list_name"} in board [unconventional]{"entity": "board_name"}
-      - update list [enchanting forest magic]{"entity": "previous_list_name"} to [interconnectedness]{"entity": "new_list_name"} in board [trellotalk]{"entity": "board_name"}
-      - update list [synchronization]{"entity": "previous_list_name"} to [extra terrestrial]{"entity": "new_list_name"} in board [spellbee competition]{"entity": "board_name"}
-      - update list [perspicacious]{"entity": "previous_list_name"} to [terms and conditions]{"entity": "new_list_name"} in board [creative flow unleashed]{"entity": "board_name"}
-      - update list [deciduous]{"entity": "previous_list_name"} to [transformative growth process]{"entity": "new_list_name"} in board [science projects lists]{"entity": "board_name"}
-      - update list [logistics management]{"entity": "previous_list_name"} to [transport arrangement]{"entity": "new_list_name"} in board [bidirectional transfer]{"entity": "board_name"}
+      - update list name [books]{"entity": "previous_list_name", "value": "books"} to [songs]{"entity": "fresh_list_name", "value": "songs"} in board [demo]{"entity": "of_board_list_name_update", "value":"demo"}
+      - update list name [project]{"entity": "previous_list_name", "value": "project"} to [books]{"entity": "fresh_list_name", "value": "books"} in board [demo]{"entity": "of_board_list_name_update", "value":"demo"}
+      - update list name [songs]{"entity": "previous_list_name", "value": "songs"} to [videos]{"entity": "fresh_list_name", "value": "videos"} in board [demo]{"entity": "of_board_list_name_update", "value":"demo"}
+      - update list name [videos]{"entity": "previous_list_name", "value": "videos"} to [movies]{"entity": "fresh_list_name", "value": "movies"} in board [demo]{"entity": "of_board_list_name_update", "value":"demo"}
+      - update list name [movies]{"entity": "previous_list_name", "value": "movies"} to [project]{"entity": "fresh_list_name", "value": "project"} in board [demo]{"entity": "of_board_list_name_update", "value":"demo"}
+
+  - regex: previous_list_name
+    examples: |
+      - \b\w+\b|\b\w+\s\w+\b
+
+  - regex: fresh_list_name
+    examples: |
+      - \b\w+\b|\b\w+\s\w+\b
+
+  - regex: of_board_list_name_update
+    examples: |
+      - \b\w+\b|\b\w+\s\w+\b
 
   - intent: create_card
     examples: |
-      - add card [authenticity]{"entity": "card_name_to_create"} to list [medicines]{"entity": "list_name"} to board [inclusivity]{"entity": "board_name"}
-      - add card [cross functional collaboration]{"entity": "card_name_to_create"} to list [apps to configure]{"entity": "list_name"} to board [95 sports]{"entity": "board_name"}
-      - add card [enchanting dream realization]{"entity": "card_name_to_create"} to list [science exihibition experiments]{"entity": "list_name"} to board [webapp for healthtrack]{"entity": "board_name"}
-      - add card [filter application]{"entity": "card_name_to_create"} to list [news list]{"entity": "list_name"} to board [esakki]{"entity": "board_name"}
-      - add card [program status]{"entity": "card_name_to_create"} to list [quality approach]{"entity": "list_name"} to board [scalable growth]{"entity": "board_name"}
-      - create card [authenticity]{"entity": "card_name_to_create"} in list [medicines]{"entity": "list_name"} in board [inclusivity]{"entity": "board_name"}
-      - create card [cross functional collaboration]{"entity": "card_name_to_create"} in list [apps to configure]{"entity": "list_name"} in board [95 sports]{"entity": "board_name"}
-      - create card [enchanting dream realization]{"entity": "card_name_to_create"} in list [science exihibition experiments]{"entity": "list_name"} in board [webapp for healthtrack]{"entity": "board_name"}
-      - create card [filter application]{"entity": "card_name_to_create"} in list [news list]{"entity": "list_name"} in board [achsah's day]{"entity": "board_name"}
-      - create card [interconnectedness]{"entity": "card_name_to_create"} in list [imaginations]{"entity": "list_name"} in board [trellotalk]{"entity": "board_name"}
-      - create card [program status]{"entity": "card_name_to_create"} in list [quality approach]{"entity": "list_name"} in board [scalable growth]{"entity": "board_name"}
+      - create card [books]{"entity": "card_name_to_create", "value": "books"} in list [demo]{"entity": "add_card_to_list_name", "value": "demo"} in board [assignment]{"entity": "to_add_card_board_name", "value":"assignment"}
+      - create card [songs]{"entity": "card_name_to_create", "value": "songs"} in list [demo]{"entity": "add_card_to_list_name", "value": "demo"} in board [assignment]{"entity": "to_add_card_board_name", "value":"assignment"}
+      - create card [project]{"entity": "card_name_to_create", "value": "project"} in list [demo]{"entity": "add_card_to_list_name", "value": "demo"} in board [assignment]{"entity": "to_add_card_board_name", "value":"assignment"}
+      - create card [videos]{"entity": "card_name_to_create", "value": "videos"} in list [demo]{"entity": "add_card_to_list_name", "value": "demo"} in board [assignment]{"entity": "to_add_card_board_name", "value":"assignment"}
+      - create card [movies]{"entity": "card_name_to_create", "value": "movies"} in list [demo]{"entity": "add_card_to_list_name", "value": "demo"} in board [assignment]{"entity": "to_add_card_board_name", "value":"assignment"}
+
+  - regex: card_name_to_create
+    examples: |
+      - \b\w+\b|\b\w+\s\w+\b
+
+  - regex: add_card_to_list_name
+    examples: |
+      - \b\w+\b|\b\w+\s\w+\b
+
+  - regex: to_add_card_board_name
+    examples: |
+      - \b\w+\b|\b\w+\s\w+\b
 
   - intent: update_card_name
     examples: |
-      - update card [lenovo]{"entity": "previous_card_name"} to [calender]{"entity": "new_card_name"} in list [commonality]{"entity": "list_name"} in board [transparency]{"entity": "board_name"}
-      - update card [optimization]{"entity": "previous_card_name"} to [fruitful]{"entity": "new_card_name"} in list [adaptability]{"entity": "list_name"} in board [teleportation]{"entity": "board_name"}
-      - update card [streamlining]{"entity": "previous_card_name"} to [pharmaceuticals]{"entity": "new_card_name"} in list [music disintegration]{"entity": "list_name"} in board [transcription]{"entity": "board_name"}
-      - update card [crisis response]{"entity": "previous_card_name"} to [medical history]{"entity": "new_card_name"} in list [eastman colour]{"entity": "list_name"} in board [proactive planning]{"entity": "board_name"}
-      - update card [risk mitigation]{"entity": "previous_card_name"} to [political science]{"entity": "new_card_name"} in list [washing machine]{"entity": "list_name"} in board [ethical conduct]{"entity": "board_name"}
-      - update card [crisis response team]{"entity": "previous_card_name"} to [medical history]{"entity": "new_card_name"} in list [eastman colour]{"entity": "list_name"} in board [proactive planning]{"entity": "board_name"}
-      - update card [enhance data security]{"entity": "previous_card_name"} to [content analysis]{"entity": "new_card_name"} in list [video editing]{"entity": "list_name"} in board [innovation nurturing]{"entity": "board_name"}
-      - update card [sustainable practices]{"entity": "previous_card_name"} to [content analysis]{"entity": "new_card_name"} in list [video editing]{"entity": "list_name"} in board [innovation nurturing]{"entity": "board_name"}
-      - update card [aligned business strategy]{"entity": "previous_card_name"} to [political science]{"entity": "new_card_name"} in list [washing machine]{"entity": "list_name"} in board [ethical conduct]{"entity": "board_name"}
+      - update card name [books]{"entity": "former_card_name", "value": "books"} to [songs]{"entity": "latter_card_name", "value": "songs"} in list [demo]{"entity": "update_card_name_list", "value": "demo"} in board [assignment]{"entity":"rename_card_for_board", "value":"assignment"}
+      - update card name [project]{"entity": "former_card_name", "value": "project"} to [books]{"entity": "latter_card_name", "value": "books"} in list [demo]{"entity": "update_card_name_list", "value": "demo"} in board [assignment]{"entity":"rename_card_for_board", "value":"assignment"}
+      - update card name [songs]{"entity": "former_card_name", "value": "songs"} to [videos]{"entity": "latter_card_name", "value": "videos"} in list [demo]{"entity": "update_card_name_list", "value": "demo"} in board [assignment]{"entity":"rename_card_for_board", "value":"assignment"}
+      - update card name [videos]{"entity": "former_card_name", "value": "videos"} to [movies]{"entity": "latter_card_name", "value": "movies"} in list [demo]{"entity": "update_card_name_list", "value": "demo"} in board [assignment]{"entity":"rename_card_for_board", "value":"assignment"}
+      - update card name [movies]{"entity": "former_card_name", "value": "movies"} to [project]{"entity": "latter_card_name", "value": "project"} in list [demo]{"entity": "update_card_name_list", "value": "demo"} in board [assignment]{"entity":"rename_card_for_board", "value":"assignment"}
+
+  - regex: former_card_name
+    examples: |
+      - \b\w+\b|\b\w+\s\w+\b
+
+  - regex: latter_card_name
+    examples: |
+      - \b\w+\b|\b\w+\s\w+\b
+
+  - regex: update_card_name_list
+    examples: |
+      - \b\w+\b|\b\w+\s\w+\b
+
+  - regex: rename_card_for_board
+    examples: |
+      - \b\w+\b|\b\w+\s\w+\b

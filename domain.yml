@@ -15,47 +15,56 @@ intents:
   - open_trello
   - open_board:
       use_entities:
-        - board_name
+        - open_board_name
   - create_board:
       use_entities:
-        - board_name
+        - board_create_name
   - update_board_name:
       use_entities:
-        - previous_board_name
+        - old_board_name
         - new_board_name
   - create_list:
       use_entities:
-        - list_name
-        - board_name
+        - list_name_create
+        - name_of_board_for_list
+
   - update_list_name:
       use_entities:
         - previous_list_name
-        - new_list_name
-        - board_name
+        - fresh_list_name
+        - name_of_board_for_list
+
   - create_card:
       use_entities:
         - card_name_to_create
-        - list_name
-        - board_name
+        - add_card_to_list_name
+        - to_add_card_board_name
+
   - update_card_name:
       use_entities:
-        - previous_card_name
-        - new_card_name
-        - list_name
-        - board_name
+        - former_card_name
+        - latter_card_name
+        - update_card_name_list
+        - rename_card_for_board
 
 entities:
   - query
-  - board_name
-  - previous_board_name
-  - new_board_name
-  - list_name
-  - previous_list_name
-  - new_list_name
-  - card_name_to_create
-  - previous_card_name
-  - new_card_name
-
+  - open_board_name #board name to open
+  - board_create_name #board name to create board
+  - old_board_name #board name to update
+  - new_board_name #new board name
+  - list_name_create #list name to create
+  - name_of_board_for_list #board name to create list
+  - previous_list_name #list name to update
+  - fresh_list_name #new list name
+  - of_board_list_name_update #board name to update list name
+  - card_name_to_create #card name to create
+  - add_card_to_list_name #list name to add card
+  - to_add_card_board_name #board name to add card
+  - former_card_name #card name to update
+  - latter_card_name #new card name
+  - update_card_name_list #list name to update card name
+  - rename_card_for_board #board name to update card name
 slots:
   query:
     type: text
@@ -65,19 +74,26 @@ slots:
         intent: open_trello
         entity: query
 
-  board_name:
+  open_board_name:
     type: text
     influence_conversation: true
     mappings:
       - type: from_entity
-        entity: board_name
+        entity: open_board_name
 
-  previous_board_name:
+  board_create_name:
     type: text
     influence_conversation: true
     mappings:
       - type: from_entity
-        entity: previous_board_name
+        entity: board_create_name
+
+  old_board_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: old_board_name
 
   new_board_name:
     type: text
@@ -86,12 +102,12 @@ slots:
       - type: from_entity
         entity: new_board_name
 
-  list_name:
+  list_name_create:
     type: text
     influence_conversation: true
     mappings:
       - type: from_entity
-        entity: list_name
+        entity: list_name_create
 
   previous_list_name:
     type: text
@@ -100,12 +116,26 @@ slots:
       - type: from_entity
         entity: previous_list_name
 
-  new_list_name:
+  fresh_list_name:
     type: text
     influence_conversation: true
     mappings:
       - type: from_entity
-        entity: new_list_name
+        entity: fresh_list_name
+
+  name_of_board_for_list:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: name_of_board_for_list
+
+  of_board_list_name_update:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: of_board_list_name_update
 
   card_name_to_create:
     type: text
@@ -114,19 +144,47 @@ slots:
       - type: from_entity
         entity: card_name_to_create
 
-  previous_card_name:
+  former_card_name:
     type: text
     influence_conversation: true
     mappings:
       - type: from_entity
-        entity: previous_card_name
+        entity: former_card_name
 
-  new_card_name:
+  latter_card_name:
     type: text
     influence_conversation: true
     mappings:
       - type: from_entity
-        entity: new_card_name
+        entity: latter_card_name
+
+  add_card_to_list_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: add_card_to_list_name
+
+  to_add_card_board_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: to_add_card_board_name
+
+  update_card_name_list:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: update_card_name_list
+
+  rename_card_for_board:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: rename_card_for_board
 
 responses:
   utter_greet:
@@ -156,6 +214,8 @@ responses:
     - text: I have created the card you asked for in your browser
   utter_update_card_name:
     - text: I have updated the card name you asked for in your browser
+    - text: I have updated the card name you asked for in your browser
+    - text: I have updated the card name you asked for in your browser
 
 actions:
   - utter_iamabot
@@ -177,43 +237,3 @@ actions:
   - utter_create_card
   - action_update_card_name
   - utter_update_card_name
-# - board_memberships
-# - board_labels
-# - board_lists
-# - board_organization
-# - board_preferences
-# - board_starred
-# - card_name
-# - card_description
-# - card_due_date
-# - card_due_complete
-# - card_idList
-# - card_idMembers
-# - card_labels
-# - card_stickers
-# - card_attachments
-# - card_checklists
-# - card_comments
-# - list_name
-# - member_name
-# - label_name
-# - due_date
-# - description
-# - comment
-# - attachment
-# - checklist
-# - checklist_item
-# - checklist_item_name
-# - checklist_item_state
-# - checklist_item_due_date
-# - checklist_item_description
-# - checklist_item_comment
-# - checklist_item_attachment
-# - checklist_item_label
-# - checklist_item_member
-# - checklist_item_checklist
-# - checklist_item_board
-# - checklist_item_card
-# - checklist_item_list
-# - checklist_item_due_date
-# - checklist_item_description

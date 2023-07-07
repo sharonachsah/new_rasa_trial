@@ -32,8 +32,8 @@ def update_list_name(client):
             for trello_list in lists:
                 if list_name in trello_list.name.lower():
                     speak("What do you want to update the list name to?")
-                    new_list_name = takecommand().lower().replace(".", "")
-                    trello_list.set_name(new_list_name)
+                    fresh_list_name = takecommand().lower().replace(".", "")
+                    trello_list.set_name(fresh_list_name)
 
 
 def archive_list(client):

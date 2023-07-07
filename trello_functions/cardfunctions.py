@@ -3,10 +3,12 @@ This file contains functions that will add, open, and update cards in a _list
 """
 import webbrowser
 
+from actions.client_token import CLIENT
 from actions.voiceassistant import speak, takecommand
 
+client = CLIENT
 
-def add_card(client):
+def add_card():
     """
     This function will add a card to a list.
 
@@ -40,7 +42,7 @@ def get_input(prompt):
     return takecommand().lower().replace(".", "")
 
 
-def open_card(client):
+def open_card():
     """
     This function will open a card in a _list
 
@@ -64,22 +66,22 @@ def open_card(client):
                             webbrowser.open(card.url)
 
 
-def update_card_name(client):
+def update_card_name(cardname: str, listname: str, boardname: str):
     """
     This function will update a card
 
     :param client: TrelloClient object
     """
-    speak("What board do you want to update a card from?")
-    board_name = takecommand().lower().replace(".", "")
+    # speak("What board do you want to update a card from?")
+    # board_name = takecommand().lower().replace(".", "")
+
     boards = client.list_boards()
     for board in boards:
-        if board_name in board.name.lower():
+        if boardname in board.name.lower():
             speak("What _list do you want to update a card from?")
-            list_name = takecommand().lower().replace(".", "")
             lists = board.list_lists()
             for _list in lists:
-                if list_name in _list.name.lower():
+                if listname in _list.name.lower():
                     speak("What card do you want to update?")
                     card_name = takecommand().lower().replace(".", "")
                     cards = _list.list_cards()

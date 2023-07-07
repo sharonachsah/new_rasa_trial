@@ -1,0 +1,787 @@
+[
+  {
+    "text": "update board name demo to assignment",
+    "entities": [
+      {
+        "start": 18,
+        "end": 22,
+        "value": "demo",
+        "entity": "old_board_name"
+      },
+      {
+        "start": 26,
+        "end": 36,
+        "value": "assignment",
+        "entity": "new_board_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "update_card_name_list",
+        "start": 18,
+        "end": 22,
+        "confidence_entity": 0.7552272081375122,
+        "value": "demo",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "old_board_name",
+        "start": 26,
+        "end": 36,
+        "confidence_entity": 0.6164891719818115,
+        "value": "assignment",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "update list name books to songs in board demo",
+    "entities": [
+      {
+        "start": 17,
+        "end": 22,
+        "value": "books",
+        "entity": "previous_list_name"
+      },
+      {
+        "start": 26,
+        "end": 31,
+        "value": "songs",
+        "entity": "fresh_list_name"
+      },
+      {
+        "start": 41,
+        "end": 45,
+        "value": "demo",
+        "entity": "of_board_list_name_update"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "fresh_list_name",
+        "start": 17,
+        "end": 22,
+        "confidence_entity": 0.8063342571258545,
+        "value": "books",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "previous_list_name",
+        "start": 26,
+        "end": 31,
+        "confidence_entity": 0.9281424283981323,
+        "value": "songs",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "of_board_list_name_update",
+        "start": 41,
+        "end": 45,
+        "confidence_entity": 0.9974936246871948,
+        "value": "demo",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "update card name videos to movies in list demo in board assignment",
+    "entities": [
+      {
+        "start": 17,
+        "end": 23,
+        "value": "videos",
+        "entity": "former_card_name"
+      },
+      {
+        "start": 27,
+        "end": 33,
+        "value": "movies",
+        "entity": "latter_card_name"
+      },
+      {
+        "start": 42,
+        "end": 46,
+        "value": "demo",
+        "entity": "update_card_name_list"
+      },
+      {
+        "start": 56,
+        "end": 66,
+        "value": "assignment",
+        "entity": "rename_card_for_board"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "latter_card_name",
+        "start": 17,
+        "end": 23,
+        "confidence_entity": 0.8759423494338989,
+        "value": "videos",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "former_card_name",
+        "start": 27,
+        "end": 33,
+        "confidence_entity": 0.8516130447387695,
+        "value": "movies",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "update_card_name_list",
+        "start": 42,
+        "end": 46,
+        "confidence_entity": 0.9959420561790466,
+        "value": "demo",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "rename_card_for_board",
+        "start": 56,
+        "end": 66,
+        "confidence_entity": 0.9975074529647827,
+        "value": "assignment",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "create board assignment",
+    "entities": [
+      {
+        "start": 13,
+        "end": 23,
+        "value": "assignment",
+        "entity": "board_create_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "open_board_name",
+        "start": 13,
+        "end": 23,
+        "confidence_entity": 0.6512977480888367,
+        "value": "assignment",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "update list name videos to movies in board demo",
+    "entities": [
+      {
+        "start": 17,
+        "end": 23,
+        "value": "videos",
+        "entity": "previous_list_name"
+      },
+      {
+        "start": 27,
+        "end": 33,
+        "value": "movies",
+        "entity": "fresh_list_name"
+      },
+      {
+        "start": 43,
+        "end": 47,
+        "value": "demo",
+        "entity": "of_board_list_name_update"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "previous_list_name",
+        "start": 17,
+        "end": 23,
+        "confidence_entity": 0.8165268301963806,
+        "value": "videos",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "previous_list_name",
+        "start": 27,
+        "end": 33,
+        "confidence_entity": 0.633015513420105,
+        "value": "movies",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "of_board_list_name_update",
+        "start": 43,
+        "end": 47,
+        "confidence_entity": 0.9947689771652222,
+        "value": "demo",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "create board demo",
+    "entities": [
+      {
+        "start": 13,
+        "end": 17,
+        "value": "demo",
+        "entity": "board_create_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "name_of_board_for_list",
+        "start": 13,
+        "end": 17,
+        "confidence_entity": 0.904213547706604,
+        "value": "demo",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "update list name movies to project in board demo",
+    "entities": [
+      {
+        "start": 17,
+        "end": 23,
+        "value": "movies",
+        "entity": "previous_list_name"
+      },
+      {
+        "start": 27,
+        "end": 34,
+        "value": "project",
+        "entity": "fresh_list_name"
+      },
+      {
+        "start": 44,
+        "end": 48,
+        "value": "demo",
+        "entity": "of_board_list_name_update"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "fresh_list_name",
+        "start": 17,
+        "end": 23,
+        "confidence_entity": 0.9675696492195129,
+        "value": "movies",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "previous_list_name",
+        "start": 27,
+        "end": 34,
+        "confidence_entity": 0.8864269256591797,
+        "value": "project",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "of_board_list_name_update",
+        "start": 44,
+        "end": 48,
+        "confidence_entity": 0.9921145439147949,
+        "value": "demo",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "update card name books to songs in list demo in board assignment",
+    "entities": [
+      {
+        "start": 17,
+        "end": 22,
+        "value": "books",
+        "entity": "former_card_name"
+      },
+      {
+        "start": 26,
+        "end": 31,
+        "value": "songs",
+        "entity": "latter_card_name"
+      },
+      {
+        "start": 40,
+        "end": 44,
+        "value": "demo",
+        "entity": "update_card_name_list"
+      },
+      {
+        "start": 54,
+        "end": 64,
+        "value": "assignment",
+        "entity": "rename_card_for_board"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "latter_card_name",
+        "start": 17,
+        "end": 22,
+        "confidence_entity": 0.9688238501548767,
+        "value": "books",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "former_card_name",
+        "start": 26,
+        "end": 31,
+        "confidence_entity": 0.9561190605163574,
+        "value": "songs",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "update_card_name_list",
+        "start": 40,
+        "end": 44,
+        "confidence_entity": 0.9978942275047302,
+        "value": "demo",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "rename_card_for_board",
+        "start": 54,
+        "end": 64,
+        "confidence_entity": 0.9963365793228149,
+        "value": "assignment",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "update board name status to demo",
+    "entities": [
+      {
+        "start": 18,
+        "end": 24,
+        "value": "status",
+        "entity": "old_board_name"
+      },
+      {
+        "start": 28,
+        "end": 32,
+        "value": "demo",
+        "entity": "new_board_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "new_board_name",
+        "start": 18,
+        "end": 24,
+        "confidence_entity": 0.7873567938804626,
+        "value": "status",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "new_board_name",
+        "start": 28,
+        "end": 32,
+        "confidence_entity": 0.5152109861373901,
+        "value": "demo",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "update list name songs to videos in board demo",
+    "entities": [
+      {
+        "start": 17,
+        "end": 22,
+        "value": "songs",
+        "entity": "previous_list_name"
+      },
+      {
+        "start": 26,
+        "end": 32,
+        "value": "videos",
+        "entity": "fresh_list_name"
+      },
+      {
+        "start": 42,
+        "end": 46,
+        "value": "demo",
+        "entity": "of_board_list_name_update"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "fresh_list_name",
+        "start": 17,
+        "end": 22,
+        "confidence_entity": 0.9904236197471619,
+        "value": "songs",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "previous_list_name",
+        "start": 26,
+        "end": 32,
+        "confidence_entity": 0.9857341051101685,
+        "value": "videos",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "of_board_list_name_update",
+        "start": 42,
+        "end": 46,
+        "confidence_entity": 0.998304009437561,
+        "value": "demo",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "update card name songs to videos in list demo in board assignment",
+    "entities": [
+      {
+        "start": 17,
+        "end": 22,
+        "value": "songs",
+        "entity": "former_card_name"
+      },
+      {
+        "start": 26,
+        "end": 32,
+        "value": "videos",
+        "entity": "latter_card_name"
+      },
+      {
+        "start": 41,
+        "end": 45,
+        "value": "demo",
+        "entity": "update_card_name_list"
+      },
+      {
+        "start": 55,
+        "end": 65,
+        "value": "assignment",
+        "entity": "rename_card_for_board"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "latter_card_name",
+        "start": 17,
+        "end": 22,
+        "confidence_entity": 0.9885480403900146,
+        "value": "songs",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "former_card_name",
+        "start": 26,
+        "end": 32,
+        "confidence_entity": 0.9774117469787598,
+        "value": "videos",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "update_card_name_list",
+        "start": 41,
+        "end": 45,
+        "confidence_entity": 0.997188150882721,
+        "value": "demo",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "rename_card_for_board",
+        "start": 55,
+        "end": 65,
+        "confidence_entity": 0.9981324076652527,
+        "value": "assignment",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "open board assignment",
+    "entities": [
+      {
+        "start": 11,
+        "end": 21,
+        "value": "assignment",
+        "entity": "open_board_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "board_create_name",
+        "start": 11,
+        "end": 21,
+        "confidence_entity": 0.7368666529655457,
+        "value": "assignment",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "update board name assignment to books",
+    "entities": [
+      {
+        "start": 18,
+        "end": 28,
+        "value": "assignment",
+        "entity": "old_board_name"
+      },
+      {
+        "start": 32,
+        "end": 37,
+        "value": "books",
+        "entity": "new_board_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "new_board_name",
+        "start": 18,
+        "end": 28,
+        "confidence_entity": 0.7548819184303284,
+        "value": "assignment",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "new_board_name",
+        "start": 32,
+        "end": 37,
+        "confidence_entity": 0.46968016028404236,
+        "value": "books",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "update list name project to books in board demo",
+    "entities": [
+      {
+        "start": 17,
+        "end": 24,
+        "value": "project",
+        "entity": "previous_list_name"
+      },
+      {
+        "start": 28,
+        "end": 33,
+        "value": "books",
+        "entity": "fresh_list_name"
+      },
+      {
+        "start": 43,
+        "end": 47,
+        "value": "demo",
+        "entity": "of_board_list_name_update"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "fresh_list_name",
+        "start": 17,
+        "end": 24,
+        "confidence_entity": 0.9438588619232178,
+        "value": "project",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "previous_list_name",
+        "start": 28,
+        "end": 33,
+        "confidence_entity": 0.8179227709770203,
+        "value": "books",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "of_board_list_name_update",
+        "start": 43,
+        "end": 47,
+        "confidence_entity": 0.9789677262306213,
+        "value": "demo",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "update card name movies to project in list demo in board assignment",
+    "entities": [
+      {
+        "start": 17,
+        "end": 23,
+        "value": "movies",
+        "entity": "former_card_name"
+      },
+      {
+        "start": 27,
+        "end": 34,
+        "value": "project",
+        "entity": "latter_card_name"
+      },
+      {
+        "start": 43,
+        "end": 47,
+        "value": "demo",
+        "entity": "update_card_name_list"
+      },
+      {
+        "start": 57,
+        "end": 67,
+        "value": "assignment",
+        "entity": "rename_card_for_board"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "latter_card_name",
+        "start": 17,
+        "end": 23,
+        "confidence_entity": 0.9554771780967712,
+        "value": "movies",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "former_card_name",
+        "start": 27,
+        "end": 34,
+        "confidence_entity": 0.9662876725196838,
+        "value": "project",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "update_card_name_list",
+        "start": 43,
+        "end": 47,
+        "confidence_entity": 0.9970059990882874,
+        "value": "demo",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "rename_card_for_board",
+        "start": 57,
+        "end": 67,
+        "confidence_entity": 0.9973082542419434,
+        "value": "assignment",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]

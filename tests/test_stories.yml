@@ -89,14 +89,117 @@ stories:
           are you a bot?
         intent: bot_challenge
       - action: utter_iamabot
-# - story: open trello
-#   steps:
-#   - user: |
-#       open trello
-#     intent: open_trello
-#     entities:
-#     - query: trello
-#   - action: action_open_trello
-#   - action: utter_open_trello
-#   - slot_was_set:
-#     - query: trello
+
+  - story: open trello
+    steps:
+      - user: |
+          open trello
+        intent: open_trello
+        entities:
+          - query: trello
+      - action: action_open_trello
+      - action: utter_open_trello
+      - slot_was_set:
+          - query: trello
+
+  - story: open board demo
+    steps:
+      - user: |
+          open board demo
+        intent: open_board
+        entities:
+          - open_board_name: demo
+      - action: action_open_board
+      - action: utter_open_board
+      - slot_was_set:
+          - open_board_name: demo
+
+  - story: create board
+    steps:
+      - user: |
+          create board demo
+        intent: create_board
+        entities:
+          - board_create_name: demo
+      - action: action_create_board
+      - action: utter_create_board
+      - slot_was_set:
+          - board_create_name: demo
+
+  - story: update board name
+    steps:
+      - user: |
+          update board name demo to assignment
+        intent: update_board
+        entities:
+          - old_board_name: demo
+          - new_board_name: assignment
+      - action: action_update_board
+      - action: utter_update_board
+      - slot_was_set:
+          - old_board_name: demo
+          - new_board_name: assignment
+
+  - story: create list
+    steps:
+      - user: |
+          create list books in board demo
+        intent: create_list
+        entities:
+          - list_name_create: books
+          - name_of_board_for_list: demo
+      - action: action_create_list
+      - action: utter_create_list
+      - slot_was_set:
+          - list_name_create: books
+          - name_of_board_for_list: demo
+
+  - story: update list name
+    steps:
+      - user: |
+          update list name books to project in board demo
+        intent: update_list_name
+        entities:
+          - previous_list_name: books
+          - fresh_list_name: project
+          - of_board_list_name_update: demo
+      - action: action_update_list_name
+      - action: utter_update_list_name
+      - slot_was_set:
+          - previous_list_name: books
+          - new_list_name: project
+          - of_board_list_name_update: demo
+
+  - story: create card
+    steps:
+      - user: |
+          create card books in list demo in board demo
+        intent: create_card
+        entities:
+          - card_name_create: books
+          - list_name_create: demo
+          - name_of_board_for_card: demo
+      - action: action_create_card
+      - action: utter_create_card
+      - slot_was_set:
+          - card_name_create: books
+          - list_name_create: demo
+          - name_of_board_for_card: demo
+
+  - story: update card name
+    steps:
+      - user: |
+          update card name books to project in list demo in board demo
+        intent: update_card_name
+        entities:
+          - former_card_name: books
+          - latter_card_name: project
+          - update_card_name_list: demo
+          - rename_card_for_board: demo
+      - action: action_update_card_name
+      - action: utter_update_card_name
+      - slot_was_set:
+          - former_card_name: books
+          - latter_card_name: project
+          - update_card_name_list: demo
+          - rename_card_for_board: demo

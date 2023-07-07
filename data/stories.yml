@@ -37,90 +37,69 @@ stories:
     steps:
       - intent: open_trello
         entities:
-          - query: trello
+          - query
       - action: action_open_trello
-      # - action: utter_open_trello
-      # - slot_was_set:
-      #     - query: trello
 
   - story: open board
     steps:
       - intent: open_board
         entities:
-          - board_name: "Achsah"
+          - open_board_name
       - action: action_open_board
       - action: utter_open_board
-      # - slot_was_set:
-      #     - board_name: board_name
 
   - story: create board
     steps:
       - intent: create_board
         entities:
-          - board_name: "Achsah"
+          - board_create_name
       - action: action_create_board
       - action: utter_create_board
-      # - slot_was_set:
-      #     - board_name: board_name
 
   - story: update board name
     steps:
       - intent: update_board_name
         entities:
-          - previous_board_name: "Achsah"
-          - new_board_name: "Mayur"
+          - old_board_name
+          - new_board_name
       - action: action_update_board_name
       - action: utter_update_board_name
-      # - slot_was_set:
-      #     - previous_board_name: previous_board_name
-      #     - new_board_name: new_board_name
-
   - story: create list
     steps:
       - intent: create_list
         entities:
-          - list_name: "Achsah"
-          - board_name: "demo"
+          - list_name_create
+          - name_of_board_for_list
       - action: action_create_list
       - action: utter_create_list
-      # - slot_was_set:
-      #     - list_name: list_name
 
   - story: update list name
     steps:
       - intent: update_list_name
         entities:
-          - previous_list_name: "Achsah"
-          - new_list_name: "list1"
-          - board_name: "demo"
+          - previous_list_name
+          - fresh_list_name
+          - of_board_list_name_update
       - action: action_update_list_name
       - action: utter_update_list_name
-      # - slot_was_set:
-      #     - previous_list_name: previous_list_name
-      #     - new_list_name: new_list_name
 
   - story: create card
     steps:
       - intent: create_card
         entities:
-          - card_name_to_create: "Achsah"
-          - list_name: "list1"
-          - board_name: "demo"
+          - card_name_to_create
+          - add_card_to_list_name
+          - to_add_card_board_name
       - action: action_create_card
       - action: utter_create_card
-      # - slot_was_set:
-      #     - card_name: card_name
 
   - story: update card name
     steps:
       - intent: update_card_name
         entities:
-          - previous_card_name: "Achsah"
-          - new_card_name: "card1"
-          - board_name: "demo"
-          - list_name: "list1"
+          - former_card_name
+          - latter_card_name
+          - update_card_name_list
+          - rename_card_for_board
       - action: action_update_card_name
       - action: utter_update_card_name
-      # - slot_was_set:
-      #     - previous_card_name: previous_card_name
-      #     - new_card_name: new_card_name

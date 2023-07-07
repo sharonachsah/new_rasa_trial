@@ -1,4 +1,4 @@
-""" This file is used to create a TrelloClient object that can be used to"""
+# The code snippet is importing necessary modules and setting up the Trello API client.
 import os
 from typing import Optional, cast
 

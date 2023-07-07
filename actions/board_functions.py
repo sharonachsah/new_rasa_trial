@@ -1,5 +1,3 @@
-""" This file contains functions that are used to interact with Trello boards."""
-import re
 import webbrowser
 from actions.client_token import CLIENT
 
@@ -7,62 +5,41 @@ client = CLIENT
 
 
 def open_trello():
-    """
-    This function opens the Trello website using the webbrowser module in Python.
-    """
     search_url = "https://www.trello.com"
     webbrowser.open(search_url)
-    # webbrowser.open(client.get_member("me").url)
-
-
 
 def add_board(boardnametoadd: str):
-    """
-    This function adds a board to a client with a given name after removing any periods in the name.
-
-    :param boardname: The parameter `boardname` is a string that represents the name of a board that
-    needs to be added. The function removes any periods (".") from the board name and then adds the
-    board using the modified name
-    :type boardname: str
-    """
-    # boardnametoadd = re.sub(r"[^\w\s]", "", boardnametoadd)
     client.add_board(boardnametoadd)
 
-
-# add_board("new board")
-
-
 def open_board(boardnametoopen: str):
-    """
-    This function opens a Trello board in the web browser if it exists, given a board name as input.
-
-    :param boardnametoopen: The parameter `boardnametoopen` is a string that represents the name of the
-    Trello board that the user wants to open
-    :type boardnametoopen: str
-    """
-    # board_name = re.sub(r"[^\w\s]", "", boardnametoopen)
-    board_name = boardnametoopen
-    # board_name = board_name.s.replace(" ", "-")
-    boards = client.list_boards()
-    board_names = {
-        board.name.lower() for board in boards
-    }  # convert board names to lowercase
-    if (
-        board_name.lower() in board_names
-    ):  # compare lowercase board name with lowercase board names in the set
-        print("board_name: ", board_name)
-        matching_board = next(
-            board for board in boards if board.name.lower() == board_name.lower()
-        )  # compare lowercase board name with lowercase board names in the list
-        print(board for board in boards if board.name == board_name)
-        print("matching_board: ", matching_board)
-        webbrowser.open(matching_board.url)
-    else:
-        print(f"Sorry, I couldn't find a board named {board_name}.")
+    board = next(
+        (
+            t_board
+            for t_board in client.list_boards()
+            if t_board.name == boardnametoopen
+        ),
+        None,
+    )
+    if not board:
+        print(f"Board '{boardnametoopen}' not found.")
+        return
+    board_url = board.url
+    webbrowser.open(board_url)
 
 
 def update_board_name(previous_board_name: str, new_board_name: str):
-    boards = [board for board in client.list_boards() if previous_board_name in board.name]
-    for board in boards:
-        board.set_name(new_board_name)
+    board = next(
+        (
+            t_board
+            for t_board in client.list_boards()
+            if t_board.name == previous_board_name
+        ),
+        None,
+    )
+    if not board:
+        print(f"Board '{previous_board_name}' not found.")
+        return
+
+    board.set_name(new_board_name)
+    print(f"Board '{previous_board_name}' updated to '{new_board_name}' successfully.")
 
